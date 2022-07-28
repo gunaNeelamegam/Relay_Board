@@ -1,7 +1,6 @@
 package com.zilogic.pjproject;
 
 import com.jfoenix.controls.JFXButton;
-import static com.zilogic.pjproject.RunLaterThread.verifyregisteration;
 import java.io.IOException;
 import java.util.ArrayList;
 import javafx.application.Platform;
@@ -28,13 +27,13 @@ public class AddAccountController {
     Thread accountRegThread;
     static boolean exitRegThread = false;
     String callStatus;
-
+    private MyObserver observer = new MyObserver();
     public static ArrayList<AddAccount> userdetails = new ArrayList<AddAccount>();
 
     @FXML
     public void save() throws IOException, Exception {
 
-        System.out.println("Thread name : "+Thread.currentThread().getName());
+        System.out.println("Thread name : " + Thread.currentThread().getName());
 
         var addaccount = new AddAccount();
         domainAddress = domain.getText();
@@ -54,11 +53,10 @@ public class AddAccountController {
                         try {
                             MainStageController.createAccount();
                             MyApp.ep.libHandleEvents(10L);
-                            AddAccountController.exitRegThread = verifyregisteration();
+                            AddAccountController.exitRegThread = observer.verifyregisteration();
                             if (MainStageController.account.getId() == 0) {
                                 exitRegThread = true;
                             }
-
                         } catch (Exception ex) {
                             System.err.println("Exception while Runlater Method....");
                         }
@@ -75,6 +73,7 @@ public class AddAccountController {
             }
         });
         accountRegThread.setName("AccountReg");
+        accountRegThread.setDaemon(true);
         accountRegThread.start();
     }
 

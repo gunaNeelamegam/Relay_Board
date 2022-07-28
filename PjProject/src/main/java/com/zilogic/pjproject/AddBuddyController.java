@@ -1,17 +1,28 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.zilogic.pjproject;
 
 import com.jfoenix.controls.JFXButton;
+import static com.zilogic.pjproject.AddAccountController.exitRegThread;
+import static com.zilogic.pjproject.MyApp.accList;
 import java.util.ArrayList;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-class AddBuddyController {
+/**
+ *
+ * @author user
+ */
+public class AddBuddyController {
 
+    Thread createBuddy;
+    static boolean exitCreateBuddy = false;
     @FXML
-    private TextField accountPass;
-
-    @FXML
-    private TextField buddyuserName;
+    private TextField buddyName;
 
     @FXML
     private JFXButton closeBtn;
@@ -19,23 +30,53 @@ class AddBuddyController {
     @FXML
     private JFXButton saveBtn;
 
-    protected ArrayList<AddBuddy> buddyList = new ArrayList<AddBuddy>();
+    public ArrayList<AddBuddy> buddyDetails = new ArrayList<AddBuddy>();
+    MyBuddy mybud = null;
+
+    @FXML
+    void close(ActionEvent event) {
+        MainStageController.add_buddy_stage.close();
+    }
 
     @FXML
     void save() {
-        System.out.println("Save button is Clicked");
-        var addbuddy = new AddBuddy();
-        addbuddy.setAccountPass(accountPass.getText());
-        addbuddy.setBuddyUserName(buddyuserName.getText());
-        buddyList.add(addbuddy);
-        MainStageController.add_buddy_stage.close();
-        System.out.println(" Succesfully Added");
-    }
-
-    @FXML
-    void close() {
-        System.out.println(" Close button is clicked");
         MainStageController.add_buddy_stage.close();
     }
-
 }
+// @FXML
+/* synchronized void save(ActionEvent event) throws Exception {
+
+        createBuddy = new Thread(() -> {
+            Runnable updater = () -> {
+                System.out.println("creating the Buddy Account ");
+                BuddyConfig bdy = new BuddyConfig();
+                try {
+                    MyAccount acc = MyApp.accList.get(0);
+                    bdy.setUri("sip:" + buddyName.getText().trim() + "@" + acc.getInfo().getUri().substring(9));
+                    bdy.setSubscribe(true);
+                    AddBuddy buddy = new AddBuddy(buddyName.getText());
+                    buddyDetails.add(buddy);
+                    mybud = acc.addBuddy(bdy);
+                    MyApp.ep.libHandleEvents(10L);
+                    System.out.println(" Buddy status : " + bdy.getUri());
+                    var app = new MyApp();
+                    if (mybud.getId() != -1) {
+                        exitCreateBuddy = true;
+                        app.saveConfig("pjsua2.json");
+                        MainStageController.add_buddy_stage.close();
+                    }
+                } catch (Exception e) {
+                    System.err.println(" BUDDY CREATION FAILED");
+                }
+            };
+            while (!exitCreateBuddy) {
+                try {
+                    Thread.sleep(100);
+                    Platform.runLater(updater);
+                } catch (Exception e) {
+                }
+            }
+        });
+        createBuddy.start();
+        System.out.println(" Create buddy is Alive : " + createBuddy.isAlive());
+    }*/

@@ -1,17 +1,22 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.zilogic.pjproject;
 
+/**
+ *
+ * @author user
+ */
 class AddBuddy {
 
-    String accountPass;
-
-    String buddyUserName;
-
-    public String getAccountPass() {
-        return accountPass;
+    public AddBuddy(String buddyUserName) {
+        this.buddyUserName = buddyUserName;
     }
 
-    public void setAccountPass(String accountPass) {
-        this.accountPass = accountPass;
+    @Override
+    public String toString() {
+        return "AddBuddy{" + "buddyUserName=" + buddyUserName + '}';
     }
 
     public String getBuddyUserName() {
@@ -22,9 +27,5 @@ class AddBuddy {
         this.buddyUserName = buddyUserName;
     }
 
-    @Override
-    public String toString() {
-        return "AddBuddy{" + "accountPass=" + accountPass + ", buddyUserName=" + buddyUserName + '}';
-    }
-
+    String buddyUserName;
 }

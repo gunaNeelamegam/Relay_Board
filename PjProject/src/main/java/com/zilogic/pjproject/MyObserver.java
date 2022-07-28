@@ -37,14 +37,11 @@ class MyObserver implements MyAppObserver {
     }
 
     public void notifyIncomingCall(MyCall paramMyCall) {
+        System.out.println(" INCOMING CALL  in NOTIFY METHOD");
         try {
             CallOpParam callOpParam = new CallOpParam();
-            var incomingCall = new IncomingCallController();
-            incomingCall.IncomingCallUI();
-//        callOpParam.setStatusCode(200);
             try {
                 currentCall = paramMyCall;
-//                currentCall.answer(callOpParam);
             } catch (Exception exception) {
                 System.out.println(exception);
             }
@@ -72,8 +69,6 @@ class MyObserver implements MyAppObserver {
         if (callInfo.getState() == 6) {
             System.out.println(" Call state :  " + callInfo.getStateText()); // Logger.getLogger(MyObserver.class.getName()).log(Level.SEVERE, null, ex);
             this.del_call_scheduled = true;
-            //                Thread.sleep(100);
-            MainStageController.outGoingCallStage.close();
         }
 
     }
@@ -82,5 +77,15 @@ class MyObserver implements MyAppObserver {
     }
 
     public void notifyChangeNetwork() {
+    }
+
+    public boolean verifyregisteration() throws Exception {
+
+        if (MainStageController.account.getInfo().getRegIsActive() && MainStageController.account.getInfo().getRegStatus() == 200) {
+            System.out.println(" Account Registeration is Done...!");
+            return true;
+        } else {
+            return false;
+        }
     }
 }

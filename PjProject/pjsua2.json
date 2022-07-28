@@ -89,7 +89,7 @@
       { 
          "AccountConfig":        { 
             "priority":             0,
-            "idUri":                "sip:6001@192.168.0.132",
+            "idUri":                "sip:6002@192.168.0.132",
             "AccountRegConfig":     { 
                "registrarUri":         "sip:192.168.0.132",
                "registerOnAdd":        true,
@@ -116,7 +116,7 @@
                   { 
                      "scheme":               "digest",
                      "realm":                "*",
-                     "username":             "6001",
+                     "username":             "6002",
                      "dataType":             0,
                      "data":                 "1234",
                      "akaK":                 "",

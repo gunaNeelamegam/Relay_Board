@@ -1,7 +1,5 @@
 package com.zilogic.pjproject;
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXListView;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -10,7 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import org.pjsip.pjsua2.AccountConfig;
 import org.pjsip.pjsua2.AccountInfo;
@@ -20,11 +18,10 @@ public class MainStageController implements Initializable {
 
 //Account user authication
     AuthCredInfo auth;
+    boolean exitIncomingCall = false;
     //MyApp has all utility function are created...
     private static MyApp app = new MyApp();
     //which is used to show all the account in the list
-    @FXML
-    static JFXListView<String> listView;
     @FXML
     public static Stage addAccountStage;
     @FXML
@@ -35,13 +32,13 @@ public class MainStageController implements Initializable {
     public static MyAccount account = null;
     private static AccountConfig accCfg = null;
     @FXML
-    public static Pane middlePane;
+    public static BorderPane borderPane;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
         try {
-            Runtime.getRuntime().addShutdownHook((Thread) new MyShutdownHook(Thread.currentThread()));
+            // Runtime.getRuntime().addShutdownHook((Thread) new MyShutdownHook(Thread.currentThread()));
             app.init((MyAppObserver) observer, ".", true);
         } catch (Exception ex) {
             System.err.println(" Excpetion while loading the runWorker");
@@ -70,13 +67,21 @@ public class MainStageController implements Initializable {
 
     @FXML
     public void buddyButton() throws Exception {
-        System.out.println("Buddy button is clicked");
-//        add_buddy_stage = new Stage();
-//        Parent root = FXMLLoader.load(getClass().getResource("AddBuddy.fxml"));
-//        var scene = new Scene(root);
-//        add_buddy_stage.setScene(scene);
-//        add_buddy_stage.setTitle("ADD BUDDY ACCOUNT :)");
-//        add_buddy_stage.showAndWait();
+
+        add_buddy_stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("AddBuddy.fxml"));
+        Scene scene = new Scene(root);
+        add_buddy_stage.setScene(scene);
+        add_buddy_stage.setTitle("ADD BUDDY");
+        add_buddy_stage.showAndWait();
+    }
+
+    @FXML
+    public void nodeConfig() throws IOException {
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("NodeConfig.fxml")));
+        addAccountStage.setScene(scene);
+        addAccountStage.setTitle("NODE CONFIG");
+        addAccountStage.show();
     }
 
     @FXML
@@ -101,9 +106,10 @@ public class MainStageController implements Initializable {
             if (acc.isDefault()) {
                 System.out.println("account uri : " + acc.getInfo().getUri());
             }
-            if (acc.getId() == 0) {
-                listView.getItems().add(acc.getInfo().getUri());
+            if (acc.getId() == 2) {
+                // listView.getItems().add(acc.getInfo().getUri());
                 acc.setDefault();
+                acc.getInfo().setRegExpiresSec(3600L);
                 System.out.println(" Registeration Status Expiry time : " + acc.getInfo().getRegExpiresSec());
                 System.out.println(" Account default : " + acc.isDefault() + "    ");
                 System.out.println(acc.isValid());
@@ -117,5 +123,4 @@ public class MainStageController implements Initializable {
             return null;
         }
     }
-
 }

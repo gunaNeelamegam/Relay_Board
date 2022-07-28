@@ -1,6 +1,9 @@
 package com.zilogic.pjproject;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextArea;
+import javafx.animation.FadeTransition;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,13 +11,25 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
-import javafx.scene.text.Text;
+import javafx.util.Duration;
 import org.pjsip.pjsua2.CallOpParam;
+import org.pjsip.pjsua2.CallSetting;
+import org.pjsip.pjsua2.SendInstantMessageParam;
 import org.pjsip.pjsua2.pjsip_status_code;
 import org.pjsip.pjsua2.pjsua_call_flag;
 
 public class OutGoingCallController {
 
+    @FXML
+    FadeTransition ft;
+    @FXML
+    private Label messageStatus;
+
+    @FXML
+    private TextField textmes;
+
+    @FXML
+    private JFXButton send;
     @FXML
     private Pane c;
     int i = 0;
@@ -48,9 +63,16 @@ public class OutGoingCallController {
     MyCall currentCall = null;
     private MyObserver observer = new MyObserver();
 
-    void UpdateCallstate() {
-        System.out.println(" Updating the call state in the label");
-
+    @FXML
+    void DisplayUI() {
+        c.setStyle("-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #ff5d48, #ff5d48);");
+        ft = new FadeTransition(Duration.millis(1000), c);
+        ft.setFromValue(1.0);
+        ft.setToValue(0.6);
+        ft.setCycleCount(Timeline.INDEFINITE);
+        ft.setAutoReverse(true);
+        ft.play();
+        c.setOpacity(1);
     }
 
     @FXML
@@ -123,28 +145,29 @@ public class OutGoingCallController {
                         try {
                             if (i == 0) {
                                 i++;
-                                //   System.out.println(" Current Thread : " + Thread.currentThread().getName());
+                                MyApp.ep.codecSetPriority("speex/32000", (short) 128);
+                                MyApp.ep.codecSetPriority("speex/16000", (short) 128);
+                                System.out.println(" Current Thread : " + Thread.currentThread().getName());
                                 MyAccount acc = MyApp.accList.get(0);
                                 acc.setDefault();
                                 System.out.println(" Account : " + acc.isValid() + acc.isDefault());
                                 currentCall = new MyCall(acc, 0);
-                                currentCall.makeCall("sip:6002@192.168.0.132", new CallOpParam(true));
+                                CallOpParam prm = new CallOpParam();
+                                currentCall.makeCall("sip:" + text.getText().trim() + "@" + acc.getInfo().getUri().substring(9), prm);
                             }
-
                             System.out.println("Call thread : " + Thread.currentThread().getName());
                             if (currentCall.getInfo().getState() != 6) {
                                 System.out.println("++++++++++++++++++");
                                 MyApp.ep.libHandleEvents(10L);
                                 callStatus.setText(currentCall.getInfo().getStateText());
                                 observer.check_OutGoinig_CallDeletion(currentCall);
+                                call.setDisable(true);
                             }
                         } catch (Exception ex) {
                             System.err.println(" Exception while  loading at make OutgoingCall Method");
                             exitThreadCalling = true;
                         }
-
                     }
-
                 };
                 while (!exitThreadCalling) {
                     calling.sleep(100);
@@ -160,8 +183,34 @@ public class OutGoingCallController {
         );
         Thread.currentThread()
                 .setName("calling");
-        t1.setDaemon(
-                true);
         t1.start();
     }
+
+    @FXML
+    void send(ActionEvent event) {
+        //sending the instant message
+        if (currentCall != null) {
+            //sending the instant Message
+            try {
+                SendInstantMessageParam prm = new SendInstantMessageParam();
+                prm.setContentType("text/plain");
+                prm.setContent(textmes.getText());
+                currentCall.sendInstantMessage(prm);
+                messageStatus.setText("sended   :)");
+            } catch (Exception e) {
+                messageStatus.setText("failed --");
+            }
+        }
+
+    }
 }
+//    @FXML
+//    synchronized void makeCall() throws Exception {
+//        MyApp.ep.codecSetPriority("speex/32000", (short) 128);
+//        System.out.println(" Current Thread : " + Thread.currentThread().getName());
+//        MyAccount acc = MyApp.accList.get(0);
+//        acc.setDefault();
+//        System.out.println(" Account : " + acc.isValid() + acc.isDefault());
+//        currentCall = new MyCall(acc, 0);
+//        currentCall.makeCall("sip:" + text.getText().trim() + "@" + acc.getInfo().getUri().substring(9),new CallOpParam(true));
+//    }

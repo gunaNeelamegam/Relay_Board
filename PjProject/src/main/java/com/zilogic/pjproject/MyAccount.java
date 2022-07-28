@@ -8,19 +8,37 @@ package com.zilogic.pjproject;
  *
  * @author user
  */
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
+import javafx.application.Platform;
+import javafx.fxml.Initializable;
 import org.pjsip.pjsua2.Account;
 import org.pjsip.pjsua2.AccountConfig;
 import org.pjsip.pjsua2.BuddyConfig;
+import org.pjsip.pjsua2.CallOpParam;
 import org.pjsip.pjsua2.OnIncomingCallParam;
 import org.pjsip.pjsua2.OnInstantMessageParam;
 import org.pjsip.pjsua2.OnRegStateParam;
+import org.pjsip.pjsua2.pjsip_status_code;
 
 class MyAccount extends Account {
 
+    @Override
+    public String toString() {
+        return "MyAccount{" + "i=" + i + ", incomingcall=" + incomingcall + ", exitIncomingCall=" + exitIncomingCall + ", buddyList=" + buddyList + ", cfg=" + cfg + '}';
+    }
+
+    int i = 0;
+    Thread incomingcall;
+    boolean exitIncomingCall = false;
+    static MyCall currentCall;
     public ArrayList<MyBuddy> buddyList = new ArrayList<>();
 
     public AccountConfig cfg;
+
+    public MyAccount() {
+    }
 
     MyAccount(AccountConfig paramAccountConfig) {
         this.cfg = paramAccountConfig;
@@ -61,15 +79,14 @@ class MyAccount extends Account {
                 .getExpiration());
     }
 
-    public void onIncomingCall(OnIncomingCallParam paramOnIncomingCallParam) {
-        System.out.println("======== Incoming call ======== ");
-         MyApp.ep.libHandleEvents(100);
-//        try {
-//            Thread.sleep(1000);
-//        } catch (InterruptedException ex) {
-//            System.err.println(" Error while at Incoming call at the Account");        }
-        MyCall myCall = new MyCall(this, paramOnIncomingCallParam.getCallId());
-        MyApp.observer.notifyIncomingCall(myCall);
+    public synchronized void onIncomingCall(OnIncomingCallParam paramOnIncomingCallParam) {
+        System.out.println(" INCOMING CALL");
+        try {
+            currentCall = new MyCall(this, paramOnIncomingCallParam.getCallId());
+            CallOpParam prm = new CallOpParam(true);
+            prm.setStatusCode(pjsip_status_code.PJSIP_SC_OK);
+        } catch (Exception ex) {
+        }
     }
 
     public void onInstantMessage(OnInstantMessageParam paramOnInstantMessageParam) {
@@ -80,4 +97,5 @@ class MyAccount extends Account {
         System.out.println("Mimetype : " + paramOnInstantMessageParam.getContentType());
         System.out.println("Body     : " + paramOnInstantMessageParam.getMsgBody());
     }
+
 }

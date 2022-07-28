@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="497.0" prefWidth="323.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zilogic.pjproject.OutGoingCallController">
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="323.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zilogic.pjproject.OutGoingCallController">
    <children>
       <Pane fx:id="c" layoutX="18.0" layoutY="28.0" prefHeight="436.0" prefWidth="277.0">
          <children>
@@ -71,7 +71,22 @@
                   <Font name="Comic Sans MS Bold" size="15.0" />
                </font>
             </TextField>
+            <Label fx:id="messageStatus" alignment="CENTER" layoutX="1.0" layoutY="-17.0" prefHeight="33.0" prefWidth="78.0" textFill="#da1010">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
+      <JFXButton fx:id="send" alignment="CENTER" buttonType="RAISED" layoutX="265.0" layoutY="502.0" onAction="#send" prefHeight="36.0" prefWidth="40.0" ripplerFill="#1ab915" text=":)" textFill="#0da82c">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="textmes" layoutX="14.0" layoutY="502.0" onAction="#send" prefHeight="40.0" prefWidth="235.0" promptText="Text">
+         <font>
+            <Font name="Monospaced Bold Italic" size="16.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>
