@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="795.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zilogic.relayboard.mainController">
+    <top>
+        <HBox alignment="CENTER" prefHeight="85.0" prefWidth="886.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" prefHeight="38.0" prefWidth="204.0" text="BOARD" textFill="WHITE">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <Pane layoutX="1.0" layoutY="-1.0" prefHeight="591.0" prefWidth="386.0">
+                    <children>
+                        <JFXComboBox fx:id="port" focusColor="#0ae15d" labelFloat="true" layoutX="15.0" layoutY="57.0" prefHeight="24.0" prefWidth="170.0" style="-fx-background-color: white;" unFocusColor="#4a0cc6" visibleRowCount="3" />
+                        <Label fx:id="PORT" alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="30.0" prefWidth="155.0" style="-fx-background-color: white;" text="PORT">
+                            <font>
+                                <Font name="Monospaced Bold Italic" size="22.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="PORT1" alignment="CENTER" layoutX="23.0" layoutY="104.0" prefHeight="30.0" prefWidth="155.0" style="-fx-background-color: white;" text="BAUDRATE">
+                            <font>
+                                <Font name="Monospaced Bold Italic" size="22.0" />
+                            </font>
+                        </Label>
+                        <JFXComboBox fx:id="baudrate" focusColor="#0ae15d" labelFloat="true" layoutX="15.0" layoutY="161.0" prefHeight="24.0" prefWidth="170.0" style="-fx-background-color: white;" unFocusColor="#4a0cc6" visibleRowCount="3" />
+                        <Label fx:id="PORT11" alignment="CENTER" layoutX="22.0" layoutY="216.0" prefHeight="30.0" prefWidth="155.0" style="-fx-background-color: white;" text="START_BIT">
+                            <font>
+                                <Font name="Monospaced Bold Italic" size="22.0" />
+                            </font>
+                        </Label>
+                        <JFXComboBox fx:id="startBit" focusColor="#0ae15d" labelFloat="true" layoutX="16.0" layoutY="272.0" prefHeight="24.0" prefWidth="170.0" style="-fx-background-color: white;" unFocusColor="#4a0cc6" visibleRowCount="3" />
+                        <Label fx:id="PORT12" alignment="CENTER" layoutX="22.0" layoutY="316.0" prefHeight="30.0" prefWidth="155.0" style="-fx-background-color: white;" text="STOP_BIT">
+                            <font>
+                                <Font name="Monospaced Bold Italic" size="22.0" />
+                            </font>
+                        </Label>
+                        <JFXComboBox fx:id="stopBit" focusColor="#0ae15d" labelFloat="true" layoutX="15.0" layoutY="371.0" prefHeight="24.0" prefWidth="170.0" style="-fx-background-color: white;" unFocusColor="#4a0cc6" visibleRowCount="3" />
+                        <Label fx:id="PORT121" alignment="CENTER" layoutX="22.0" layoutY="416.0" prefHeight="30.0" prefWidth="155.0" style="-fx-background-color: white;" text="PARITY">
+                            <font>
+                                <Font name="Monospaced Bold Italic" size="22.0" />
+                            </font>
+                        </Label>
+                        <JFXComboBox fx:id="parity" focusColor="#0ae15d" labelFloat="true" layoutX="8.0" layoutY="464.0" prefHeight="24.0" prefWidth="170.0" style="-fx-background-color: white;" unFocusColor="#4a0cc6" visibleRowCount="3" />
+                        <JFXButton buttonType="RAISED" layoutX="16.0" layoutY="544.0" onAction="#showOpen" ripplerFill="#1d1e1d" style="-fx-background-color: black;" text="open" textFill="#eeecec">
+                            <font>
+                                <Font name="Monospaced Bold Italic" size="17.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="closeBtn" buttonType="RAISED" layoutX="298.0" layoutY="544.0" onAction="#showClose" ripplerFill="#1d1e1d" style="-fx-background-color: black;" text="close" textFill="#fffefe">
+                            <font>
+                                <Font name="Monospaced Bold Italic" size="17.0" />
+                            </font>
+                        </JFXButton>
+                  <JFXButton fx:id="referesh" alignment="CENTER" buttonType="RAISED" layoutX="317.0" layoutY="5.0" onAction="#refresh_port" ripplerFill="#27d615" style="-fx-background-color: black;" text="Ref" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold Italic" size="16.0" />
+                     </font>
+                  </JFXButton>
+                    </children>
+                </Pane>
+                <Pane layoutX="393.0" layoutY="2.0" prefHeight="581.0" prefWidth="402.0">
+                    <children>
+                        <JFXListView fx:id="commands" layoutX="14.0" layoutY="318.0" prefHeight="209.0" prefWidth="200.0" style="-fx-background-color: white;" verticalGap="1.0">
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </JFXListView>
+                        <Label alignment="CENTER" graphicTextGap="6.0" layoutX="25.0" layoutY="267.0" prefHeight="32.0" prefWidth="196.0" text="ENABLE_REG">
+                            <font>
+                                <Font name="Gargi" size="17.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="comText" layoutX="230.0" layoutY="312.0" prefHeight="38.0" prefWidth="158.0" promptText="command" style="-fx-background-color: white;">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </TextField>
+                        <JFXButton fx:id="send" buttonType="RAISED" layoutX="278.0" layoutY="365.0" onAction="#send_port" prefHeight="33.0" prefWidth="74.0" ripplerFill="#1d1e1d" style="-fx-background-color: black;" text="send" textFill="#fffefe">
+                            <font>
+                                <Font name="Monospaced Bold Italic" size="17.0" />
+                            </font>
+                        </JFXButton>
+                  <TextField layoutX="114.0" layoutY="66.0" />
+                  <TextField fx:id="response" alignment="TOP_LEFT" layoutX="44.0" layoutY="56.0" prefHeight="147.0" prefWidth="313.0" promptText="Response">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

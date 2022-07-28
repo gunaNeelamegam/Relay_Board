@@ -1,0 +1,4 @@
+#mainPane{
+    -fx-background-images:url(/home/user/NetBeansProjects/RelayBoard/src/main/resources/com/zilogic/relayboard/board.jpg);
+    -fx-background-color:transparent;
+}
