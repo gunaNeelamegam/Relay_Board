@@ -9,7 +9,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class AddAccountController {
-
+    
     String domainAddress;
     String username;
     String password;
@@ -29,12 +29,12 @@ public class AddAccountController {
     String callStatus;
     private MyObserver observer = new MyObserver();
     public static ArrayList<AddAccount> userdetails = new ArrayList<AddAccount>();
-
+    
     @FXML
-    public void save() throws IOException, Exception {
-
+    public  synchronized void save() throws IOException, Exception {
+        
         System.out.println("Thread name : " + Thread.currentThread().getName());
-
+        
         var addaccount = new AddAccount();
         domainAddress = domain.getText();
         username = user.getText();
@@ -53,8 +53,8 @@ public class AddAccountController {
                         try {
                             MainStageController.createAccount();
                             MyApp.ep.libHandleEvents(10L);
-                            AddAccountController.exitRegThread = observer.verifyregisteration();
-                            if (MainStageController.account.getId() == 0) {
+                            if (MainStageController.account.getId() != -1) {
+                                MainStageController.account.getInfo().setRegExpiresSec(500000);
                                 exitRegThread = true;
                             }
                         } catch (Exception ex) {
@@ -64,7 +64,7 @@ public class AddAccountController {
                 };
                 while (!exitRegThread) {
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(10);
                     } catch (Exception e) {
                         System.out.println(e);
                     }
@@ -73,10 +73,9 @@ public class AddAccountController {
             }
         });
         accountRegThread.setName("AccountReg");
-        accountRegThread.setDaemon(true);
         accountRegThread.start();
     }
-
+    
     @FXML
     public void close() {
         MainStageController.addAccountStage.close();

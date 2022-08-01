@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXTextArea;
 import javafx.animation.FadeTransition;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -19,15 +20,15 @@ import org.pjsip.pjsua2.pjsip_status_code;
 import org.pjsip.pjsua2.pjsua_call_flag;
 
 public class OutGoingCallController {
-
+    
     @FXML
     FadeTransition ft;
     @FXML
     private Label messageStatus;
-
+    
     @FXML
     private TextField textmes;
-
+    
     @FXML
     private JFXButton send;
     @FXML
@@ -35,46 +36,49 @@ public class OutGoingCallController {
     int i = 0;
     @FXML
     private JFXButton call;
-
+    
     @FXML
     Label callStatus;
-
+    
     @FXML
     private Circle circle;
-
+    
     @FXML
     private JFXButton hangUp;
-
+    
     @FXML
     private JFXButton mute;
-
+    
     @FXML
     private JFXButton unHoldCall;
-
+    
     @FXML
     private JFXButton unMute;
     @FXML
     private JFXButton holdCall;
-
+    
     @FXML
     private TextField text;
     Thread calling;
     static boolean exitThreadCalling = false;
     MyCall currentCall = null;
     private MyObserver observer = new MyObserver();
-
-    @FXML
-    void DisplayUI() {
-        c.setStyle("-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #ff5d48, #ff5d48);");
-        ft = new FadeTransition(Duration.millis(1000), c);
-        ft.setFromValue(1.0);
-        ft.setToValue(0.6);
-        ft.setCycleCount(Timeline.INDEFINITE);
-        ft.setAutoReverse(true);
-        ft.play();
-        c.setOpacity(1);
-    }
-
+    
+    Task<Void> task = new Task<Void>() {
+        @Override
+        protected Void call() throws Exception {
+            c.setStyle("-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #00FF00, #FFFFFF);");
+            ft = new FadeTransition(Duration.millis(1000), c);
+            ft.setFromValue(1.0);
+            ft.setToValue(0.6);
+            c.opacityProperty().set(0);
+            ft.setCycleCount(Timeline.INDEFINITE);
+            ft.setAutoReverse(true);
+            ft.play();
+            return null;
+        }
+    };
+    
     @FXML
     void hangUpCall() throws Exception {
         if (currentCall != null) {
@@ -87,26 +91,26 @@ public class OutGoingCallController {
             MainStageController.outGoingCallStage.close();
         }
     }
-
+    
     @FXML
     void muteCall(ActionEvent event) throws Exception {
         if (currentCall != null) {
             currentCall.audioMedia.adjustRxLevel(0);
-            MyApp.ep.libHandleEvents(100);
+            MyApp.ep.libHandleEvents(10L);
             System.out.println("current call mute : " + currentCall.audioMedia.getTxLevel());
         }
     }
-
+    
     @FXML
     void unMute_Call() throws Exception {
         System.out.println("unmute call");
         if (currentCall != null) {
             CallOpParam prm = new CallOpParam(true);
             currentCall.audioMedia.adjustRxLevel((float) 1);
-            MyApp.ep.libHandleEvents(100);
+            MyApp.ep.libHandleEvents(10L);
         }
     }
-
+    
     @FXML
     void hold() throws Exception {
         System.out.println(" Hold the Call");
@@ -115,7 +119,7 @@ public class OutGoingCallController {
             callOp.setStatusCode(pjsua_call_flag.PJSUA_CALL_UPDATE_CONTACT);
             callOp.setReason("hold");
             currentCall.setHold(callOp);
-            MyApp.ep.libHandleEvents(100);
+            MyApp.ep.libHandleEvents(10L);
         }
     }
 
@@ -127,7 +131,7 @@ public class OutGoingCallController {
             CallOpParam callOp = new CallOpParam(true);
             callOp.getOpt().setFlag(1);
             currentCall.reinvite(callOp);
-            MyApp.ep.libHandleEvents(100);
+            MyApp.ep.libHandleEvents(10L);
         }
     }
 
@@ -135,8 +139,8 @@ public class OutGoingCallController {
     The Method is used for creating the OutGoingcall
      */
     @FXML
-    void makeCall() {
-
+    void makeCall() throws Exception {
+        
         Thread t1 = new Thread(() -> {
             try {
                 var a = new Runnable() {
@@ -145,24 +149,18 @@ public class OutGoingCallController {
                         try {
                             if (i == 0) {
                                 i++;
-                                MyApp.ep.codecSetPriority("speex/32000", (short) 128);
-                                MyApp.ep.codecSetPriority("speex/16000", (short) 128);
                                 System.out.println(" Current Thread : " + Thread.currentThread().getName());
                                 MyAccount acc = MyApp.accList.get(0);
                                 acc.setDefault();
-                                System.out.println(" Account : " + acc.isValid() + acc.isDefault());
                                 currentCall = new MyCall(acc, 0);
                                 CallOpParam prm = new CallOpParam();
                                 currentCall.makeCall("sip:" + text.getText().trim() + "@" + acc.getInfo().getUri().substring(9), prm);
+                                Thread fade = new Thread(task);
+                                fade.start();
                             }
-                            System.out.println("Call thread : " + Thread.currentThread().getName());
-                            if (currentCall.getInfo().getState() != 6) {
-                                System.out.println("++++++++++++++++++");
-                                MyApp.ep.libHandleEvents(10L);
-                                callStatus.setText(currentCall.getInfo().getStateText());
-                                observer.check_OutGoinig_CallDeletion(currentCall);
-                                call.setDisable(true);
-                            }
+                            MyApp.ep.libHandleEvents(10L);
+                            callStatus.setText(currentCall.getInfo().getStateText());
+                            call.setDisable(true);
                         } catch (Exception ex) {
                             System.err.println(" Exception while  loading at make OutgoingCall Method");
                             exitThreadCalling = true;
@@ -170,7 +168,7 @@ public class OutGoingCallController {
                     }
                 };
                 while (!exitThreadCalling) {
-                    calling.sleep(100);
+                    Thread.sleep(10);
                     Platform.runLater(a);
                 }
             } catch (Exception ex) {
@@ -181,11 +179,10 @@ public class OutGoingCallController {
             }
         }
         );
-        Thread.currentThread()
-                .setName("calling");
+        Thread.currentThread().setName("calling");
         t1.start();
     }
-
+    
     @FXML
     void send(ActionEvent event) {
         //sending the instant message
@@ -201,7 +198,7 @@ public class OutGoingCallController {
                 messageStatus.setText("failed --");
             }
         }
-
+        
     }
 }
 //    @FXML

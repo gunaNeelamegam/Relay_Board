@@ -29,17 +29,17 @@ class MyCall extends Call {
     }
 
     public void onCallState(OnCallStateParam paramOnCallStateParam) {
-        try {
-            CallInfo callInfo = getInfo();
-            //6 means that pjsip_inv_state id disConneted
-            MyApp.ep.libHandleEvents(1000);
-            if (callInfo.getState() == 6) {
-//                MyApp.ep.utilLogWrite(3, "MyCall", dump(true, ""));
-                MainStageController.outGoingCallStage.close();
-            }
-        } catch (Exception exception) {
-            System.err.println(" Exeption  while onCallState method");
-        }
+//        try {
+//            CallInfo callInfo = getInfo();
+//            //6 means that pjsip_inv_state id disConneted
+////            MyApp.ep.libHandleEvents(10L);
+//            if (callInfo.getState() == 6) {
+////                MyApp.ep.utilLogWrite(3, "MyCall", dump(true, ""));
+//                MainStageController.outGoingCallStage.close();
+//            }
+//        } catch (Exception exception) {
+//            System.err.println(" Exeption  while onCallState method");
+//        }
         MyApp.observer.notifyCallState(this);
     }
 

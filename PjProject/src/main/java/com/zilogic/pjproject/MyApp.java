@@ -63,8 +63,6 @@ class MyApp {
         }
         this.epConfig.getLogConfig().setLevel(4L);
         this.epConfig.getLogConfig().setConsoleLevel(4L);
-//        ep.codecSetPriority("speex/32000", (short) 132);
-//        ep.codecSetPriority("speex/16000", (short) 132);
         LogConfig logConfig = this.epConfig.getLogConfig();
         this.logWriter = new MyLogWriter();
         logConfig.setWriter((LogWriter) this.logWriter);
@@ -72,8 +70,8 @@ class MyApp {
         UaConfig uaConfig = this.epConfig.getUaConfig();
         uaConfig.setUserAgent("Guna Application " + ep.libVersion().getFull());
         if (paramBoolean) {
-            uaConfig.setThreadCnt(0L);
-            uaConfig.setMainThreadOnly(true);
+            uaConfig.setThreadCnt(1L);
+            uaConfig.setMainThreadOnly(false);
         }
         try {
             ep.libInit(this.epConfig);
@@ -98,8 +96,8 @@ class MyApp {
         }
         this.sipTpConfig.setPort(6000L);
         //To clear the all the Data inside the List 
-        accCfgs.clear();
-        accList.clear();
+//        accCfgs.clear();
+//        accList.clear();
         for (int b = 0; b < accCfgs.size(); b++) {
             MyAccountConfig myAccountConfig = accCfgs.get(b);
             myAccountConfig.accCfg.getNatConfig().setIceEnabled(true);

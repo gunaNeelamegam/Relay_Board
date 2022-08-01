@@ -18,22 +18,10 @@ class MyObserver implements MyAppObserver {
         }
     }
 
-    public void check_OutGoinig_CallDeletion(MyCall call) throws Exception {
-        CallInfo info = call.getInfo();
-        System.out.println(" Call instance : " + call.getInfo().getStateText());
-        System.out.println(" call : " + call.isActive() + call);
-        if (call == null && info.getState() == 6) {
-            CallOpParam prm = new CallOpParam(true);
-            OutGoingCallController.exitThreadCalling = true;
-            call.delete();
-            call = null;
-            System.out.println(" Call Deleted ");
-        }
-    }
-
     public void notifyRegState(int paramInt, String paramString, long paramLong) {
 
-        System.out.println(" Registartion status : " + paramString);
+        System.out.println(" Registartion status : " + paramString + "Param status code : " + paramInt);
+
     }
 
     public void notifyIncomingCall(MyCall paramMyCall) {
@@ -69,6 +57,9 @@ class MyObserver implements MyAppObserver {
         if (callInfo.getState() == 6) {
             System.out.println(" Call state :  " + callInfo.getStateText()); // Logger.getLogger(MyObserver.class.getName()).log(Level.SEVERE, null, ex);
             this.del_call_scheduled = true;
+            paramMyCall.delete();
+            paramMyCall = null;
+            OutGoingCallController.exitThreadCalling = true;
         }
 
     }
@@ -77,15 +68,5 @@ class MyObserver implements MyAppObserver {
     }
 
     public void notifyChangeNetwork() {
-    }
-
-    public boolean verifyregisteration() throws Exception {
-
-        if (MainStageController.account.getInfo().getRegIsActive() && MainStageController.account.getInfo().getRegStatus() == 200) {
-            System.out.println(" Account Registeration is Done...!");
-            return true;
-        } else {
-            return false;
-        }
     }
 }

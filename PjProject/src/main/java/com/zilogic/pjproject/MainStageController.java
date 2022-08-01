@@ -1,8 +1,13 @@
 package com.zilogic.pjproject;
 
+import com.jfoenix.controls.JFXButton;
+import static com.zilogic.pjproject.MyAccount.INCOMINGCALL;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -33,19 +38,71 @@ public class MainStageController implements Initializable {
     private static AccountConfig accCfg = null;
     @FXML
     public static BorderPane borderPane;
+    static Stage incoming_stage = null;
+    static int i = 0;
+
+    @FXML
+    JFXButton incomingCallBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
         try {
-            // Runtime.getRuntime().addShutdownHook((Thread) new MyShutdownHook(Thread.currentThread()));
             app.init((MyAppObserver) observer, ".", true);
+            loadingIncomingUI();
         } catch (Exception ex) {
             System.err.println(" Excpetion while loading the runWorker");
         }
     }
 
     @FXML
+    public void loadIncomingUI() {
+        try {
+            incoming_stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("ic.fxml"));
+            Scene scene = new Scene(root);
+            incoming_stage.setScene(scene);
+            incoming_stage.setTitle("Incomingcall");
+            incoming_stage.showAndWait();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    Task<Void> task;
+
+    @FXML
+    public void loadingIncomingUI() {
+
+        task = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                while (true) {
+                    Thread.sleep(100);
+                    try {
+                        System.out.println("INCOMING CALL");
+                        if (INCOMINGCALL == 1) {
+                            INCOMINGCALL++;
+                            System.out.println("INCOMING CALL fired");
+                            Platform.runLater(() -> {
+                                loadIncomingUI();
+                            });
+                            task.cancel();
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Exception while loading the incoming call ");
+                        System.out.println(e.getMessage());
+                    }
+                }
+                //   return null;
+            }
+
+        };
+        new Thread(task).start();
+    }
+
+    @FXML
+
     public void accountButton() throws IOException {
 
         addAccountStage = new Stage();
@@ -106,16 +163,15 @@ public class MainStageController implements Initializable {
             if (acc.isDefault()) {
                 System.out.println("account uri : " + acc.getInfo().getUri());
             }
-            if (acc.getId() == 2) {
-                // listView.getItems().add(acc.getInfo().getUri());
-                acc.setDefault();
-                acc.getInfo().setRegExpiresSec(3600L);
-                System.out.println(" Registeration Status Expiry time : " + acc.getInfo().getRegExpiresSec());
-                System.out.println(" Account default : " + acc.isDefault() + "    ");
-                System.out.println(acc.isValid());
-                acc.getInfo().setOnlineStatus(true);
-                System.out.println(accinfo.getOnlineStatus() + "Account status  text :" + accinfo.getOnlineStatusText());
-            }
+            // listView.getItems().add(acc.getInfo().getUri());
+            acc.setDefault();
+            acc.getInfo().setRegExpiresSec(500000L);
+            System.out.println(" Registeration Status Expiry time : " + acc.getInfo().getRegExpiresSec());
+            System.out.println(" Account default : " + acc.isDefault() + "    ");
+            System.out.println(acc.isValid());
+            acc.getInfo().setOnlineStatus(true);
+            System.out.println(accinfo.getOnlineStatus() + "Account status  text :" + accinfo.getOnlineStatusText());
+
         }
         if (account != null) {
             return account;

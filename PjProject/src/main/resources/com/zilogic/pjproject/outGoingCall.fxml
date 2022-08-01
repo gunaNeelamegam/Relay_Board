@@ -5,37 +5,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="323.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zilogic.pjproject.OutGoingCallController">
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zilogic.pjproject.OutGoingCallController">
    <children>
-      <Pane fx:id="c" layoutX="18.0" layoutY="28.0" prefHeight="436.0" prefWidth="277.0">
+      <Pane fx:id="c" layoutY="-3.0" prefHeight="564.0" prefWidth="306.0">
          <children>
-            <Circle fx:id="circle" fill="#f2a2a2" layoutX="139.0" layoutY="138.0" radius="124.0" stroke="#4eb3b5" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="5.0">
-<!--               <fill>
-                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.1658535897731781" green="0.16329999268054962" blue="0.7099999785423279" opacity="0.6399999856948853" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.9736841917037964" green="0.2930068373680115" blue="0.2930068373680115" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </fill>-->
-                </Circle>
-            <Label fx:id="callStatus" alignment="CENTER" layoutX="54.0" layoutY="106.0" prefHeight="32.0" prefWidth="186.0" style="-fx-background-color: #ebe7e7;" textFill="#e80d0d">
-               
-               <font>
-                  <Font name="Comic Sans MS Bold" size="19.0" />
-               </font>
-            </Label>
             <JFXButton fx:id="call" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="96.0" layoutY="398.0" onAction="#makeCall" ripplerFill="#f56d0c" text="call" textFill="#322828">
                <font>
                   <Font size="17.0" />
@@ -76,17 +51,23 @@
                   <Font size="15.0" />
                </font>
             </Label>
+            <TextField fx:id="textmes" layoutX="16.0" layoutY="483.0" onAction="#send" prefHeight="40.0" prefWidth="235.0" promptText="Text">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="16.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="send" alignment="CENTER" buttonType="RAISED" layoutX="261.0" layoutY="483.0" onAction="#send" prefHeight="36.0" prefWidth="40.0" ripplerFill="#1ab915" text=":)" textFill="#0da82c">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="callStatus" alignment="CENTER" layoutX="60.0" layoutY="110.0" prefHeight="32.0" prefWidth="186.0" style="-fx-background-color: #ebe7e7;" textFill="#e80d0d">
+               
+                                 <font>
+                  <Font name="Comic Sans MS Bold" size="19.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <JFXButton fx:id="send" alignment="CENTER" buttonType="RAISED" layoutX="265.0" layoutY="502.0" onAction="#send" prefHeight="36.0" prefWidth="40.0" ripplerFill="#1ab915" text=":)" textFill="#0da82c">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </JFXButton>
-      <TextField fx:id="textmes" layoutX="14.0" layoutY="502.0" onAction="#send" prefHeight="40.0" prefWidth="235.0" promptText="Text">
-         <font>
-            <Font name="Monospaced Bold Italic" size="16.0" />
-         </font>
-      </TextField>
    </children>
 </AnchorPane>
