@@ -50,6 +50,7 @@ public class MainStageController implements Initializable {
         try {
             app.init((MyAppObserver) observer, ".", true);
             loadingIncomingUI();
+            dis_ConnectCallStage();
         } catch (Exception ex) {
             System.err.println(" Excpetion while loading the runWorker");
         }
@@ -59,7 +60,7 @@ public class MainStageController implements Initializable {
     public void loadIncomingUI() {
         try {
             incoming_stage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("ic.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("IncomingCall.fxml"));
             Scene scene = new Scene(root);
             incoming_stage.setScene(scene);
             incoming_stage.setTitle("Incomingcall");
@@ -69,16 +70,19 @@ public class MainStageController implements Initializable {
         }
     }
 
-    Task<Void> task;
+    /*
+    @param methid is used to verfify the incoming call is Arrived or not
+     */
+    static Task<Void> task;
 
     @FXML
-    public void loadingIncomingUI() {
+    public  synchronized void loadingIncomingUI() {
 
         task = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
                 while (true) {
-                    Thread.sleep(100);
+                    Thread.sleep(1000);
                     try {
                         System.out.println("INCOMING CALL");
                         if (INCOMINGCALL == 1) {
@@ -87,7 +91,6 @@ public class MainStageController implements Initializable {
                             Platform.runLater(() -> {
                                 loadIncomingUI();
                             });
-                            task.cancel();
                         }
                     } catch (Exception e) {
                         System.out.println("Exception while loading the incoming call ");
@@ -99,6 +102,49 @@ public class MainStageController implements Initializable {
 
         };
         new Thread(task).start();
+    }
+
+    /*
+    *creating the Thread for verfify and close the stage for the Incoming and OutGoing call stage 
+     */
+    static Task<Void> dis_connect;
+
+    void disConnect_UI() {
+        if (MainStageController.incoming_stage.isShowing()) {
+            MainStageController.incoming_stage.close();
+        }
+        if (MainStageController.outGoingCallStage.isShowing()) {
+//            OutGoingCallController.exitThreadCalling = true;
+            MainStageController.outGoingCallStage.close();
+        }
+    }
+
+    @FXML
+    public  synchronized void dis_ConnectCallStage() {
+
+        dis_connect = new Task<Void>() {
+            @Override
+            protected Void call() throws Exception {
+                while (true) {
+                    Thread.sleep(1000);
+                    try {
+                        System.out.println("DISCCONECT CALL");
+                        if (MyCall.DISCONNECTCALL == 6) {
+                            MyCall.DISCONNECTCALL = 0;
+                            System.out.println("DISCCONECT STAGE ");
+                            Platform.runLater(() -> {
+                                disConnect_UI();
+                            });
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Exception while loading the incoming call ");
+                        System.out.println(e.getMessage());
+                    }
+                }
+            }
+
+        };
+        new Thread(dis_connect).start();
     }
 
     @FXML
@@ -141,6 +187,9 @@ public class MainStageController implements Initializable {
         addAccountStage.show();
     }
 
+    /*
+    @param method is used for creating the account using the External Thread for polling the Event
+     */
     @FXML
     public static MyAccount createAccount() throws Exception {
         MyApp.accList.clear();
@@ -163,15 +212,12 @@ public class MainStageController implements Initializable {
             if (acc.isDefault()) {
                 System.out.println("account uri : " + acc.getInfo().getUri());
             }
-            // listView.getItems().add(acc.getInfo().getUri());
             acc.setDefault();
-            acc.getInfo().setRegExpiresSec(500000L);
-            System.out.println(" Registeration Status Expiry time : " + acc.getInfo().getRegExpiresSec());
-            System.out.println(" Account default : " + acc.isDefault() + "    ");
-            System.out.println(acc.isValid());
-            acc.getInfo().setOnlineStatus(true);
-            System.out.println(accinfo.getOnlineStatus() + "Account status  text :" + accinfo.getOnlineStatusText());
-
+//            System.out.println(" Registeration Status Expiry time : " + acc.getInfo().getRegExpiresSec());
+//            System.out.println(" Account default : " + acc.isDefault() + "    ");
+//            System.out.println(acc.isValid());
+//            acc.getInfo().setOnlineStatus(true);
+//            System.out.println(accinfo.getOnlineStatus() + "Account status  text :" + accinfo.getOnlineStatusText());
         }
         if (account != null) {
             return account;

@@ -1,28 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zilogic.pjproject.IncomingCallController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="342.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zilogic.pjproject.IncomingCallController">
    <children>
-      <JFXButton fx:id="answer" buttonType="RAISED" layoutX="31.0" layoutY="452.0" onAction="#answer" ripplerFill="#09da1e" style="-fx-background-color: green;" text="answer" textFill="#dddada">
+      <JFXButton fx:id="hangUp" buttonType="RAISED" contentDisplay="TOP" layoutX="232.0" layoutY="473.0" onAction="#hangUp" prefHeight="81.0" prefWidth="90.0" ripplerFill="#09db1e" text=" " textFill="WHITE">
          <font>
-            <Font name="FreeMono" size="14.0" />
+            <Font size="14.0" />
          </font>
+         <graphic>
+            <FontAwesomeIconView fill="#e10707" glyphName="PHONE" size="30" wrappingWidth="11.0">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </FontAwesomeIconView>
+         </graphic>
       </JFXButton>
-      <JFXButton fx:id="hangUp" buttonType="RAISED" layoutX="228.0" layoutY="452.0" onAction="#hangUp" ripplerFill="#d90b0b" style="-fx-background-color: red;" text="hangUp" textFill="WHITE">
+      <JFXButton fx:id="answer" buttonType="RAISED" contentDisplay="TOP" layoutX="14.0" layoutY="463.0" onAction="#answer" prefHeight="101.0" prefWidth="77.0" ripplerFill="#09db1e" text=" " textFill="WHITE">
          <font>
-            <Font name="FreeMono" size="13.0" />
+            <Font size="14.0" />
          </font>
+         <graphic>
+            <FontAwesomeIconView fill="#1ce009" fontSmoothingType="LCD" glyphName="PHONE" selectionFill="#e8e2e2" size="30" wrappingWidth="11.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </FontAwesomeIconView>
+         </graphic>
       </JFXButton>
-      <Circle fill="WHITE" layoutX="155.0" layoutY="168.0" radius="118.0" stroke="#5df700" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" />
-      <Label fx:id="caller" alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="119.0" prefHeight="49.0" prefWidth="133.0" textFill="#1b0a0a">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
+      <Circle layoutX="171.0" layoutY="190.0" radius="145.0" stroke="#0aae0c" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 50;" />
+      <Label fx:id="caller" alignment="CENTER" contentDisplay="CENTER" layoutX="110.0" layoutY="145.0" prefHeight="63.0" prefWidth="122.0" />
+      <Circle layoutX="165.0" layoutY="190.0" radius="100.0" stroke="#8e3db8" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 60;" />
+      <Circle layoutX="171.0" layoutY="190.0" radius="48.0" stroke="#654848" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="10.0" style="-fx-stroke-dash-array: 70;" />
    </children>
 </AnchorPane>

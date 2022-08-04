@@ -1,0 +1,68 @@
+@FXML
+    void makecall() throws Exception {
+
+        Thread t1 = new Thread(() -> {
+            try {
+                var a = new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            if (i == 0) {
+                                i++;
+                                System.out.println(" Current Thread : " + Thread.currentThread().getName());
+                                MyAccount acc = MyApp.accList.get(0);
+                                acc.setDefault();
+                                currentCall = new MyCall(acc, 0);
+                                CallOpParam prm = new CallOpParam();
+                                currentCall.makeCall("sip:" + text.getText().trim() + "@" + acc.getInfo().getUri().substring(9), prm);
+                            }
+                            callStatus.setText(currentCall.getInfo().getStateText());
+                            call.setDisable(true);
+                        } catch (Exception ex) {
+                            System.err.println(" Exception while  loading at make OutgoingCall Method");
+                            exitThreadCalling = true;
+                        }
+                    }
+                };
+                while (!exitThreadCalling) {
+                    Thread.sleep(10);
+                    Platform.runLater(a);
+                }
+            } catch (Exception ex) {
+                System.out.println(" Excpetion while loading the outgoingcall");
+            } finally {
+                exitThreadCalling = false;
+                i = 0;
+            }
+        }
+        );
+        Thread.currentThread().setName("calling");
+        t1.start();
+    }
+
+}
+
+//        makecall = new Task() {
+//            @Override
+//            protected Void call() throws Exception {
+//                Platform.runLater(() -> {
+//                    try {
+//                        if (i == 0) {
+//                            i++;
+//                            MyAccount acc = MyApp.accList.get(0);
+//                            acc.setDefault();
+//                            currentCall = new MyCall(acc, 0);
+//                            CallOpParam prm = new CallOpParam();
+//                            currentCall.makeCall("sip:" + text.getText().trim() + "@" + acc.getInfo().getUri().substring(9), prm);
+//                        }
+//                    } catch (Exception r) {
+//                        System.err.println(" Exception while  loading at make OutgoingCall Method");
+//                        makecall.cancel();
+//                    }
+//                });
+//                return null;
+//            }
+//        };
+//        Thread t1 = new Thread(makecall);
+//        t1.start();
+ 

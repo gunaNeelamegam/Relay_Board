@@ -4,12 +4,13 @@ import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
 import java.util.ArrayList;
 import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class AddAccountController {
-    
+
     String domainAddress;
     String username;
     String password;
@@ -29,12 +30,14 @@ public class AddAccountController {
     String callStatus;
     private MyObserver observer = new MyObserver();
     public static ArrayList<AddAccount> userdetails = new ArrayList<AddAccount>();
-    
+
+
+    Task<Void> task;
+
     @FXML
-    public  synchronized void save() throws IOException, Exception {
-        
+    void save() throws Exception {
+        MyApp.accList.clear();
         System.out.println("Thread name : " + Thread.currentThread().getName());
-        
         var addaccount = new AddAccount();
         domainAddress = domain.getText();
         username = user.getText();
@@ -43,42 +46,76 @@ public class AddAccountController {
         addaccount.setDomainAddress(domainAddress);
         addaccount.setPassword(password);
         userdetails.add(addaccount);
-        MainStageController.addAccountStage.close();
-        accountRegThread = new Thread(new Runnable() {
+        task = new Task() {
             @Override
-            public void run() {
-                var updater = new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            MainStageController.createAccount();
-                            MyApp.ep.libHandleEvents(10L);
-                            if (MainStageController.account.getId() != -1) {
-                                MainStageController.account.getInfo().setRegExpiresSec(500000);
-                                exitRegThread = true;
-                            }
-                        } catch (Exception ex) {
-                            System.err.println("Exception while Runlater Method....");
-                        }
-                    }
-                };
-                while (!exitRegThread) {
+            protected Void call() throws Exception {
+                Platform.runLater(() -> {
                     try {
-                        Thread.sleep(10);
+                        System.out.println("Account ");
+                        MyAccount account = MainStageController.createAccount();
+                        MyApp.ep.libHandleEvents(10L);
+                        if (account.getId() != -1) {
+                            MainStageController.addAccountStage.close();
+                            task.cancel();
+                        }
                     } catch (Exception e) {
-                        System.out.println(e);
                     }
-                    Platform.runLater(updater);
-                }
+                });
+                return null;
             }
-        });
-        accountRegThread.setName("AccountReg");
-        accountRegThread.start();
+        };
+        Thread t1 = new Thread(task);
+        t1.start();
     }
-    
+
     @FXML
     public void close() {
         MainStageController.addAccountStage.close();
         System.out.println(" add Account close SuccessFully");
     }
 }
+
+//    @FXML
+//    public synchronized void save() throws IOException, Exception {
+//        MyApp.accList.clear();
+//        System.out.println("Thread name : " + Thread.currentThread().getName());
+//        var addaccount = new AddAccount();
+//        domainAddress = domain.getText();
+//        username = user.getText();
+//        password = pass.getText();
+//        addaccount.setUsername(username);
+//        addaccount.setDomainAddress(domainAddress);
+//        addaccount.setPassword(password);
+//        userdetails.add(addaccount);
+//        accountRegThread = new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                var updater = new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        try {
+//                            MainStageController.createAccount();
+//                            MyApp.ep.libHandleEvents(10L);
+//                            if (MainStageController.account.getId() != -1) {
+//                                if (MainStageController.account.getInfo().getRegStatusText().equalsIgnoreCase("OK"));
+//                                MainStageController.addAccountStage.close();
+//                                exitRegThread = true;
+//                            }
+//                        } catch (Exception ex) {
+//                            System.err.println("Exception while Runlater Method....");
+//                        }
+//                    }
+//                };
+//                while (!exitRegThread) {
+//                    try {
+//                        Thread.sleep(10);
+//                    } catch (Exception e) {
+//                        System.out.println(e);
+//                    }
+//                    Platform.runLater(updater);
+//                }
+//            }
+//        });
+//        accountRegThread.setName("AccountReg");
+//        accountRegThread.start();
+//    }

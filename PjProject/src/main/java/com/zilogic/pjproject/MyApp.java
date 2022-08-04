@@ -4,6 +4,8 @@ import java.io.File;
 import java.util.ArrayList;
 import org.pjsip.pjsua2.AccountConfig;
 import org.pjsip.pjsua2.BuddyConfig;
+import org.pjsip.pjsua2.CodecInfo;
+import org.pjsip.pjsua2.CodecInfoVector2;
 import org.pjsip.pjsua2.ContainerNode;
 import org.pjsip.pjsua2.Endpoint;
 import org.pjsip.pjsua2.EpConfig;
@@ -17,7 +19,7 @@ import org.pjsip.pjsua2.UaConfig;
 
 class MyApp {
 
-    static {
+        static {
         System.loadLibrary("pjsua2");
         System.loadLibrary("openh264");
     }
@@ -75,10 +77,16 @@ class MyApp {
         }
         try {
             ep.libInit(this.epConfig);
+
         } catch (Exception exception) {
             return;
         }
         try {
+            CodecInfoVector2 codeinfo = ep.codecEnum2();
+            for (CodecInfo c : codeinfo) {
+                System.out.println(" code : " + c.getCodecId() + " " + c.getPriority());
+            }
+            ep.codecSetPriority("speex/32000/1", (short) 130);
             ep.transportCreate(1, this.sipTpConfig);
         } catch (Exception exception) {
             System.out.println(exception);

@@ -5,6 +5,7 @@ import org.pjsip.pjsua2.CallOpParam;
 
 class MyObserver implements MyAppObserver {
 
+    MainStageController mainCon = new MainStageController();
     protected static MyCall currentCall = null;
 
     private boolean del_call_scheduled = false;
@@ -18,12 +19,14 @@ class MyObserver implements MyAppObserver {
         }
     }
 
+    @Override
     public void notifyRegState(int paramInt, String paramString, long paramLong) {
 
         System.out.println(" Registartion status : " + paramString + "Param status code : " + paramInt);
 
     }
 
+    @Override
     public void notifyIncomingCall(MyCall paramMyCall) {
         System.out.println(" INCOMING CALL  in NOTIFY METHOD");
         try {
@@ -39,10 +42,12 @@ class MyObserver implements MyAppObserver {
 
     }
 
+    @Override
     public void notifyCallMediaState(MyCall paramMyCall) {
         System.out.println("MEDIA STATE : " + paramMyCall.toString());
     }
 
+    @Override
     public void notifyCallState(MyCall paramMyCall) {
 
         CallInfo callInfo;
@@ -59,14 +64,16 @@ class MyObserver implements MyAppObserver {
             this.del_call_scheduled = true;
             paramMyCall.delete();
             paramMyCall = null;
-            OutGoingCallController.exitThreadCalling = true;
+          
         }
 
     }
 
+    @Override
     public void notifyBuddyState(MyBuddy paramMyBuddy) {
     }
 
+    @Override
     public void notifyChangeNetwork() {
     }
 }

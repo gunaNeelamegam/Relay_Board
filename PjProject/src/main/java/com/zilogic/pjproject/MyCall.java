@@ -1,7 +1,10 @@
 package com.zilogic.pjproject;
 
+import javafx.application.Platform;
+import javafx.concurrent.Task;
 import org.pjsip.pjsua2.Account;
 import org.pjsip.pjsua2.AudioMedia;
+import org.pjsip.pjsua2.AudioMediaPlayer;
 import org.pjsip.pjsua2.Call;
 import org.pjsip.pjsua2.CallInfo;
 import org.pjsip.pjsua2.CallMediaInfo;
@@ -18,28 +21,29 @@ class MyCall extends Call {
         return "MyCall{" + "audioMedia=" + audioMedia + ", vidWin=" + vidWin + ", vidPrev=" + vidPrev + '}';
     }
 
+    MainStageController mainc = new MainStageController();
     AudioMedia audioMedia;
     public VideoWindow vidWin;
 
     public VideoPreview vidPrev;
+    static int DISCONNECTCALL = 0;
 
     MyCall(MyAccount paramMyAccount, int paramInt) {
         super((Account) paramMyAccount, paramInt);
         this.vidWin = null;
     }
+    Task<Void> task;
 
     public void onCallState(OnCallStateParam paramOnCallStateParam) {
-//        try {
-//            CallInfo callInfo = getInfo();
-//            //6 means that pjsip_inv_state id disConneted
-////            MyApp.ep.libHandleEvents(10L);
-//            if (callInfo.getState() == 6) {
-////                MyApp.ep.utilLogWrite(3, "MyCall", dump(true, ""));
-//                MainStageController.outGoingCallStage.close();
-//            }
-//        } catch (Exception exception) {
-//            System.err.println(" Exeption  while onCallState method");
-//        }
+        try {
+            CallInfo callInfo = getInfo();
+            System.out.println("=====================================");
+            if (callInfo.getState() == 6) {
+                DISCONNECTCALL = 6;
+            }
+        } catch (Exception exception) {
+            System.err.println(" Exeption  while onCallState method");
+        }
         MyApp.observer.notifyCallState(this);
     }
 
@@ -57,6 +61,9 @@ class MyCall extends Call {
                     .getStatus() == 1 || callMediaInfo
                             .getStatus() == 3)) {
                 try {
+//                    AudioMediaPlayer player =new AudioMediaPlayer();
+//                    player.createPlayer("Tum-Tum-MassTamilan.fm.wav");
+//                    player.startTransmit(audioMedia);
                     audioMedia = getAudioMedia(b);
                     MyApp.ep.audDevManager().getCaptureDevMedia()
                             .startTransmit(audioMedia);
