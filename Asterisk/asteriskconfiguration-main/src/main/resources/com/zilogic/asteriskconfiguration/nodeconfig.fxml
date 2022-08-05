@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zilogic.asteriskconfiguration.NodeConfigController">
+   <top>
+      <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="33.0" prefWidth="280.0" spacing="20.0">
+               <children>
+                  <Text fx:id="hostText" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Address" />
+                  <TextField fx:id="hostTextField" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <ListView fx:id="listView" prefHeight="215.0" prefWidth="252.0" />
+            <Button fx:id="configBtn" alignment="CENTER" mnemonicParsing="false" onAction="#configNode" text="Configure" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

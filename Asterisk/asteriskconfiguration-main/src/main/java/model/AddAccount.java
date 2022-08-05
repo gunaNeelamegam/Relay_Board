@@ -1,4 +1,4 @@
-package com.zilogic.pjproject;
+package model;
 
 
 
@@ -6,7 +6,7 @@ package com.zilogic.pjproject;
 //@Getter
 //@Setter
 //@ToString
-class AddAccount {
+public class AddAccount {
 
     @Override
     public String toString() {

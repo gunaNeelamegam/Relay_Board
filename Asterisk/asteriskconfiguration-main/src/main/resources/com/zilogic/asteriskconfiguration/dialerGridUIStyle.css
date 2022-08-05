@@ -1,0 +1,59 @@
+.round_btn:hover {
+	-fx-background-color: gray,transparent;
+	    -fx-border-color: transparent;
+
+}
+
+.round_btn { -fx-background-radius: 4em;
+                -fx-min-width: 60px;  
+                -fx-min-height: 60px;  
+                -fx-max-width: 60px;  
+                -fx-max-height: 60px;
+}
+
+.call:hover{
+	-fx-background-color: rgb(48, 184, 48),transparent;
+    -fx-border-color: transparent;
+		
+}
+
+.call { -fx-background-radius: 4em,4em,4em,4em;
+                -fx-min-width: 60px;  
+                -fx-min-height: 60px;  
+                -fx-max-width: 60px;  
+                -fx-max-height: 60px;
+}
+
+.calleeText {
+    -fx-background-color: light-grey;
+}
+
+/* .checkBtn { -fx-background-radius: 60px;
+    -fx-border-radius: 20px;
+    -fx-border: 1px solid red;
+    -fx-display: inline-block;
+    -fx-min-width: 60px;  
+    -fx-min-height: 60px;  
+    -fx-max-width: 60px;  
+    -fx-max-height: 60px;
+}
+
+.check1 {
+    -fx-display:block;
+    -fx-height: 300px;
+    -fx-width: 300px;
+    -fx-border-radius: 50%;
+    -fx-border: 1px solid red;
+    
+  }
+.checkBtn:hover {
+	-fx-background-color: red,transparent;
+	    -fx-border-color: transparent;
+
+}
+
+.check1:hover {
+	-fx-background-color: blue,transparent;
+	    -fx-border-color: transparent;
+
+} */

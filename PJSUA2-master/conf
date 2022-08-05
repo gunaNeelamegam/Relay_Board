@@ -1,0 +1,1107 @@
+18:37:37.247         sip_endpoint.c  .Module "mod-pjsua-log" registered
+18:37:37.247         sip_endpoint.c  .Module "mod-tsx-layer" registered
+18:37:37.247         sip_endpoint.c  .Module "mod-stateful-util" registered
+18:37:37.247         sip_endpoint.c  .Module "mod-ua" registered
+18:37:37.247         sip_endpoint.c  .Module "mod-100rel" registered
+18:37:37.248         sip_endpoint.c  .Module "mod-pjsua" registered
+18:37:37.248         sip_endpoint.c  .Module "mod-invite" registered
+18:37:37.547             alsa_dev.c  ..Added sound device default
+18:37:37.548             alsa_dev.c  ..Added sound device surround21
+18:37:37.549             alsa_dev.c  ..Added sound device surround40
+18:37:37.549             alsa_dev.c  ..Added sound device surround41
+18:37:37.549             alsa_dev.c  ..Added sound device surround50
+18:37:37.549             alsa_dev.c  ..Added sound device surround51
+18:37:37.550             alsa_dev.c  ..Added sound device surround71
+18:37:37.550             alsa_dev.c  ..Added sound device samplerate
+18:37:37.550             alsa_dev.c  ..Added sound device speexrate
+18:37:37.551             alsa_dev.c  ..Added sound device jack
+18:37:37.551             alsa_dev.c  ..Added sound device oss
+18:37:37.553             alsa_dev.c  ..Added sound device pulse
+18:37:37.553             alsa_dev.c  ..Added sound device upmix
+18:37:37.553             alsa_dev.c  ..Added sound device vdownmix
+18:37:37.564             alsa_dev.c  ..Added sound device sysdefault:CARD=PCH
+18:37:37.564             alsa_dev.c  ..Added sound device front:CARD=PCH,DEV=0
+18:37:37.564             alsa_dev.c  ..Added sound device surround21:CARD=PCH,DEV=0
+18:37:37.564             alsa_dev.c  ..Added sound device surround40:CARD=PCH,DEV=0
+18:37:37.565             alsa_dev.c  ..Added sound device surround41:CARD=PCH,DEV=0
+18:37:37.565             alsa_dev.c  ..Added sound device surround50:CARD=PCH,DEV=0
+18:37:37.565             alsa_dev.c  ..Added sound device surround51:CARD=PCH,DEV=0
+18:37:37.565             alsa_dev.c  ..Added sound device surround71:CARD=PCH,DEV=0
+18:37:37.572             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=0
+18:37:37.573             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=1
+18:37:37.573             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=2
+18:37:37.574             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=3
+18:37:37.574             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=4
+18:37:37.575             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=0
+18:37:37.575             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=2
+18:37:37.613             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=3
+18:37:37.615             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=7
+18:37:37.616             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=8
+18:37:37.625             alsa_dev.c  ..ALSA driver found 32 devices
+18:37:37.625             alsa_dev.c  ..ALSA initialized
+18:37:37.625                  pjlib  ..select() I/O Queue created (0x7f6cb0496d18)
+18:37:37.626           conference.c  ..Creating conference bridge with 254 ports
+18:37:37.626           Master/sound  ..Using delay buffer with WSOLA.
+18:37:37.630         sip_endpoint.c  .Module "mod-evsub" registered
+18:37:37.631         sip_endpoint.c  .Module "mod-presence" registered
+18:37:37.631                evsub.c  .Event pkg "presence" registered by mod-presence
+18:37:37.631         sip_endpoint.c  .Module "mod-mwi" registered
+18:37:37.631                evsub.c  .Event pkg "message-summary" registered by mod-mwi
+18:37:37.631         sip_endpoint.c  .Module "mod-refer" registered
+18:37:37.631                evsub.c  .Event pkg "refer" registered by mod-refer
+18:37:37.631         sip_endpoint.c  .Module "mod-pjsua-pres" registered
+18:37:37.631         sip_endpoint.c  .Module "mod-pjsua-im" registered
+18:37:37.631         sip_endpoint.c  .Module "mod-pjsua-options" registered
+18:37:37.631           pjsua_core.c  .1 SIP worker threads created
+18:37:37.631           pjsua_core.c  .pjsua version 2.12.1 for Linux-5.13.0.52/x86_64/glibc-2.31 initialized
+18:37:37.631           pjsua_core.c  .PJSUA state changed: CREATED --> INIT
+18:37:37.632           pjsua_core.c  PJSUA state changed: INIT --> STARTING
+18:37:37.632         sip_endpoint.c  .Module "mod-unsolicited-mwi" registered
+18:37:37.632           pjsua_core.c  .PJSUA state changed: STARTING --> RUNNING
+18:37:55.471            pjsua_acc.c  Adding account: id=sip:6001@192.168.0.132
+18:37:55.472            pjsua_acc.c  .Account sip:6001@192.168.0.132 added with id 0
+18:37:55.472            pjsua_acc.c  .Acc 0: setting registration..
+18:37:55.473            pjsua_acc.c  ..Contact for acc 0 updated: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+18:37:55.474               endpoint  ..Request msg REGISTER/cseq=7526 (tdta0x7f6cb0126758) created.
+18:37:55.474      tsx0x7f6cb0128718  ...Transaction created for Request msg REGISTER/cseq=7527 (tdta0x7f6cb0126758)
+18:37:55.474      tsx0x7f6cb0128718  ..Sending Request msg REGISTER/cseq=7527 (tdta0x7f6cb0126758) in state Null
+18:37:55.474          sip_resolve.c  ...Target '192.168.0.132:0' type=Unspecified resolved to '192.168.0.132:5060' type=UDP (UDP transport)
+18:37:55.474           pjsua_core.c  ...TX 507 bytes Request msg REGISTER/cseq=7527 (tdta0x7f6cb0126758) to UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPj9c83b17b-ca25-44c0-9ead-373f9ba4cf39
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=e4172634-72fe-4ec1-a394-b216d4e45417
+To: <sip:6001@192.168.0.132>
+Call-ID: fe2fd0c5-316f-4a2e-b814-573d31bf40b7
+CSeq: 7527 REGISTER
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+18:37:55.475      tsx0x7f6cb0128718  ...State changed from Null to Calling, event=TX_MSG
+18:37:55.475            pjsua_acc.c  ..Acc 0: Registration sent
+18:37:55.475         sip_endpoint.c !Processing incoming message: Response msg 401/REGISTER/cseq=7527 (rdata0x7f6cb039eb08)
+18:37:55.475           pjsua_core.c  .RX 569 bytes Response msg 401/REGISTER/cseq=7527 (rdata0x7f6cb039eb08) from UDP 192.168.0.132:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPj9c83b17b-ca25-44c0-9ead-373f9ba4cf39
+Call-ID: fe2fd0c5-316f-4a2e-b814-573d31bf40b7
+From: <sip:6001@192.168.0.132>;tag=e4172634-72fe-4ec1-a394-b216d4e45417
+To: <sip:6001@192.168.0.132>;tag=z9hG4bKPj9c83b17b-ca25-44c0-9ead-373f9ba4cf39
+CSeq: 7527 REGISTER
+WWW-Authenticate: Digest realm="asterisk",nonce="1657804075/2d85b06f08813a3e6bdcf931ba851108",opaque="0b5bad4156372001",algorithm=MD5,qop="auth"
+Server: Asterisk PBX 18.13.0
+Content-Length:  0
+
+
+--end msg--
+18:37:55.477      tsx0x7f6cb0128718  .Incoming Response msg 401/REGISTER/cseq=7527 (rdata0x7f6cb039eb08) in state Calling
+18:37:55.477      tsx0x7f6cb0128718  ..State changed from Calling to Completed, event=RX_MSG
+18:37:55.477      sip_auth_client.c  ...Digest algorithm is "MD5"
+18:37:55.477      tsx0x7f6c84002e88  ....Transaction created for Request msg REGISTER/cseq=7528 (tdta0x7f6cb0126758)
+18:37:55.477      tsx0x7f6c84002e88  ...Sending Request msg REGISTER/cseq=7528 (tdta0x7f6cb0126758) in state Null
+18:37:55.477               endpoint  ....Request msg REGISTER/cseq=7528 (tdta0x7f6cb0126758): skipping target resolution because address is already set
+18:37:55.477           pjsua_core.c  ....TX 795 bytes Request msg REGISTER/cseq=7528 (tdta0x7f6cb0126758) to UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPjeec2bd7b-1ad6-4c96-9628-c406f5f88f2c
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=e4172634-72fe-4ec1-a394-b216d4e45417
+To: <sip:6001@192.168.0.132>
+Call-ID: fe2fd0c5-316f-4a2e-b814-573d31bf40b7
+CSeq: 7528 REGISTER
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Authorization: Digest username="6001", realm="asterisk", nonce="1657804075/2d85b06f08813a3e6bdcf931ba851108", uri="sip:192.168.0.132", response="af6f08500627d49dee4b2d8b5494f9b8", algorithm=MD5, cnonce="2bbc3e4089b44c729555b507b4d95c1f", opaque="0b5bad4156372001", qop=auth, nc=00000001
+Content-Length:  0
+
+
+--end msg--
+18:37:55.478      tsx0x7f6c84002e88  ....State changed from Null to Calling, event=TX_MSG
+18:37:55.480         sip_endpoint.c  Processing incoming message: Response msg 200/REGISTER/cseq=7528 (rdata0x7f6c84003618)
+18:37:55.480           pjsua_core.c  .RX 519 bytes Response msg 200/REGISTER/cseq=7528 (rdata0x7f6c84003618) from UDP 192.168.0.132:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPjeec2bd7b-1ad6-4c96-9628-c406f5f88f2c
+Call-ID: fe2fd0c5-316f-4a2e-b814-573d31bf40b7
+From: <sip:6001@192.168.0.132>;tag=e4172634-72fe-4ec1-a394-b216d4e45417
+To: <sip:6001@192.168.0.132>;tag=z9hG4bKPjeec2bd7b-1ad6-4c96-9628-c406f5f88f2c
+CSeq: 7528 REGISTER
+Date: Thu, 14 Jul 2022 13:07:55 GMT
+Contact: <sip:6001@192.168.0.132:5080;ob>;expires=299
+Expires: 300
+Server: Asterisk PBX 18.13.0
+Content-Length:  0
+
+
+--end msg--
+18:37:55.482      tsx0x7f6c84002e88  .Incoming Response msg 200/REGISTER/cseq=7528 (rdata0x7f6c84003618) in state Calling
+18:37:55.482      tsx0x7f6c84002e88  ..State changed from Calling to Completed, event=RX_MSG
+18:37:55.482            pjsua_acc.c  ....SIP outbound status for acc 0 is not active
+18:37:55.482            pjsua_acc.c  ....sip:6001@192.168.0.132: registration success, status=200 (OK), will re-register in 299 seconds
+18:37:55.484            pjsua_acc.c  ....Keep-alive timer started for acc 0, destination:192.168.0.132:5060, interval:12s
+18:38:00.479      tsx0x7f6cb0128718  Timeout timer event
+18:38:00.479      tsx0x7f6cb0128718  .State changed from Completed to Terminated, event=TIMER
+18:38:00.479      tsx0x7f6cb0128718  Timeout timer event
+18:38:00.479      tsx0x7f6cb0128718  .State changed from Terminated to Destroyed, event=TIMER
+18:38:00.479      tsx0x7f6cb0128718  Transaction destroyed!
+18:38:00.482      tsx0x7f6c84002e88  Timeout timer event
+18:38:00.482      tsx0x7f6c84002e88  .State changed from Completed to Terminated, event=TIMER
+18:38:00.482      tsx0x7f6c84002e88  Timeout timer event
+18:38:00.482      tsx0x7f6c84002e88  .State changed from Terminated to Destroyed, event=TIMER
+18:38:00.482     tdta0x7f6cb0126758  ..Destroying txdata Request msg REGISTER/cseq=7528 (tdta0x7f6cb0126758)
+18:38:00.482      tsx0x7f6c84002e88  Transaction destroyed!
+18:38:01.175            pjsua_acc.c !Adding account: id=sip:6001@192.168.0.132
+18:38:01.175            pjsua_acc.c  .Account sip:6001@192.168.0.132 added with id 1
+18:38:01.175            pjsua_acc.c  .Acc 1: setting registration..
+18:38:01.176            pjsua_acc.c  ..Contact for acc 1 updated: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+18:38:01.176               endpoint  ..Request msg REGISTER/cseq=23812 (tdta0x7f6cb0537c78) created.
+18:38:01.176      tsx0x7f6cb0396628  ...Transaction created for Request msg REGISTER/cseq=23813 (tdta0x7f6cb0537c78)
+18:38:01.176      tsx0x7f6cb0396628  ..Sending Request msg REGISTER/cseq=23813 (tdta0x7f6cb0537c78) in state Null
+18:38:01.176          sip_resolve.c  ...Target '192.168.0.132:0' type=Unspecified resolved to '192.168.0.132:5060' type=UDP (UDP transport)
+18:38:01.176           pjsua_core.c  ...TX 508 bytes Request msg REGISTER/cseq=23813 (tdta0x7f6cb0537c78) to UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPj1f152a33-c32c-4064-b21d-11f7199b4f70
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=97de133b-07e4-4f89-beb1-bc8720cebd6c
+To: <sip:6001@192.168.0.132>
+Call-ID: 4e542a36-7bbf-4637-aeee-b165957ac83b
+CSeq: 23813 REGISTER
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+18:38:01.176      tsx0x7f6cb0396628  ...State changed from Null to Calling, event=TX_MSG
+18:38:01.176            pjsua_acc.c  ..Acc 1: Registration sent
+18:38:01.177         sip_endpoint.c !Processing incoming message: Response msg 401/REGISTER/cseq=23813 (rdata0x7f6c84003618)
+18:38:01.177           pjsua_core.c  .RX 570 bytes Response msg 401/REGISTER/cseq=23813 (rdata0x7f6c84003618) from UDP 192.168.0.132:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPj1f152a33-c32c-4064-b21d-11f7199b4f70
+Call-ID: 4e542a36-7bbf-4637-aeee-b165957ac83b
+From: <sip:6001@192.168.0.132>;tag=97de133b-07e4-4f89-beb1-bc8720cebd6c
+To: <sip:6001@192.168.0.132>;tag=z9hG4bKPj1f152a33-c32c-4064-b21d-11f7199b4f70
+CSeq: 23813 REGISTER
+WWW-Authenticate: Digest realm="asterisk",nonce="1657804081/e27feeb75fbc8446eae0d1c3d7af3b98",opaque="168bfa1452685cd9",algorithm=MD5,qop="auth"
+Server: Asterisk PBX 18.13.0
+Content-Length:  0
+
+
+--end msg--
+18:38:01.178      tsx0x7f6cb0396628  .Incoming Response msg 401/REGISTER/cseq=23813 (rdata0x7f6c84003618) in state Calling
+18:38:01.178      tsx0x7f6cb0396628  ..State changed from Calling to Completed, event=RX_MSG
+18:38:01.178      sip_auth_client.c  ...Digest algorithm is "MD5"
+18:38:01.178      tsx0x7f6c84002e88  ....Transaction created for Request msg REGISTER/cseq=23814 (tdta0x7f6cb0537c78)
+18:38:01.178      tsx0x7f6c84002e88  ...Sending Request msg REGISTER/cseq=23814 (tdta0x7f6cb0537c78) in state Null
+18:38:01.178               endpoint  ....Request msg REGISTER/cseq=23814 (tdta0x7f6cb0537c78): skipping target resolution because address is already set
+18:38:01.178           pjsua_core.c  ....TX 796 bytes Request msg REGISTER/cseq=23814 (tdta0x7f6cb0537c78) to UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPjc934138d-e90a-4fdf-8679-78d5de82cf54
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=97de133b-07e4-4f89-beb1-bc8720cebd6c
+To: <sip:6001@192.168.0.132>
+Call-ID: 4e542a36-7bbf-4637-aeee-b165957ac83b
+CSeq: 23814 REGISTER
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Authorization: Digest username="6001", realm="asterisk", nonce="1657804081/e27feeb75fbc8446eae0d1c3d7af3b98", uri="sip:192.168.0.132", response="715f7070066a3d903f1d6a6848f2a048", algorithm=MD5, cnonce="4c7ea1b4a79e47fb91840669c01ba8d2", opaque="168bfa1452685cd9", qop=auth, nc=00000001
+Content-Length:  0
+
+
+--end msg--
+18:38:01.179      tsx0x7f6c84002e88  ....State changed from Null to Calling, event=TX_MSG
+18:38:01.180         sip_endpoint.c  Processing incoming message: Response msg 200/REGISTER/cseq=23814 (rdata0x7f6c84003618)
+18:38:01.180           pjsua_core.c  .RX 520 bytes Response msg 200/REGISTER/cseq=23814 (rdata0x7f6c84003618) from UDP 192.168.0.132:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPjc934138d-e90a-4fdf-8679-78d5de82cf54
+Call-ID: 4e542a36-7bbf-4637-aeee-b165957ac83b
+From: <sip:6001@192.168.0.132>;tag=97de133b-07e4-4f89-beb1-bc8720cebd6c
+To: <sip:6001@192.168.0.132>;tag=z9hG4bKPjc934138d-e90a-4fdf-8679-78d5de82cf54
+CSeq: 23814 REGISTER
+Date: Thu, 14 Jul 2022 13:08:01 GMT
+Contact: <sip:6001@192.168.0.132:5080;ob>;expires=299
+Expires: 300
+Server: Asterisk PBX 18.13.0
+Content-Length:  0
+
+
+--end msg--
+18:38:01.181      tsx0x7f6c84002e88  .Incoming Response msg 200/REGISTER/cseq=23814 (rdata0x7f6c84003618) in state Calling
+18:38:01.181      tsx0x7f6c84002e88  ..State changed from Calling to Completed, event=RX_MSG
+18:38:01.181            pjsua_acc.c  ....SIP outbound status for acc 1 is not active
+18:38:01.181            pjsua_acc.c  ....sip:6001@192.168.0.132: registration success, status=200 (OK), will re-register in 299 seconds
+18:38:01.181            pjsua_acc.c  ....Keep-alive timer started for acc 1, destination:192.168.0.132:5060, interval:12s
+18:38:01.182           pjsua_call.c !Making call with acc #1 to sip:6002@192.168.0.132
+18:38:01.182            pjsua_aud.c  .Set sound device: capture=-1, playback=-2, mode=0
+18:38:01.182            pjsua_aud.c  ..Opening sound device (speaker + mic) PCM@16000/1/20ms
+18:38:01.182             alsa_dev.c  ...open_playback: Open playback device 'default'
+18:38:01.186             alsa_dev.c  ...Opened device alsa(default) for playing, sample rate=16000, ch=1, bits=16, period size=320 frames, latency=140 ms
+18:38:01.186             alsa_dev.c  ...open_capture: Open capture device 'default'
+18:38:01.200             alsa_dev.c  ...Opened device alsa(default) for capture, sample rate=16000, ch=1, bits=16, period size=320 frames, latency=100 ms
+18:38:01.200       ec0x7f6cb06b12f0  ...Creating Speex AEC
+18:38:01.201       ec0x7f6cb06b12f0  ...Speex AEC created, clock_rate=16000, channel=1, samples per frame=320, tail length=200 ms, latency=0 ms
+18:38:01.201      dlg0x7f6cb03b1da8  .UAC dialog created
+18:38:01.201      dlg0x7f6cb03b1da8  ..Session count inc to 2 by mod-pjsua
+18:38:01.201          pjsua_media.c  .Call 0: initializing media..
+18:38:01.202                icetp00  ..Creating ICE stream transport with 2 component(s)
+18:38:01.202                icetp00  ...Comp 1/0: host candidate 192.168.0.132:4011 (tpid=64) added
+18:38:01.203                icetp00  ...Comp 2/0: host candidate 192.168.0.132:4020 (tpid=64) added
+18:38:01.203                icetp00  ...ICE stream transport 0x7f6cb02d92b8 created
+18:38:01.203                icetp00  ...ICE operation complete (op=0/initialization): Success
+18:38:01.203          pjsua_media.c  ..Media index 0 selected for audio call 0
+18:38:01.204             alsa_dev.c !ca_thread_func(61405): Set thread priority for audio capture thread.
+18:38:01.204             alsa_dev.c  Unable to increase thread priority, root access needed.
+18:38:01.207                  speex !warning: discarded first playback frame
+18:38:01.208                  speex  warning: discarded first playback frame
+18:38:01.208                  speex  warning: discarded first playback frame
+18:38:01.208                  speex  warning: discarded first playback frame
+18:38:01.208                  speex  warning: discarded first playback frame
+18:38:01.209                  speex  warning: discarded first playback frame
+18:38:01.209                  speex  warning: discarded first playback frame
+18:38:01.209                  speex  warning: discarded first playback frame
+18:38:01.209                  speex  warning: discarded first playback frame
+18:38:01.212     srtp0x7f6c840198b0 !SRTP keying SDES created
+18:38:01.213          pjsua_media.c  Call 0: media transport initialization complete: Success
+18:38:01.213                icetp00  ICE session created, comp_cnt=2, role is Controlling agent
+18:38:01.213                icetp00  ICE nomination type set to aggressive
+18:38:01.213                icetp00  Candidate 0 added: comp_id=1, type=host, foundation=Hc0a80084, addr=192.168.0.132:4011, base=192.168.0.132:4011, prio=0x7effffff (2130706431)
+18:38:01.214                icetp00  Candidate 1 added: comp_id=2, type=host, foundation=Hc0a80084, addr=192.168.0.132:4020, base=192.168.0.132:4020, prio=0x7efffffe (2130706430)
+18:38:01.214      dlg0x7f6cb03b1da8  .Session count dec to 2 by mod-pjsua
+18:38:01.215      dlg0x7f6cb03b1da8  Module mod-invite added as dialog usage, data=0x7f6c840208b8
+18:38:01.215      dlg0x7f6cb03b1da8  .Session count inc to 4 by mod-invite
+18:38:01.215      dlg0x7f6cb03b1da8  Module mod-100rel added as dialog usage, data=0x7f6c840228e0
+18:38:01.215      dlg0x7f6cb03b1da8  100rel module attached
+18:38:01.215      inv0x7f6cb03b1da8  UAC invite session created for dialog dlg0x7f6cb03b1da8
+18:38:01.215               endpoint  Request msg INVITE/cseq=31594 (tdta0x7f6c84022bd8) created.
+18:38:01.215      inv0x7f6cb03b1da8  .Sending Request msg INVITE/cseq=31594 (tdta0x7f6c84022bd8)
+18:38:01.215      dlg0x7f6cb03b1da8  ..Sending Request msg INVITE/cseq=31594 (tdta0x7f6c84022bd8)
+18:38:01.215      tsx0x7f6c84025b48  ...Transaction created for Request msg INVITE/cseq=31594 (tdta0x7f6c84022bd8)
+18:38:01.215      tsx0x7f6c84025b48  ..Sending Request msg INVITE/cseq=31594 (tdta0x7f6c84022bd8) in state Null
+18:38:01.215          sip_resolve.c  ...Target '192.168.0.132:0' type=Unspecified resolved to '192.168.0.132:5060' type=UDP (UDP transport)
+18:38:01.215               endpoint  ...Request msg INVITE/cseq=31594 (tdta0x7f6c84022bd8) exceeds UDP size threshold (1300), sending with TCP
+18:38:01.215     tcpc0x7f6c84028858  ...TCP client transport created
+18:38:01.216     tcpc0x7f6c84028858  ...TCP transport 192.168.0.132:40817 is connecting to 192.168.0.132:5060...
+18:38:01.216           pjsua_core.c  ...TX 1441 bytes Request msg INVITE/cseq=31594 (tdta0x7f6c84022bd8) to TCP 192.168.0.132:5060:
+INVITE sip:6002@192.168.0.132 SIP/2.0
+Via: SIP/2.0/TCP 192.168.0.132:40817;rport;branch=z9hG4bKPjdd4bc076-7fc5-4b87-9773-17b36658fff4;alias
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=35edf94a-d06a-4910-88ef-477e28b44b7a
+To: sip:6002@192.168.0.132
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Call-ID: 101c52f7-18d7-4828-bcf0-7af15d73e174
+CSeq: 31594 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+Content-Type: application/sdp
+Content-Length:   826
+
+v=0
+o=- 3866792881 3866792881 IN IP4 192.168.0.132
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4011 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 192.168.0.132
+b=TIAS:64000
+a=rtcp:4020 IN IP4 192.168.0.132
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:1820790157 cname:3fa2ad0a03caf28a
+a=ice-ufrag:4a507410
+a=ice-pwd:360844470e7f4b42482b6d38
+a=candidate:Hc0a80084 1 UDP 2130706431 192.168.0.132 4011 typ host
+a=candidate:Hc0a80084 2 UDP 2130706430 192.168.0.132 4020 typ host
+
+--end msg--
+18:38:01.216      tsx0x7f6c84025b48  ...State changed from Null to Calling, event=TX_MSG
+18:38:01.216      dlg0x7f6cb03b1da8  ....Transaction tsx0x7f6c84025b48 state changed to Calling
+18:38:01.227     tcpc0x7f6c84028858  TCP connect() error: [code=120111]: Connection refused
+18:38:01.228      tsx0x7f6c84025b48  Temporary failure in sending Request msg INVITE/cseq=31594 (tdta0x7f6c84022bd8), will try next server: Connection refused
+18:38:01.228           pjsua_core.c  TX 1434 bytes Request msg INVITE/cseq=31594 (tdta0x7f6c84022bd8) to UDP 192.168.0.132:5060:
+INVITE sip:6002@192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPjdd4bc076-7fc5-4b87-9773-17b36658fff4
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=35edf94a-d06a-4910-88ef-477e28b44b7a
+To: sip:6002@192.168.0.132
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Call-ID: 101c52f7-18d7-4828-bcf0-7af15d73e174
+CSeq: 31594 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+Content-Type: application/sdp
+Content-Length:   826
+
+v=0
+o=- 3866792881 3866792881 IN IP4 192.168.0.132
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4011 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 192.168.0.132
+b=TIAS:64000
+a=rtcp:4020 IN IP4 192.168.0.132
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:1820790157 cname:3fa2ad0a03caf28a
+a=ice-ufrag:4a507410
+a=ice-pwd:360844470e7f4b42482b6d38
+a=candidate:Hc0a80084 1 UDP 2130706431 192.168.0.132 4011 typ host
+a=candidate:Hc0a80084 2 UDP 2130706430 192.168.0.132 4020 typ host
+
+--end msg--
+18:38:01.230     tcpc0x7f6c84028858  TCP send() error, sent=-120111
+18:38:01.230            pjsua_acc.c  Disconnected notification for transport tcpc0x7f6c84028858
+18:38:01.230        sip_transport.c  .Transport tcpc0x7f6c84028858 shutting down, force=0
+18:38:01.231     tcpc0x7f6c84028858  TCP transport destroyed with reason 120111: Connection refused
+18:38:01.231         sip_endpoint.c  Processing incoming message: Response msg 401/INVITE/cseq=31594 (rdata0x7f6c84003618)
+18:38:01.231           pjsua_core.c  .RX 568 bytes Response msg 401/INVITE/cseq=31594 (rdata0x7f6c84003618) from UDP 192.168.0.132:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPjdd4bc076-7fc5-4b87-9773-17b36658fff4
+Call-ID: 101c52f7-18d7-4828-bcf0-7af15d73e174
+From: <sip:6001@192.168.0.132>;tag=35edf94a-d06a-4910-88ef-477e28b44b7a
+To: <sip:6002@192.168.0.132>;tag=z9hG4bKPjdd4bc076-7fc5-4b87-9773-17b36658fff4
+CSeq: 31594 INVITE
+WWW-Authenticate: Digest realm="asterisk",nonce="1657804081/e27feeb75fbc8446eae0d1c3d7af3b98",opaque="3e464435477ed0c1",algorithm=MD5,qop="auth"
+Server: Asterisk PBX 18.13.0
+Content-Length:  0
+
+
+--end msg--
+18:38:01.231      tsx0x7f6c84025b48  .Incoming Response msg 401/INVITE/cseq=31594 (rdata0x7f6c84003618) in state Calling
+18:38:01.231               endpoint  ..Request msg ACK/cseq=31594 (tdta0x7f6c840288d8) created.
+18:38:01.231           pjsua_core.c  ..TX 385 bytes Request msg ACK/cseq=31594 (tdta0x7f6c840288d8) to UDP 192.168.0.132:5060:
+ACK sip:6002@192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPjdd4bc076-7fc5-4b87-9773-17b36658fff4
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=35edf94a-d06a-4910-88ef-477e28b44b7a
+To: sip:6002@192.168.0.132;tag=z9hG4bKPjdd4bc076-7fc5-4b87-9773-17b36658fff4
+Call-ID: 101c52f7-18d7-4828-bcf0-7af15d73e174
+CSeq: 31594 ACK
+Content-Length:  0
+
+
+--end msg--
+18:38:01.232      tsx0x7f6c84025b48  ..State changed from Calling to Completed, event=RX_MSG
+18:38:01.232      dlg0x7f6cb03b1da8  ...Received Response msg 401/INVITE/cseq=31594 (rdata0x7f6c84003618)
+18:38:01.232      dlg0x7f6cb03b1da8  ...Transaction tsx0x7f6c84025b48 state changed to Completed
+18:38:01.232      sip_auth_client.c  ....Digest algorithm is "MD5"
+18:38:01.233      inv0x7f6cb03b1da8  .....Sending Request msg INVITE/cseq=31594 (tdta0x7f6c84022bd8)
+18:38:01.233      dlg0x7f6cb03b1da8  ......Sending Request msg INVITE/cseq=31594 (tdta0x7f6c84022bd8)
+18:38:01.233      tsx0x7f6c8402a5b8  .......Transaction created for Request msg INVITE/cseq=31595 (tdta0x7f6c84022bd8)
+18:38:01.233      tsx0x7f6c8402a5b8  ......Sending Request msg INVITE/cseq=31595 (tdta0x7f6c84022bd8) in state Null
+18:38:01.233               endpoint  .......Request msg INVITE/cseq=31595 (tdta0x7f6c84022bd8): skipping target resolution because address is already set
+18:38:01.233           pjsua_core.c  .......TX 1727 bytes Request msg INVITE/cseq=31595 (tdta0x7f6c84022bd8) to UDP 192.168.0.132:5060:
+INVITE sip:6002@192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPjf823ac94-e08e-4290-a7d4-54479ace7220
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=35edf94a-d06a-4910-88ef-477e28b44b7a
+To: sip:6002@192.168.0.132
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Call-ID: 101c52f7-18d7-4828-bcf0-7af15d73e174
+CSeq: 31595 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+Authorization: Digest username="6001", realm="asterisk", nonce="1657804081/e27feeb75fbc8446eae0d1c3d7af3b98", uri="sip:6002@192.168.0.132", response="19c1b7b9b76d67d0b14289e89250e82a", algorithm=MD5, cnonce="b3aa5af181314a79a55a7d83666cb46d", opaque="3e464435477ed0c1", qop=auth, nc=00000001
+Content-Type: application/sdp
+Content-Length:   826
+
+v=0
+o=- 3866792881 3866792881 IN IP4 192.168.0.132
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4011 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 192.168.0.132
+b=TIAS:64000
+a=rtcp:4020 IN IP4 192.168.0.132
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:1820790157 cname:3fa2ad0a03caf28a
+a=ice-ufrag:4a507410
+a=ice-pwd:360844470e7f4b42482b6d38
+a=candidate:Hc0a80084 1 UDP 2130706431 192.168.0.132 4011 typ host
+a=candidate:Hc0a80084 2 UDP 2130706430 192.168.0.132 4020 typ host
+
+--end msg--
+18:38:01.236      tsx0x7f6c8402a5b8  .......State changed from Null to Calling, event=TX_MSG
+18:38:01.236      dlg0x7f6cb03b1da8  ........Transaction tsx0x7f6c8402a5b8 state changed to Calling
+18:38:01.237         sip_endpoint.c  Processing incoming message: Response msg 100/INVITE/cseq=31595 (rdata0x7f6c84003618)
+18:38:01.237           pjsua_core.c  .RX 366 bytes Response msg 100/INVITE/cseq=31595 (rdata0x7f6c84003618) from UDP 192.168.0.132:5060:
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPjf823ac94-e08e-4290-a7d4-54479ace7220
+Call-ID: 101c52f7-18d7-4828-bcf0-7af15d73e174
+From: <sip:6001@192.168.0.132>;tag=35edf94a-d06a-4910-88ef-477e28b44b7a
+To: <sip:6002@192.168.0.132>
+CSeq: 31595 INVITE
+Server: Asterisk PBX 18.13.0
+Content-Length:  0
+
+
+--end msg--
+18:38:01.237      tsx0x7f6c8402a5b8  .Incoming Response msg 100/INVITE/cseq=31595 (rdata0x7f6c84003618) in state Calling
+18:38:01.237      tsx0x7f6c8402a5b8  ..State changed from Calling to Proceeding, event=RX_MSG
+18:38:01.237      dlg0x7f6cb03b1da8  ...Received Response msg 100/INVITE/cseq=31595 (rdata0x7f6c84003618)
+18:38:01.237      dlg0x7f6cb03b1da8  ...Transaction tsx0x7f6c8402a5b8 state changed to Proceeding
+18:38:01.426                  speex !warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:01.451         sip_endpoint.c !Processing incoming message: Response msg 200/INVITE/cseq=31595 (rdata0x7f6c84003618)
+18:38:01.451           pjsua_core.c  .RX 923 bytes Response msg 200/INVITE/cseq=31595 (rdata0x7f6c84003618) from UDP 192.168.0.132:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPjf823ac94-e08e-4290-a7d4-54479ace7220
+Call-ID: 101c52f7-18d7-4828-bcf0-7af15d73e174
+From: <sip:6001@192.168.0.132>;tag=35edf94a-d06a-4910-88ef-477e28b44b7a
+To: <sip:6002@192.168.0.132>;tag=b1181352-4469-44e6-a17a-819a53352605
+CSeq: 31595 INVITE
+Server: Asterisk PBX 18.13.0
+Contact: <sip:192.168.0.132:5060>
+Allow: OPTIONS, REGISTER, SUBSCRIBE, NOTIFY, PUBLISH, INVITE, ACK, BYE, CANCEL, UPDATE, PRACK, REFER, MESSAGE
+Supported: 100rel, timer, replaces, norefersub
+Session-Expires: 1800;refresher=uac
+Require: timer
+Content-Type: application/sdp
+Content-Length:   239
+
+v=0
+o=- 3866792881 3866792883 IN IP4 192.168.0.132
+s=Asterisk
+c=IN IP4 192.168.0.132
+t=0 0
+m=audio 18556 RTP/AVP 0 121
+a=rtpmap:0 PCMU/8000
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=ptime:20
+a=maxptime:150
+a=sendrecv
+
+--end msg--
+18:38:01.452      tsx0x7f6c8402a5b8  .Incoming Response msg 200/INVITE/cseq=31595 (rdata0x7f6c84003618) in state Proceeding
+18:38:01.452      tsx0x7f6c8402a5b8  ..State changed from Proceeding to Terminated, event=RX_MSG
+18:38:01.452      dlg0x7f6cb03b1da8  ...Received Response msg 200/INVITE/cseq=31595 (rdata0x7f6c84003618)
+18:38:01.452      dlg0x7f6cb03b1da8  ....Route-set updated
+18:38:01.452      dlg0x7f6cb03b1da8  ....Route-set frozen
+18:38:01.452      dlg0x7f6cb03b1da8  ...Transaction tsx0x7f6c8402a5b8 state changed to Terminated
+18:38:01.452      inv0x7f6cb03b1da8  ....Got SDP answer in Response msg 200/INVITE/cseq=31595 (rdata0x7f6c84003618)
+18:38:01.452      inv0x7f6cb03b1da8  ....SDP negotiation done: Success
+18:38:01.452           pjsua_call.c  .....Call 0: remote NAT type is 0 (Unknown)
+18:38:01.452          pjsua_media.c  .....Call 0: updating media..
+18:38:01.453          pjsua_media.c  .......Media stream call00:0 is destroyed
+18:38:01.453                icetp00  ......Stopping ICE, reason=Remote answer doesn't support ICE
+18:38:01.453                icetp00  ......Destroying ICE session 0x7f6c8401b078
+18:38:01.453    stuse0x7f6c8401da60  ......STUN session 0x7f6c8401de98 destroy request, ref_cnt=13
+18:38:01.453    stuse0x7f6c8401ea60  ......STUN session 0x7f6c8401ee98 destroy request, ref_cnt=12
+18:38:01.453            pjsua_aud.c  ......Audio channel update..
+18:38:01.454     strm0x7f6c84035938  .......VAD temporarily disabled
+18:38:01.454     strm0x7f6c84035938  .......Jitter buffer reset
+18:38:01.454                  rtp.c  .......pjmedia_rtp_session_init: ses=0x7f6c840387a0, default_pt=0, ssrc=0x6c870d8d
+18:38:01.454                  rtp.c  .......pjmedia_rtp_session_init2: ses=0x7f6c840387a0, seq=25398, ts=0, peer_ssrc=0
+18:38:01.454                  rtp.c  .......pjmedia_rtp_session_init: ses=0x7f6c84038e20, default_pt=0, ssrc=0x6c870d8d
+18:38:01.454                  rtp.c  .......pjmedia_rtp_session_init2: ses=0x7f6c84038e20, seq=5111, ts=0, peer_ssrc=0
+18:38:01.455               stream.c  .......Stream strm0x7f6c84035938 created
+18:38:01.455     strm0x7f6c84035938  .......Encoder stream started
+18:38:01.455     strm0x7f6c84035938  .......Decoder stream started
+18:38:01.455             resample.c  .......resample created: high qualiy, large filter, in/out rate=8000/16000
+18:38:01.455             resample.c  .......resample created: high qualiy, large filter, in/out rate=16000/8000
+18:38:01.455          pjsua_media.c  ......Audio updated, stream #0: PCMU (sendrecv)
+18:38:01.459            pjsua_aud.c  .....Conf connect: 0 --> 1
+18:38:01.459           conference.c  ......Port 0 (default) transmitting to port 1 (sip:6002@192.168.0.132)
+18:38:01.459            pjsua_aud.c  .....Conf connect: 1 --> 0
+18:38:01.459           conference.c  ......Port 1 (sip:6002@192.168.0.132) transmitting to port 0 (default)
+18:38:01.460      inv0x7f6cb03b1da8  ....Received Response msg 200/INVITE/cseq=31595 (rdata0x7f6c84003618), sending ACK
+18:38:01.460               endpoint  ....Request msg ACK/cseq=31595 (tdta0x7f6c8403dc08) created.
+18:38:01.460      dlg0x7f6cb03b1da8  .....Sending Request msg ACK/cseq=31595 (tdta0x7f6c8403dc08)
+18:38:01.460          sip_resolve.c  .....Target '192.168.0.132:5060' type=Unspecified resolved to '192.168.0.132:5060' type=UDP (UDP transport)
+18:38:01.460           pjsua_core.c  .....TX 376 bytes Request msg ACK/cseq=31595 (tdta0x7f6c8403dc08) to UDP 192.168.0.132:5060:
+ACK sip:192.168.0.132:5060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPj799c1809-3f91-41eb-b81b-ad23167ecc2b
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=35edf94a-d06a-4910-88ef-477e28b44b7a
+To: sip:6002@192.168.0.132;tag=b1181352-4469-44e6-a17a-819a53352605
+Call-ID: 101c52f7-18d7-4828-bcf0-7af15d73e174
+CSeq: 31595 ACK
+Content-Length:  0
+
+
+--end msg--
+18:38:01.461      tsx0x7f6c8402a5b8  Timeout timer event
+18:38:01.461      tsx0x7f6c8402a5b8  .State changed from Terminated to Destroyed, event=TIMER
+18:38:01.461      tsx0x7f6c8402a5b8  Transaction destroyed!
+18:38:01.461     strm0x7f6c84035938  RTP status: badpt=0, badssrc=0, dup=0, outorder=0, probation=-1, restart=0
+18:38:01.466           Master/sound !Underflow, buf_cnt=0, will generate 1 frame
+18:38:01.467     strm0x7f6c84035938  Resetting jitter buffer in stream playback start
+18:38:01.467     strm0x7f6c84035938  Jitter buffer reset
+18:38:01.467     strm0x7f6c84035938  Start talksprut..
+18:38:01.484           Master/sound  Underflow, buf_cnt=0, will generate 1 frame
+18:38:01.551                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:01.808                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:02.084     strm0x7f6c84035938  VAD re-enabled
+18:38:02.084           silencedet.c  Starting talk burst (level=2521 threshold=1000)
+18:38:02.114                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:02.369                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:02.513                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:02.848                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:03.054                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:03.430                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:03.734                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:04.245                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:04.374                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:04.433     strm0x7f6c84035938  Jitter buffer empty (prefetch=0), plc invoked
+18:38:04.452     strm0x7f6c84035938  Jitter buffer starts returning normal frames (after 1 empty/lost)
+18:38:04.546           silencedet.c  Starting silence (level=45 threshold=378)
+18:38:04.546     strm0x7f6c84035938  Starting silence
+18:38:05.165                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:05.225           silencedet.c  Starting talk burst (level=386 threshold=378)
+18:38:05.225     strm0x7f6c84035938  Start talksprut..
+18:38:05.354                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:06.127                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:06.179      tsx0x7f6cb0396628 !Timeout timer event
+18:38:06.179      tsx0x7f6cb0396628  .State changed from Completed to Terminated, event=TIMER
+18:38:06.179      tsx0x7f6cb0396628  Timeout timer event
+18:38:06.179      tsx0x7f6cb0396628  .State changed from Terminated to Destroyed, event=TIMER
+18:38:06.179      tsx0x7f6cb0396628  Transaction destroyed!
+18:38:06.180      tsx0x7f6c84002e88  Timeout timer event
+18:38:06.180      tsx0x7f6c84002e88  .State changed from Completed to Terminated, event=TIMER
+18:38:06.180      tsx0x7f6c84002e88  Timeout timer event
+18:38:06.180      tsx0x7f6c84002e88  .State changed from Terminated to Destroyed, event=TIMER
+18:38:06.180     tdta0x7f6cb0537c78  ..Destroying txdata Request msg REGISTER/cseq=23814 (tdta0x7f6cb0537c78)
+18:38:06.180      tsx0x7f6c84002e88  Transaction destroyed!
+18:38:06.305           silencedet.c !Starting silence (level=51 threshold=124)
+18:38:06.305     strm0x7f6c84035938  Starting silence
+18:38:06.393                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:06.412           silencedet.c  Starting talk burst (level=636 threshold=124)
+18:38:06.412     strm0x7f6c84035938  Start talksprut..
+18:38:07.347           silencedet.c  Starting silence (level=85 threshold=128)
+18:38:07.347     strm0x7f6c84035938  Starting silence
+18:38:07.484            pjsua_acc.c !Sending 2 bytes keep-alive packet for acc 0 to 192.168.0.132:5060
+18:38:07.484     tdta0x7f6c84041d38  Destroying txdata raw
+18:38:08.746           silencedet.c !Starting talk burst (level=154 threshold=128)
+18:38:08.747     strm0x7f6c84035938  Start talksprut..
+18:38:08.846                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:08.973                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:09.489                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:09.774                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:10.128                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:10.414                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:11.005                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:11.073                  speex  warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+18:38:11.703           pjsua_call.c !Call 0 hanging up: code=200..
+18:38:11.704          pjsua_media.c  .Call 0: deinitializing media..
+18:38:11.704          pjsua_media.c  ..
+  [CONFIRMED] To: sip:6002@192.168.0.132;tag=b1181352-4469-44e6-a17a-819a53352605
+    Call time: 00h:00m:10s, 1st res in 251 ms, conn in 259ms
+    #0 audio PCMU @8kHz, sendrecv, peer=192.168.0.132:18556
+       SRTP status: Not active Crypto-suite: 
+       ICE role: Unknown, state: Candidate Gathering, comp_cnt: 2
+       RX pt=0, last update:00h:00m:01.114s ago
+          total 512pkt 81.9KB (102.4KB +IP hdr) @avg=63.9Kbps/79.9Kbps
+          pkt loss=0 (0.0%), discrd=0 (0.0%), dup=0 (0.0%), reord=0 (0.0%)
+                (msec)    min     avg     max     last    dev
+          loss period:   0.000   0.000   0.000   0.000   0.000
+          jitter     :   0.000   0.040   1.250   0.000   0.159
+       TX pt=0, ptime=20, last update:never
+          total 403pkt 64.4KB (80.6KB +IP hdr) @avg=50.3Kbps/62.9Kbps
+          pkt loss=0 (0.0%), dup=0 (0.0%), reorder=0 (0.0%)
+                (msec)    min     avg     max     last    dev 
+          loss period:   0.000   0.000   0.000   0.000   0.000
+          jitter     :   0.000   0.000   0.000   0.000   0.000
+       RTT msec      :   0.000   0.000   0.000   0.000   0.000
+18:38:11.704     strm0x7f6c84035938  ...JB summary:
+  size=2/eff=2 prefetch=0 level=2
+  delay (min/max/avg/dev)=20/20/20/0 ms
+  burst (min/max/avg/dev)=2/2/2/0 frames
+  lost=0 discard=0 empty=1
+18:38:11.704          pjsua_media.c  ...Media stream call00:0 is destroyed
+18:38:11.705                icetp00  ..Stopping ICE, reason=media stop requested
+18:38:11.705                icetp00  ..ICE stream transport 0x7f6cb02d92b8 destroy request..
+18:38:11.705   stuntp0x7f6cb02dcce0  ...STUN sock 0x7f6cb02dce18 request, ref_cnt=9
+18:38:11.705   stuntp0x7f6cb02dcce0  ...STUN session 0x7f6cb02de258 destroy request, ref_cnt=9
+18:38:11.705   stuntp0x7f6cb02dee20  ...STUN sock 0x7f6cb02c74a8 request, ref_cnt=6
+18:38:11.705   stuntp0x7f6cb02dee20  ...STUN session 0x7f6cb02c88e8 destroy request, ref_cnt=6
+18:38:11.705          ice_session.c  ..ICE session 0x7f6c8401b078 destroyed
+18:38:11.705                icetp00  ..ICE stream transport 0x7f6cb02d92b8 destroyed
+18:38:11.705                         ..STUN sock 0x7f6cb02dce18 destroyed
+18:38:11.705         stun_session.c  ..STUN session 0x7f6cb02de258 destroyed
+18:38:11.705                         ..STUN sock 0x7f6cb02c74a8 destroyed
+18:38:11.705         stun_session.c  ..STUN session 0x7f6cb02c88e8 destroyed
+18:38:11.705         stun_session.c  ..STUN session 0x7f6c8401de98 destroyed
+18:38:11.705         stun_session.c  ..STUN session 0x7f6c8401ee98 destroyed
+18:38:11.706           pjsua_call.c  .Call 0 hanging up: code=0..
+18:38:11.706           pjsua_call.c  ..Call 0 hangup request ignored as it is on progress
+18:38:11.706               endpoint  ..Request msg BYE/cseq=31596 (tdta0x7f6cb0537c78) created.
+18:38:11.706      inv0x7f6cb03b1da8  ..Sending Request msg BYE/cseq=31596 (tdta0x7f6cb0537c78)
+18:38:11.706      dlg0x7f6cb03b1da8  ...Sending Request msg BYE/cseq=31596 (tdta0x7f6cb0537c78)
+18:38:11.706      tsx0x7f6cb02dd4b8  ....Transaction created for Request msg BYE/cseq=31596 (tdta0x7f6cb0537c78)
+18:38:11.706      tsx0x7f6cb02dd4b8  ...Sending Request msg BYE/cseq=31596 (tdta0x7f6cb0537c78) in state Null
+18:38:11.706          sip_resolve.c  ....Target '192.168.0.132:5060' type=Unspecified resolved to '192.168.0.132:5060' type=UDP (UDP transport)
+18:38:11.706           pjsua_core.c  ....TX 376 bytes Request msg BYE/cseq=31596 (tdta0x7f6cb0537c78) to UDP 192.168.0.132:5060:
+BYE sip:192.168.0.132:5060 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPj6710ab98-bd71-4287-96c0-58a944479147
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=35edf94a-d06a-4910-88ef-477e28b44b7a
+To: sip:6002@192.168.0.132;tag=b1181352-4469-44e6-a17a-819a53352605
+Call-ID: 101c52f7-18d7-4828-bcf0-7af15d73e174
+CSeq: 31596 BYE
+Content-Length:  0
+
+
+--end msg--
+18:38:11.707      tsx0x7f6cb02dd4b8  ....State changed from Null to Calling, event=TX_MSG
+18:38:11.707      dlg0x7f6cb03b1da8  .....Transaction tsx0x7f6cb02dd4b8 state changed to Calling
+18:38:11.707         sip_endpoint.c !Processing incoming message: Response msg 200/BYE/cseq=31596 (rdata0x7f6c84003618)
+18:38:11.707           pjsua_core.c  .RX 400 bytes Response msg 200/BYE/cseq=31596 (rdata0x7f6c84003618) from UDP 192.168.0.132:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPj6710ab98-bd71-4287-96c0-58a944479147
+Call-ID: 101c52f7-18d7-4828-bcf0-7af15d73e174
+From: <sip:6001@192.168.0.132>;tag=35edf94a-d06a-4910-88ef-477e28b44b7a
+To: <sip:6002@192.168.0.132>;tag=b1181352-4469-44e6-a17a-819a53352605
+CSeq: 31596 BYE
+Server: Asterisk PBX 18.13.0
+Content-Length:  0
+
+
+--end msg--
+18:38:11.708      tsx0x7f6cb02dd4b8  .Incoming Response msg 200/BYE/cseq=31596 (rdata0x7f6c84003618) in state Calling
+18:38:11.708      tsx0x7f6cb02dd4b8  ..State changed from Calling to Completed, event=RX_MSG
+18:38:11.708      dlg0x7f6cb03b1da8  ...Received Response msg 200/BYE/cseq=31596 (rdata0x7f6c84003618)
+18:38:11.708      dlg0x7f6cb03b1da8  ...Transaction tsx0x7f6cb02dd4b8 state changed to Completed
+18:38:11.708     tdta0x7f6c8403dc08  ....Destroying txdata Request msg ACK/cseq=31595 (tdta0x7f6c8403dc08)
+18:38:11.708     tdta0x7f6c84022bd8  ....Destroying txdata Request msg INVITE/cseq=31595 (tdta0x7f6c84022bd8)
+18:38:11.708      dlg0x7f6cb03b1da8  .....Session count dec to 1 by mod-invite
+18:38:12.607                  speex !warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+18:38:12.704            pjsua_aud.c !Closing sound device after idle for 1 second(s)
+18:38:12.705            pjsua_aud.c  .Closing default sound playback device and default sound capture device
+18:38:13.182            pjsua_acc.c  Sending 2 bytes keep-alive packet for acc 1 to 192.168.0.132:5060
+18:38:13.182     tdta0x7f6c84002e88  Destroying txdata raw
+18:38:15.520            pjsua_acc.c !Adding account: id=sip:6001@192.168.0.132
+18:38:15.520            pjsua_acc.c  .Account sip:6001@192.168.0.132 added with id 2
+18:38:15.520            pjsua_acc.c  .Acc 2: setting registration..
+18:38:15.520            pjsua_acc.c  ..Contact for acc 2 updated: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+18:38:15.520               endpoint  ..Request msg REGISTER/cseq=3588 (tdta0x7f6cb06abcf8) created.
+18:38:15.520      tsx0x7f6cb0126758  ...Transaction created for Request msg REGISTER/cseq=3589 (tdta0x7f6cb06abcf8)
+18:38:15.520      tsx0x7f6cb0126758  ..Sending Request msg REGISTER/cseq=3589 (tdta0x7f6cb06abcf8) in state Null
+18:38:15.520          sip_resolve.c  ...Target '192.168.0.132:0' type=Unspecified resolved to '192.168.0.132:5060' type=UDP (UDP transport)
+18:38:15.520           pjsua_core.c  ...TX 507 bytes Request msg REGISTER/cseq=3589 (tdta0x7f6cb06abcf8) to UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPj0b37a66a-1191-4338-be50-448200ee2549
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=b7e35667-d69f-4d29-9f8c-2ec87471fabe
+To: <sip:6001@192.168.0.132>
+Call-ID: ff7cdd80-f2c4-42b8-8f4b-369fa6f1c4af
+CSeq: 3589 REGISTER
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+18:38:15.521      tsx0x7f6cb0126758  ...State changed from Null to Calling, event=TX_MSG
+18:38:15.521            pjsua_acc.c  ..Acc 2: Registration sent
+18:38:15.521         sip_endpoint.c !Processing incoming message: Response msg 401/REGISTER/cseq=3589 (rdata0x7f6c840266f8)
+18:38:15.521           pjsua_core.c  .RX 569 bytes Response msg 401/REGISTER/cseq=3589 (rdata0x7f6c840266f8) from UDP 192.168.0.132:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPj0b37a66a-1191-4338-be50-448200ee2549
+Call-ID: ff7cdd80-f2c4-42b8-8f4b-369fa6f1c4af
+From: <sip:6001@192.168.0.132>;tag=b7e35667-d69f-4d29-9f8c-2ec87471fabe
+To: <sip:6001@192.168.0.132>;tag=z9hG4bKPj0b37a66a-1191-4338-be50-448200ee2549
+CSeq: 3589 REGISTER
+WWW-Authenticate: Digest realm="asterisk",nonce="1657804095/49a82750ce8b0e6176503d3acb230f20",opaque="60f718944d4cdbec",algorithm=MD5,qop="auth"
+Server: Asterisk PBX 18.13.0
+Content-Length:  0
+
+
+--end msg--
+18:38:15.522      tsx0x7f6cb0126758  .Incoming Response msg 401/REGISTER/cseq=3589 (rdata0x7f6c840266f8) in state Calling
+18:38:15.522      tsx0x7f6cb0126758  ..State changed from Calling to Completed, event=RX_MSG
+18:38:15.522      sip_auth_client.c  ...Digest algorithm is "MD5"
+18:38:15.522      tsx0x7f6c8402a5b8  ....Transaction created for Request msg REGISTER/cseq=3590 (tdta0x7f6cb06abcf8)
+18:38:15.522      tsx0x7f6c8402a5b8  ...Sending Request msg REGISTER/cseq=3590 (tdta0x7f6cb06abcf8) in state Null
+18:38:15.522               endpoint  ....Request msg REGISTER/cseq=3590 (tdta0x7f6cb06abcf8): skipping target resolution because address is already set
+18:38:15.522           pjsua_core.c  ....TX 795 bytes Request msg REGISTER/cseq=3590 (tdta0x7f6cb06abcf8) to UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPj3588e841-c248-4d10-8f09-1de97795d49b
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=b7e35667-d69f-4d29-9f8c-2ec87471fabe
+To: <sip:6001@192.168.0.132>
+Call-ID: ff7cdd80-f2c4-42b8-8f4b-369fa6f1c4af
+CSeq: 3590 REGISTER
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Authorization: Digest username="6001", realm="asterisk", nonce="1657804095/49a82750ce8b0e6176503d3acb230f20", uri="sip:192.168.0.132", response="90f1f8d185c88236e0ea813b8c6f7c0a", algorithm=MD5, cnonce="c7408e0bcca644ae96f0d70c63b3036b", opaque="60f718944d4cdbec", qop=auth, nc=00000001
+Content-Length:  0
+
+
+--end msg--
+18:38:15.522      tsx0x7f6c8402a5b8  ....State changed from Null to Calling, event=TX_MSG
+18:38:15.524         sip_endpoint.c  Processing incoming message: Response msg 200/REGISTER/cseq=3590 (rdata0x7f6c840266f8)
+18:38:15.524           pjsua_core.c  .RX 519 bytes Response msg 200/REGISTER/cseq=3590 (rdata0x7f6c840266f8) from UDP 192.168.0.132:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPj3588e841-c248-4d10-8f09-1de97795d49b
+Call-ID: ff7cdd80-f2c4-42b8-8f4b-369fa6f1c4af
+From: <sip:6001@192.168.0.132>;tag=b7e35667-d69f-4d29-9f8c-2ec87471fabe
+To: <sip:6001@192.168.0.132>;tag=z9hG4bKPj3588e841-c248-4d10-8f09-1de97795d49b
+CSeq: 3590 REGISTER
+Date: Thu, 14 Jul 2022 13:08:15 GMT
+Contact: <sip:6001@192.168.0.132:5080;ob>;expires=299
+Expires: 300
+Server: Asterisk PBX 18.13.0
+Content-Length:  0
+
+
+--end msg--
+18:38:15.524      tsx0x7f6c8402a5b8  .Incoming Response msg 200/REGISTER/cseq=3590 (rdata0x7f6c840266f8) in state Calling
+18:38:15.524      tsx0x7f6c8402a5b8  ..State changed from Calling to Completed, event=RX_MSG
+18:38:15.524            pjsua_acc.c  ....SIP outbound status for acc 2 is not active
+18:38:15.524            pjsua_acc.c  ....sip:6001@192.168.0.132: registration success, status=200 (OK), will re-register in 299 seconds
+18:38:15.525            pjsua_acc.c  ....Keep-alive timer started for acc 2, destination:192.168.0.132:5060, interval:13s
+18:38:15.631           pjsua_call.c !Making call with acc #2 to sip:600@192.168.0.132
+18:38:15.631            pjsua_aud.c  .Set sound device: capture=-1, playback=-2, mode=0
+18:38:15.632            pjsua_aud.c  ..Opening sound device (speaker + mic) PCM@16000/1/20ms
+18:38:15.632             alsa_dev.c  ...open_playback: Open playback device 'default'
+18:38:15.636             alsa_dev.c  ...Opened device alsa(default) for playing, sample rate=16000, ch=1, bits=16, period size=320 frames, latency=140 ms
+18:38:15.636             alsa_dev.c  ...open_capture: Open capture device 'default'
+18:38:15.638             alsa_dev.c  ...Opened device alsa(default) for capture, sample rate=16000, ch=1, bits=16, period size=320 frames, latency=100 ms
+18:38:15.638       ec0x7f6cb02dee20  ...Creating Speex AEC
+18:38:15.638       ec0x7f6cb02dee20  ...Speex AEC created, clock_rate=16000, channel=1, samples per frame=320, tail length=200 ms, latency=0 ms
+18:38:15.639      dlg0x7f6cb00c7538  .UAC dialog created
+18:38:15.639      dlg0x7f6cb00c7538  ..Session count inc to 2 by mod-pjsua
+18:38:15.639          pjsua_media.c  .Call 1: initializing media..
+18:38:15.639                icetp00  ..Creating ICE stream transport with 2 component(s)
+18:38:15.639                icetp00  ...Comp 1/0: host candidate 192.168.0.132:4016 (tpid=64) added
+18:38:15.640                icetp00  ...Comp 2/0: host candidate 192.168.0.132:4000 (tpid=64) added
+18:38:15.640                icetp00  ...ICE stream transport 0x7f6cb00c80d8 created
+18:38:15.640                icetp00  ...ICE operation complete (op=0/initialization): Success
+18:38:15.640          pjsua_media.c  ..Media index 0 selected for audio call 1
+18:38:15.640                  speex !warning: discarded first playback frame
+18:38:15.642                  speex  warning: discarded first playback frame
+18:38:15.642             alsa_dev.c  pb_thread_func: underrun!
+18:38:15.643             alsa_dev.c !ca_thread_func(61456): Set thread priority for audio capture thread.
+18:38:15.643             alsa_dev.c  Unable to increase thread priority, root access needed.
+18:38:15.644                  speex !warning: discarded first playback frame
+18:38:15.645                  speex  warning: discarded first playback frame
+18:38:15.645             alsa_dev.c  pb_thread_func: underrun!
+18:38:15.647     srtp0x7f6cb02d3610 !SRTP keying SDES created
+18:38:15.647          pjsua_media.c  Call 1: media transport initialization complete: Success
+18:38:15.647                icetp00  ICE session created, comp_cnt=2, role is Controlling agent
+18:38:15.647                icetp00  ICE nomination type set to aggressive
+18:38:15.647                icetp00  Candidate 0 added: comp_id=1, type=host, foundation=Hc0a80084, addr=192.168.0.132:4016, base=192.168.0.132:4016, prio=0x7effffff (2130706431)
+18:38:15.647                icetp00  Candidate 1 added: comp_id=2, type=host, foundation=Hc0a80084, addr=192.168.0.132:4000, base=192.168.0.132:4000, prio=0x7efffffe (2130706430)
+18:38:15.648      dlg0x7f6cb00c7538  .Session count dec to 2 by mod-pjsua
+18:38:15.648      dlg0x7f6cb00c7538  Module mod-invite added as dialog usage, data=0x7f6c84025568
+18:38:15.648      dlg0x7f6cb00c7538  .Session count inc to 4 by mod-invite
+18:38:15.648      dlg0x7f6cb00c7538  Module mod-100rel added as dialog usage, data=0x7f6c84041710
+18:38:15.648      dlg0x7f6cb00c7538  100rel module attached
+18:38:15.648      inv0x7f6cb00c7538  UAC invite session created for dialog dlg0x7f6cb00c7538
+18:38:15.648               endpoint  Request msg INVITE/cseq=14024 (tdta0x7f6c8403e188) created.
+18:38:15.648      inv0x7f6cb00c7538  .Sending Request msg INVITE/cseq=14024 (tdta0x7f6c8403e188)
+18:38:15.648      dlg0x7f6cb00c7538  ..Sending Request msg INVITE/cseq=14024 (tdta0x7f6c8403e188)
+18:38:15.648      tsx0x7f6c840359b8  ...Transaction created for Request msg INVITE/cseq=14024 (tdta0x7f6c8403e188)
+18:38:15.648      tsx0x7f6c840359b8  ..Sending Request msg INVITE/cseq=14024 (tdta0x7f6c8403e188) in state Null
+18:38:15.648          sip_resolve.c  ...Target '192.168.0.132:0' type=Unspecified resolved to '192.168.0.132:5060' type=UDP (UDP transport)
+18:38:15.648               endpoint  ...Request msg INVITE/cseq=14024 (tdta0x7f6c8403e188) exceeds UDP size threshold (1300), sending with TCP
+18:38:15.648     tcpc0x7f6c840198d8  ...TCP client transport created
+18:38:15.648     tcpc0x7f6c840198d8  ...TCP transport 192.168.0.132:40195 is connecting to 192.168.0.132:5060...
+18:38:15.648           pjsua_core.c  ...TX 1439 bytes Request msg INVITE/cseq=14024 (tdta0x7f6c8403e188) to TCP 192.168.0.132:5060:
+INVITE sip:600@192.168.0.132 SIP/2.0
+Via: SIP/2.0/TCP 192.168.0.132:40195;rport;branch=z9hG4bKPj921fb406-79db-4c27-9d28-91b0aeae45d3;alias
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=02d8b8a6-3493-49d2-b1d2-eea6028064d9
+To: sip:600@192.168.0.132
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Call-ID: de1ac6c7-ca9f-4028-ba4b-6da70b3b66a0
+CSeq: 14024 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+Content-Type: application/sdp
+Content-Length:   826
+
+v=0
+o=- 3866792895 3866792895 IN IP4 192.168.0.132
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4016 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 192.168.0.132
+b=TIAS:64000
+a=rtcp:4000 IN IP4 192.168.0.132
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:2041745178 cname:09f2128b01228ef5
+a=ice-ufrag:0334e56a
+a=ice-pwd:5f417a4c79bc496728d2c4f8
+a=candidate:Hc0a80084 1 UDP 2130706431 192.168.0.132 4016 typ host
+a=candidate:Hc0a80084 2 UDP 2130706430 192.168.0.132 4000 typ host
+
+--end msg--
+18:38:15.649      tsx0x7f6c840359b8  ...State changed from Null to Calling, event=TX_MSG
+18:38:15.649      dlg0x7f6cb00c7538  ....Transaction tsx0x7f6c840359b8 state changed to Calling
+18:38:15.649     tcpc0x7f6c840198d8  TCP connect() error: [code=120111]: Connection refused
+18:38:15.649      tsx0x7f6c840359b8  Temporary failure in sending Request msg INVITE/cseq=14024 (tdta0x7f6c8403e188), will try next server: Connection refused
+18:38:15.649           pjsua_core.c  TX 1432 bytes Request msg INVITE/cseq=14024 (tdta0x7f6c8403e188) to UDP 192.168.0.132:5060:
+INVITE sip:600@192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPj921fb406-79db-4c27-9d28-91b0aeae45d3
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=02d8b8a6-3493-49d2-b1d2-eea6028064d9
+To: sip:600@192.168.0.132
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Call-ID: de1ac6c7-ca9f-4028-ba4b-6da70b3b66a0
+CSeq: 14024 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+Content-Type: application/sdp
+Content-Length:   826
+
+v=0
+o=- 3866792895 3866792895 IN IP4 192.168.0.132
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4016 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 192.168.0.132
+b=TIAS:64000
+a=rtcp:4000 IN IP4 192.168.0.132
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:2041745178 cname:09f2128b01228ef5
+a=ice-ufrag:0334e56a
+a=ice-pwd:5f417a4c79bc496728d2c4f8
+a=candidate:Hc0a80084 1 UDP 2130706431 192.168.0.132 4016 typ host
+a=candidate:Hc0a80084 2 UDP 2130706430 192.168.0.132 4000 typ host
+
+--end msg--
+18:38:15.650     tcpc0x7f6c840198d8  TCP send() error, sent=-120111
+18:38:15.652                  speex !warning: discarded first playback frame
+18:38:15.652                  speex  warning: discarded first playback frame
+18:38:15.652             alsa_dev.c  pb_thread_func: underrun!
+18:38:15.656            pjsua_acc.c !Disconnected notification for transport tcpc0x7f6c840198d8
+18:38:15.656        sip_transport.c  .Transport tcpc0x7f6c840198d8 shutting down, force=0
+18:38:15.656     tcpc0x7f6c840198d8  TCP transport destroyed with reason 120111: Connection refused
+18:38:15.656         sip_endpoint.c  Processing incoming message: Response msg 401/INVITE/cseq=14024 (rdata0x7f6c840266f8)
+18:38:15.656           pjsua_core.c  .RX 567 bytes Response msg 401/INVITE/cseq=14024 (rdata0x7f6c840266f8) from UDP 192.168.0.132:5060:
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPj921fb406-79db-4c27-9d28-91b0aeae45d3
+Call-ID: de1ac6c7-ca9f-4028-ba4b-6da70b3b66a0
+From: <sip:6001@192.168.0.132>;tag=02d8b8a6-3493-49d2-b1d2-eea6028064d9
+To: <sip:600@192.168.0.132>;tag=z9hG4bKPj921fb406-79db-4c27-9d28-91b0aeae45d3
+CSeq: 14024 INVITE
+WWW-Authenticate: Digest realm="asterisk",nonce="1657804095/49a82750ce8b0e6176503d3acb230f20",opaque="59991d6265975230",algorithm=MD5,qop="auth"
+Server: Asterisk PBX 18.13.0
+Content-Length:  0
+
+
+--end msg--
+18:38:15.656      tsx0x7f6c840359b8  .Incoming Response msg 401/INVITE/cseq=14024 (rdata0x7f6c840266f8) in state Calling
+18:38:15.656               endpoint  ..Request msg ACK/cseq=14024 (tdta0x7f6c84019958) created.
+18:38:15.656           pjsua_core.c  ..TX 383 bytes Request msg ACK/cseq=14024 (tdta0x7f6c84019958) to UDP 192.168.0.132:5060:
+ACK sip:600@192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPj921fb406-79db-4c27-9d28-91b0aeae45d3
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=02d8b8a6-3493-49d2-b1d2-eea6028064d9
+To: sip:600@192.168.0.132;tag=z9hG4bKPj921fb406-79db-4c27-9d28-91b0aeae45d3
+Call-ID: de1ac6c7-ca9f-4028-ba4b-6da70b3b66a0
+CSeq: 14024 ACK
+Content-Length:  0
+
+
+--end msg--
+18:38:15.656      tsx0x7f6c840359b8  ..State changed from Calling to Completed, event=RX_MSG
+18:38:15.656      dlg0x7f6cb00c7538  ...Received Response msg 401/INVITE/cseq=14024 (rdata0x7f6c840266f8)
+18:38:15.656      dlg0x7f6cb00c7538  ...Transaction tsx0x7f6c840359b8 state changed to Completed
+18:38:15.657      sip_auth_client.c  ....Digest algorithm is "MD5"
+18:38:15.657      inv0x7f6cb00c7538  .....Sending Request msg INVITE/cseq=14024 (tdta0x7f6c8403e188)
+18:38:15.657      dlg0x7f6cb00c7538  ......Sending Request msg INVITE/cseq=14024 (tdta0x7f6c8403e188)
+18:38:15.657      tsx0x7f6c8401c8b8  .......Transaction created for Request msg INVITE/cseq=14025 (tdta0x7f6c8403e188)
+18:38:15.657      tsx0x7f6c8401c8b8  ......Sending Request msg INVITE/cseq=14025 (tdta0x7f6c8403e188) in state Null
+18:38:15.657               endpoint  .......Request msg INVITE/cseq=14025 (tdta0x7f6c8403e188): skipping target resolution because address is already set
+18:38:15.657           pjsua_core.c  .......TX 1724 bytes Request msg INVITE/cseq=14025 (tdta0x7f6c8403e188) to UDP 192.168.0.132:5060:
+INVITE sip:600@192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPjdefeedd7-bbeb-4655-b615-19fe398b5772
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=02d8b8a6-3493-49d2-b1d2-eea6028064d9
+To: sip:600@192.168.0.132
+Contact: <sip:6001@192.168.0.132:5080;ob>;+sip.ice
+Call-ID: de1ac6c7-ca9f-4028-ba4b-6da70b3b66a0
+CSeq: 14025 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+Authorization: Digest username="6001", realm="asterisk", nonce="1657804095/49a82750ce8b0e6176503d3acb230f20", uri="sip:600@192.168.0.132", response="7ac8d4e1173543fdbc3ef210b0b880b6", algorithm=MD5, cnonce="cfcce258c7f74d8ca8c03da5d1428f19", opaque="59991d6265975230", qop=auth, nc=00000001
+Content-Type: application/sdp
+Content-Length:   826
+
+v=0
+o=- 3866792895 3866792895 IN IP4 192.168.0.132
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4016 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 192.168.0.132
+b=TIAS:64000
+a=rtcp:4000 IN IP4 192.168.0.132
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:2041745178 cname:09f2128b01228ef5
+a=ice-ufrag:0334e56a
+a=ice-pwd:5f417a4c79bc496728d2c4f8
+a=candidate:Hc0a80084 1 UDP 2130706431 192.168.0.132 4016 typ host
+a=candidate:Hc0a80084 2 UDP 2130706430 192.168.0.132 4000 typ host
+
+--end msg--
+18:38:15.657      tsx0x7f6c8401c8b8  .......State changed from Null to Calling, event=TX_MSG
+18:38:15.657      dlg0x7f6cb00c7538  ........Transaction tsx0x7f6c8401c8b8 state changed to Calling
+18:38:15.657         sip_endpoint.c  Processing incoming message: Response msg 484/INVITE/cseq=14025 (rdata0x7f6c840266f8)
+18:38:15.657           pjsua_core.c  .RX 418 bytes Response msg 484/INVITE/cseq=14025 (rdata0x7f6c840266f8) from UDP 192.168.0.132:5060:
+SIP/2.0 484 Address Incomplete
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport=5080;received=192.168.0.132;branch=z9hG4bKPjdefeedd7-bbeb-4655-b615-19fe398b5772
+Call-ID: de1ac6c7-ca9f-4028-ba4b-6da70b3b66a0
+From: <sip:6001@192.168.0.132>;tag=02d8b8a6-3493-49d2-b1d2-eea6028064d9
+To: <sip:600@192.168.0.132>;tag=d57be30c-69bf-4345-b6f5-9e81ba11413a
+CSeq: 14025 INVITE
+Server: Asterisk PBX 18.13.0
+Content-Length:  0
+
+
+--end msg--
+18:38:15.658      tsx0x7f6c8401c8b8  .Incoming Response msg 484/INVITE/cseq=14025 (rdata0x7f6c840266f8) in state Calling
+18:38:15.658               endpoint  ..Request msg ACK/cseq=14025 (tdta0x7f6c8401d0c8) created.
+18:38:15.658           pjsua_core.c  ..TX 374 bytes Request msg ACK/cseq=14025 (tdta0x7f6c8401d0c8) to UDP 192.168.0.132:5060:
+ACK sip:600@192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5080;rport;branch=z9hG4bKPjdefeedd7-bbeb-4655-b615-19fe398b5772
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=02d8b8a6-3493-49d2-b1d2-eea6028064d9
+To: sip:600@192.168.0.132;tag=d57be30c-69bf-4345-b6f5-9e81ba11413a
+Call-ID: de1ac6c7-ca9f-4028-ba4b-6da70b3b66a0
+CSeq: 14025 ACK
+Content-Length:  0
+
+
+--end msg--
+18:38:15.658      tsx0x7f6c8401c8b8  ..State changed from Calling to Completed, event=RX_MSG
+18:38:15.658      dlg0x7f6cb00c7538  ...Received Response msg 484/INVITE/cseq=14025 (rdata0x7f6c840266f8)
+18:38:15.658      dlg0x7f6cb00c7538  ...Transaction tsx0x7f6c8401c8b8 state changed to Completed
+18:38:15.658          pjsua_media.c  .....Call 1: deinitializing media..
+18:38:15.658          pjsua_media.c  ......
+  [DISCONNCTD] To: sip:600@192.168.0.132
+    Call time: 00h:00m:00s, 1st res in 19 ms, conn in 0ms
+18:38:15.658          pjsua_media.c  ......Call 1: cleaning up provisional media, prov_med_cnt=1, med_cnt=0
+18:38:15.658                icetp00  ......Stopping ICE, reason=media stop requested
+18:38:15.659                icetp00  ......Destroying ICE session 0x7f6c84022b58
+18:38:15.659    stuse0x7f6cb06bde10  ......STUN session 0x7f6c84034ce8 destroy request, ref_cnt=13
+18:38:15.659    stuse0x7f6c840332a0  ......STUN session 0x7f6c84005ff8 destroy request, ref_cnt=12
+18:38:15.659                icetp00  ......ICE stream transport 0x7f6cb00c80d8 destroy request..
+18:38:15.659   stuntp0x7f6cb03966e0  .......STUN sock 0x7f6cb00cbb28 request, ref_cnt=9
+18:38:15.659   stuntp0x7f6cb03966e0  .......STUN session 0x7f6cb00ccf68 destroy request, ref_cnt=9
+18:38:15.659   stuntp0x7f6cb06b9500  .......STUN sock 0x7f6cb02c82f8 request, ref_cnt=6
+18:38:15.659   stuntp0x7f6cb06b9500  .......STUN session 0x7f6cb00ce978 destroy request, ref_cnt=6
+18:38:15.659          ice_session.c  ......ICE session 0x7f6c84022b58 destroyed
+18:38:15.659                icetp00  ......ICE stream transport 0x7f6cb00c80d8 destroyed
+18:38:15.659                         ......STUN sock 0x7f6cb00cbb28 destroyed
+18:38:15.659         stun_session.c  ......STUN session 0x7f6cb00ccf68 destroyed
+18:38:15.659                         ......STUN sock 0x7f6cb02c82f8 destroyed
+18:38:15.659         stun_session.c  ......STUN session 0x7f6cb00ce978 destroyed
+18:

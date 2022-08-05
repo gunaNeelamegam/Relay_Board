@@ -1,4 +1,4 @@
-package com.zilogic.pjproject;
+package model;
 
 import org.pjsip.pjsua2.Account;
 import org.pjsip.pjsua2.AudioMedia;
@@ -11,15 +11,19 @@ import org.pjsip.pjsua2.OnCallStateParam;
 import org.pjsip.pjsua2.VideoPreview;
 import org.pjsip.pjsua2.VideoWindow;
 
-class MyCall extends Call {
+public class MyCall extends Call {
 
-    AudioMedia audioMedia;
+    @Override
+    public String toString() {
+        return "MyCall{" + "audioMedia=" + audioMedia + ", vidWin=" + vidWin + ", vidPrev=" + vidPrev + '}';
+    }
+
+    public AudioMedia audioMedia;
     public VideoWindow vidWin;
 
     public VideoPreview vidPrev;
 
-
-    MyCall(MyAccount paramMyAccount, int paramInt) {
+    public MyCall(MyAccount paramMyAccount, int paramInt) {
         super((Account) paramMyAccount, paramInt);
         this.vidWin = null;
     }
@@ -28,11 +32,13 @@ class MyCall extends Call {
         try {
             CallInfo callInfo = getInfo();
             //6 means that pjsip_inv_state id disConneted
+            MyApp.ep.libHandleEvents(1000);
             if (callInfo.getState() == 6) {
-                MyApp.ep.utilLogWrite(3, "MyCall", dump(true, ""));
+//                MyApp.ep.utilLogWrite(3, "MyCall", dump(true, ""));
+                //     MainStageController.outGoingCallStage.close();
             }
         } catch (Exception exception) {
-            System.err.println(" Exeption  while onCallState method4");
+            System.err.println(" Exeption  while onCallState method");
         }
         MyApp.observer.notifyCallState(this);
     }

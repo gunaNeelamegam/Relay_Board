@@ -1,26 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.zilogic.pjproject;
 
 import com.jfoenix.controls.JFXButton;
-import static com.zilogic.pjproject.AddAccountController.exitRegThread;
-import static com.zilogic.pjproject.MyApp.accList;
 import java.util.ArrayList;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import org.pjsip.pjsua2.BuddyConfig;
 
 /**
  *
- * @author user
+ * @author Guna
  */
 public class AddBuddyController {
 
-    Thread createBuddy;
-    static boolean exitCreateBuddy = false;
+    BuddyConfig bdy = new BuddyConfig();
     @FXML
     private TextField buddyName;
 
@@ -30,6 +25,8 @@ public class AddBuddyController {
     @FXML
     private JFXButton saveBtn;
 
+     MyApp app=new MyApp();
+    
     public ArrayList<AddBuddy> buddyDetails = new ArrayList<AddBuddy>();
     MyBuddy mybud = null;
 
@@ -40,7 +37,26 @@ public class AddBuddyController {
 
     @FXML
     void save() {
+        Platform.runLater(() -> {
+            try {
+                add_Buddy(buddyDetails);
+            } catch (Exception ex) {
+            }
+        });
+
         MainStageController.add_buddy_stage.close();
+    }
+
+    private void add_Buddy(ArrayList<AddBuddy> buddyDetails) throws Exception {
+        MyAccount acc = MyApp.accList.get(0);
+        bdy.setUri("sip:" + buddyName.getText().trim() + "@" + acc.getInfo().getUri().substring(9));
+        bdy.setSubscribe(true);
+        AddBuddy buddy = new AddBuddy(buddyName.getText());
+        buddyDetails.add(buddy);
+        mybud = acc.addBuddy(bdy);
+        System.out.println("Buddy added Successfully");
+        app.saveConfig("pjsua2.json");
+        
     }
 }
 // @FXML

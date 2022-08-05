@@ -1,0 +1,48 @@
+image: maven:3.6.1-jdk-11
+ 
+variables:
+  MAVEN_OPTS: "-Dhttps.protocols=TLSv1.2 -Dmaven.repo.local=.m2/repository -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN -Dorg.slf4j.simpleLogger.showDateTime=true -Djava.awt.headless=true"
+  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end"
+  DOCKER_IMAGE_TO_SCAN: hello-webapp:latest
+ 
+  
+# Cache the Maven repository so that each job does not have to download it.
+cache:
+  key: mavenrepo
+  paths:
+    - ./.m2/repository/
+
+before_script:
+  apt-get update &&
+  apt-get install -y unzip &&
+  wget -c https://www.mizu-voip.com/Portals/0/Files/JVoIP.zip &&
+  unzip JVoIP.zip &&
+  mvn install:install-file -Dfile=JVoIP/JVoIP.jar -DgroupId=JVoIP -DartifactId=JVoIP -Dversion=1.0 -Dpackaging=jar
+
+stages:
+  - build
+  - test
+
+
+build_binary:
+  stage: build
+  script: 'mvn package'
+
+  artifacts:
+    paths:
+      - target/*.jar
+    exclude:
+      - target/classes
+      - target/archive-tmp
+      - target/generated-sources
+      - target/maven-archiver
+      - target/maven-status
+      - target/asteriskconfiguration-1.0-SNAPSHOT.jar 
+    expire_in: 2 day
+
+
+checkstyle:
+  stage: test
+  script:
+    - 'mvn checkstyle:checkstyle'
+

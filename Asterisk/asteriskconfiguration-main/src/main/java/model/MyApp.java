@@ -1,4 +1,4 @@
-package com.zilogic.pjproject;
+package model;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -15,34 +15,38 @@ import org.pjsip.pjsua2.PersistentObject;
 import org.pjsip.pjsua2.TransportConfig;
 import org.pjsip.pjsua2.UaConfig;
 
-class MyApp {
-
+public class MyApp {
+    
+    static {
+        System.loadLibrary("pjsua2");
+        System.loadLibrary("openh264");
+    }
     public static Endpoint ep = new Endpoint();
-
+    
     public static MyAppObserver observer;
-
+    
     public static ArrayList<MyAccount> accList = new ArrayList<>();
-
+    
     public static ArrayList<MyAccountConfig> accCfgs = new ArrayList<>();
-
-    private EpConfig epConfig = new EpConfig();
-
+    
+    EpConfig epConfig = new EpConfig();
+    
     private TransportConfig sipTpConfig = new TransportConfig();
-
+    
     private String appDir;
-
+    
     private MyLogWriter logWriter;
-
+    
     private final String configName = "pjsua2.json";
 
     // private final int SIP_PORT = 5080;
     private final int LOG_LEVEL = 4;
-
-    public void init(MyAppObserver paramMyAppObserver, String paramString) {
+    
+    public void init(MyAppObserver paramMyAppObserver, String paramString) throws Exception {
         init(paramMyAppObserver, paramString, false);
     }
-
-    public void init(MyAppObserver paramMyAppObserver, String paramString, boolean paramBoolean) {
+    
+    public void init(MyAppObserver paramMyAppObserver, String paramString, boolean paramBoolean) throws Exception {
         observer = paramMyAppObserver;
         this.appDir = paramString;
         try {
@@ -59,6 +63,8 @@ class MyApp {
         }
         this.epConfig.getLogConfig().setLevel(4L);
         this.epConfig.getLogConfig().setConsoleLevel(4L);
+//        ep.codecSetPriority("speex/32000", (short) 132);
+//        ep.codecSetPriority("speex/16000", (short) 132);
         LogConfig logConfig = this.epConfig.getLogConfig();
         this.logWriter = new MyLogWriter();
         logConfig.setWriter((LogWriter) this.logWriter);
@@ -68,6 +74,7 @@ class MyApp {
         if (paramBoolean) {
             uaConfig.setThreadCnt(0L);
             uaConfig.setMainThreadOnly(true);
+            
         }
         try {
             ep.libInit(this.epConfig);
@@ -91,8 +98,11 @@ class MyApp {
             System.out.println(exception);
         }
         this.sipTpConfig.setPort(6000L);
-        for (int b = 0; b < this.accCfgs.size(); b++) {
-            MyAccountConfig myAccountConfig = this.accCfgs.get(b);
+        //To clear the all the Data inside the List 
+        accCfgs.clear();
+        accList.clear();
+        for (int b = 0; b < accCfgs.size(); b++) {
+            MyAccountConfig myAccountConfig = accCfgs.get(b);
             myAccountConfig.accCfg.getNatConfig().setIceEnabled(true);
             myAccountConfig.accCfg.getVideoConfig().setAutoTransmitOutgoing(true);
             myAccountConfig.accCfg.getVideoConfig().setAutoShowIncoming(true);
@@ -112,7 +122,7 @@ class MyApp {
             return;
         }
     }
-
+    
     public MyAccount addAcc(AccountConfig paramAccountConfig) {
         MyAccount myAccount = new MyAccount(paramAccountConfig);
         try {
@@ -122,14 +132,14 @@ class MyApp {
             myAccount = null;
             return null;
         }
-        this.accList.add(myAccount);
+        accList.add(myAccount);
         return myAccount;
     }
-
+    
     public void delAcc(MyAccount paramMyAccount) {
-        this.accList.remove(paramMyAccount);
+        accList.remove(paramMyAccount);
     }
-
+    
     private void loadConfig(String paramString) {
         JsonDocument jsonDocument = new JsonDocument();
         try {
@@ -138,23 +148,23 @@ class MyApp {
             this.epConfig.readObject(containerNode1);
             ContainerNode containerNode2 = containerNode1.readContainer("SipTransport");
             this.sipTpConfig.readObject(containerNode2);
-            this.accCfgs.clear();
+            accCfgs.clear();
             ContainerNode containerNode3 = containerNode1.readArray("accounts");
             while (containerNode3.hasUnread()) {
                 MyAccountConfig myAccountConfig = new MyAccountConfig();
                 myAccountConfig.readObject(containerNode3);
-                this.accCfgs.add(myAccountConfig);
+                accCfgs.add(myAccountConfig);
             }
         } catch (Exception exception) {
             System.out.println(exception);
         }
         jsonDocument.delete();
     }
-
+    
     private void buildAccConfigs() {
-        this.accCfgs.clear();
-        for (byte b = 0; b < this.accList.size(); b++) {
-            MyAccount myAccount = this.accList.get(b);
+        accCfgs.clear();
+        for (byte b = 0; b < accList.size(); b++) {
+            MyAccount myAccount = accList.get(b);
             MyAccountConfig myAccountConfig = new MyAccountConfig();
             myAccountConfig.accCfg = myAccount.cfg;
             myAccountConfig.buddyCfgs.clear();
@@ -162,11 +172,11 @@ class MyApp {
                 MyBuddy myBuddy = myAccount.buddyList.get(b1);
                 myAccountConfig.buddyCfgs.add(myBuddy.cfg);
             }
-            this.accCfgs.add(myAccountConfig);
+            accCfgs.add(myAccountConfig);
         }
     }
-
-     void saveConfig(String paramString) {
+    
+    public void saveConfig(String paramString) {
         JsonDocument jsonDocument = new JsonDocument();
         try {
             jsonDocument.writeObject((PersistentObject) this.epConfig);
@@ -174,15 +184,15 @@ class MyApp {
             this.sipTpConfig.writeObject(containerNode1);
             buildAccConfigs();
             ContainerNode containerNode2 = jsonDocument.writeNewArray("accounts");
-            for (byte b = 0; b < this.accCfgs.size(); b++) {
-                ((MyAccountConfig) this.accCfgs.get(b)).writeObject(containerNode2);
+            for (byte b = 0; b < accCfgs.size(); b++) {
+                ((MyAccountConfig) accCfgs.get(b)).writeObject(containerNode2);
             }
             jsonDocument.saveFile(paramString);
         } catch (Exception exception) {
         }
         jsonDocument.delete();
     }
-
+    
     public void handleNetworkChange() {
         try {
             System.out.println("Network change detected");
@@ -192,7 +202,7 @@ class MyApp {
             System.out.println(exception);
         }
     }
-
+    
     public void deinit() {
         String str = this.appDir + "/" + "pjsua2.json";
         saveConfig(str);

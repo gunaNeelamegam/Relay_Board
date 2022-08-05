@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="100.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Contoller">
+	<children>
+		<StackPane fx:id="stack" layoutX="289.0" prefHeight="50.0" prefWidth="300.0">
+			<children>
+				<Label fx:id="label" alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="44.0" prefWidth="307.0" text="Status" textFill="#3ca66f">
+					<font>
+						<Font size="24.0" />
+					</font>
+				</Label>
+			</children>
+		</StackPane>
+		<FlowPane layoutX="288.0" layoutY="48.0" prefHeight="254.0" prefWidth="242.0">
+			<children>
+				<Button fx:id="btn1" mnemonicParsing="false" onAction="#keyPressed" onKeyPressed="#keyPressed" prefHeight="80.0" prefWidth="80.0">
+					<font>
+						<Font size="32.0" />
+					</font>
+				</Button>
+				<Button fx:id="btn2" mnemonicParsing="false" onAction="#keyPressed" onKeyPressed="#keyPressed" prefHeight="80.0" prefWidth="80.0">
+					<font>
+						<Font size="32.0" />
+					</font>
+				</Button>
+				<Button fx:id="btn3" mnemonicParsing="false" onAction="#keyPressed" onKeyPressed="#keyPressed" prefHeight="80.0" prefWidth="80.0">
+					<font>
+						<Font size="32.0" />
+					</font>
+				</Button>
+				<Button fx:id="btn4" mnemonicParsing="false" onAction="#keyPressed" onKeyPressed="#keyPressed" prefHeight="80.0" prefWidth="80.0">
+					<font>
+						<Font size="32.0" />
+					</font>
+				</Button>
+				<Button fx:id="btn5" mnemonicParsing="false" onAction="#keyPressed" onKeyPressed="#keyPressed" prefHeight="80.0" prefWidth="80.0">
+					<font>
+						<Font size="32.0" />
+					</font>
+				</Button>
+				<Button fx:id="btn6" mnemonicParsing="false" onAction="#keyPressed" onKeyPressed="#keyPressed" prefHeight="80.0" prefWidth="80.0">
+					<font>
+						<Font size="32.0" />
+					</font>
+				</Button>
+				<Button fx:id="btn7" mnemonicParsing="false" onAction="#keyPressed" onKeyPressed="#keyPressed" prefHeight="80.0" prefWidth="80.0">
+					<font>
+						<Font size="32.0" />
+					</font>
+				</Button>
+				<Button fx:id="btn8" mnemonicParsing="false" onAction="#keyPressed" onKeyPressed="#keyPressed" prefHeight="80.0" prefWidth="80.0">
+					<font>
+						<Font size="32.0" />
+					</font>
+				</Button>
+				<Button fx:id="btn9" mnemonicParsing="false" onAction="#keyPressed" onKeyPressed="#keyPressed" prefHeight="80.0" prefWidth="80.0">
+					<font>
+						<Font size="32.0" />
+					</font>
+				</Button>
+			</children>
+		</FlowPane>
+		<Text fx:id="player1" fill="#218fa3" fontSmoothingType="LCD" layoutX="30.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLAYER NAME 1:" wrappingWidth="197.7294921875">
+			<font>
+				<Font size="23.0" />
+			</font>
+		</Text>
+		<Text fx:id="player2" fill="#218fa3" fontSmoothingType="LCD" layoutX="30.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLAYER NAME 2:" wrappingWidth="197.7294921875">
+			<font>
+				<Font size="23.0" />
+			</font>
+		</Text>
+		<TextField fx:id="name1" layoutX="46.0" layoutY="84.0" prefHeight="44.0" prefWidth="165.0" promptText="Player 1 Name">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</TextField>
+		<TextField fx:id="name2" layoutX="46.0" layoutY="182.0" prefHeight="44.0" prefWidth="165.0" promptText="Player 2 Name">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</TextField>
+		<Button fx:id="submit" alignment="CENTER" layoutX="69.0" layoutY="233.0" mnemonicParsing="false" onAction="#Submit" text="Submit" textFill="#332c3b">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="restart" layoutX="74.0" layoutY="268.0" mnemonicParsing="false" onAction="#reStart" text="Restart">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Button>
+      <Button fx:id="exit" layoutX="197.0" layoutY="266.0" mnemonicParsing="false" onAction="#exit" text="EXIT">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+	</children>
+</AnchorPane>

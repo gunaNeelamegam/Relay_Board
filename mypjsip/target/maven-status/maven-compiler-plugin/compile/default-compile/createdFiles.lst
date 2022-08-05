@@ -1,0 +1,9 @@
+com/zilogic/mypjsip/ControllerClass.class
+com/zilogic/mypjsip/MyLogWriter.class
+com/zilogic/mypjsip/MyCall.class
+com/zilogic/mypjsip/MyApp.class
+com/zilogic/mypjsip/MyAccount.class
+com/zilogic/mypjsip/MyAccountConfig.class
+com/zilogic/mypjsip/MyBuddy.class
+com/zilogic/mypjsip/Mypjsip.class
+com/zilogic/mypjsip/MyAppObserver.class

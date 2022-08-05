@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="293.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.callapp.AddAccountController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="293.0" prefWidth="422.0">
+         <children>
+            <TextField fx:id="domain" layoutX="118.0" layoutY="26.0" promptText="Domain Address">
+               <font>
+                  <Font name="Comic Sans MS" size="21.0" />
+               </font>
+            </TextField>
+            <Label layoutX="8.0" layoutY="32.0" prefHeight="32.0" prefWidth="104.0" text="Domain">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="88.0" prefHeight="32.0" prefWidth="104.0" text="user name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="153.0" prefHeight="32.0" prefWidth="115.0" text="password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="saveButton" layoutX="152.0" layoutY="245.0" mnemonicParsing="false" onAction="#save" text="save" />
+            <Button fx:id="close" layoutX="236.0" layoutY="245.0" mnemonicParsing="false" onAction="#close" text="close" />
+            <TextField fx:id="user" layoutX="118.0" layoutY="84.0" promptText="user name">
+               <font>
+                  <Font name="Comic Sans MS" size="21.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="pass" layoutX="117.0" layoutY="161.0" prefHeight="43.0" prefWidth="276.0" promptText="password">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,7 +1,6 @@
 package com.zilogic.pjproject;
 
 import com.jfoenix.controls.JFXButton;
-import java.io.IOException;
 import java.util.ArrayList;
 import javafx.application.Platform;
 import javafx.concurrent.Task;

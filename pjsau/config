@@ -1,0 +1,392 @@
+14:33:50.737         sip_endpoint.c  .Module "mod-pjsua-log" registered
+14:33:50.738         sip_endpoint.c  .Module "mod-tsx-layer" registered
+14:33:50.738         sip_endpoint.c  .Module "mod-stateful-util" registered
+14:33:50.738         sip_endpoint.c  .Module "mod-ua" registered
+14:33:50.738         sip_endpoint.c  .Module "mod-100rel" registered
+14:33:50.738         sip_endpoint.c  .Module "mod-pjsua" registered
+14:33:50.738         sip_endpoint.c  .Module "mod-invite" registered
+14:33:50.738           pjsua_core.c  .Trying STUN server 192.168.0.132 IPv4 (1 of 1)..
+14:33:50.738            stunresolve  ..TX 40 bytes STUN message to 192.168.0.132:3478:
+--- begin STUN message ---
+STUN Binding request
+ Hdr: length=20, magic=2112a442, tsx_id=686d3bc4dca3298200018230
+ Attributes:
+  SOFTWARE: length=13, value="pjnath-2.12.1"
+--- end of STUN message ---
+
+14:33:50.739     utsx0x7f50b81c5458  ..STUN client transaction created
+14:33:50.739     utsx0x7f50b81c5458  ..STUN sending message (transmit count=1)
+14:33:50.825             alsa_dev.c  ..Added sound device default
+14:33:50.827             alsa_dev.c  ..Added sound device surround21
+14:33:50.827             alsa_dev.c  ..Added sound device surround40
+14:33:50.828             alsa_dev.c  ..Added sound device surround41
+14:33:50.828             alsa_dev.c  ..Added sound device surround50
+14:33:50.828             alsa_dev.c  ..Added sound device surround51
+14:33:50.829             alsa_dev.c  ..Added sound device surround71
+14:33:50.850             alsa_dev.c  ..Added sound device samplerate
+14:33:50.863             alsa_dev.c  ..Added sound device speexrate
+14:33:50.885             alsa_dev.c  ..Added sound device jack
+14:33:50.886             alsa_dev.c  ..Added sound device oss
+14:33:50.888             alsa_dev.c  ..Added sound device pulse
+14:33:50.888             alsa_dev.c  ..Added sound device upmix
+14:33:50.888             alsa_dev.c  ..Added sound device vdownmix
+14:33:50.889             alsa_dev.c  ..Added sound device sysdefault:CARD=PCH
+14:33:50.890             alsa_dev.c  ..Added sound device front:CARD=PCH,DEV=0
+14:33:50.890             alsa_dev.c  ..Added sound device surround21:CARD=PCH,DEV=0
+14:33:50.890             alsa_dev.c  ..Added sound device surround40:CARD=PCH,DEV=0
+14:33:50.891             alsa_dev.c  ..Added sound device surround41:CARD=PCH,DEV=0
+14:33:50.891             alsa_dev.c  ..Added sound device surround50:CARD=PCH,DEV=0
+14:33:50.891             alsa_dev.c  ..Added sound device surround51:CARD=PCH,DEV=0
+14:33:50.891             alsa_dev.c  ..Added sound device surround71:CARD=PCH,DEV=0
+14:33:50.898             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=0
+14:33:50.899             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=1
+14:33:50.899             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=2
+14:33:50.900             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=3
+14:33:50.900             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=4
+14:33:50.900             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=0
+14:33:50.901             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=2
+14:33:50.931             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=3
+14:33:50.933             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=7
+14:33:50.935             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=8
+14:33:50.949             alsa_dev.c  ..ALSA driver found 32 devices
+14:33:50.949             alsa_dev.c  ..ALSA initialized
+14:33:50.949                  pjlib  ..select() I/O Queue created (0x7f50b81e9ae8)
+14:33:50.949           conference.c  ..Creating conference bridge with 254 ports
+14:33:50.949           Master/sound  ..Using delay buffer with WSOLA.
+14:33:50.955         sip_endpoint.c  .Module "mod-evsub" registered
+14:33:50.955         sip_endpoint.c  .Module "mod-presence" registered
+14:33:50.955                evsub.c  .Event pkg "presence" registered by mod-presence
+14:33:50.955         sip_endpoint.c  .Module "mod-mwi" registered
+14:33:50.955                evsub.c  .Event pkg "message-summary" registered by mod-mwi
+14:33:50.955         sip_endpoint.c  .Module "mod-refer" registered
+14:33:50.955                evsub.c  .Event pkg "refer" registered by mod-refer
+14:33:50.955         sip_endpoint.c  .Module "mod-pjsua-pres" registered
+14:33:50.955         sip_endpoint.c  .Module "mod-pjsua-im" registered
+14:33:50.955         sip_endpoint.c  .Module "mod-pjsua-options" registered
+14:33:50.956           pjsua_core.c  .1 SIP worker threads created
+14:33:50.956     utsx0x7f50b81c5458 !STUN sending message (transmit count=2)
+14:33:50.956           pjsua_core.c !.pjsua version 2.12.1 for Linux-5.13.0.51/x86_64/glibc-2.31 initialized
+14:33:50.956           pjsua_core.c  .PJSUA state changed: CREATED --> INIT
+14:33:51.155     utsx0x7f50b81c5458 !STUN sending message (transmit count=3)
+14:33:51.556     utsx0x7f50b81c5458  STUN sending message (transmit count=4)
+14:33:52.357     utsx0x7f50b81c5458  STUN sending message (transmit count=5)
+14:33:53.957     utsx0x7f50b81c5458  STUN sending message (transmit count=6)
+14:33:57.157     utsx0x7f50b81c5458  STUN sending message (transmit count=7)
+14:33:58.757     utsx0x7f50b81c5458  STUN timeout waiting for response
+14:33:58.757            stunresolve  .Session failed because STUN Binding request failed: STUN transaction has timed out (PJNATH_ESTUNTIMEDOUT)
+14:33:58.758           pjsua_core.c  .STUN resolution for 192.168.0.132 failed: STUN transaction has timed out (PJNATH_ESTUNTIMEDOUT)
+14:33:58.758            stunresolve  .STUN sock 0x7f50b813ee98 request, ref_cnt=6
+14:33:58.758            stunresolve  .STUN session 0x7f50b81c4668 destroy request, ref_cnt=6
+14:33:58.758     utsx0x7f50b81c5458  .STUN client transaction 0x7f50b81c5458 stopped, ref_cnt=7
+14:33:58.758           pjsua_core.c  .STUN resolution failed: STUN transaction has timed out (PJNATH_ESTUNTIMEDOUT)
+14:33:58.759         stun_session.c  .tdata 0x7f50b81c52d8 destroy request, force=1, tsx=0x7f50b81c5458, destroying=0
+14:33:58.759     utsx0x7f50b81c5458  .STUN client transaction 0x7f50b81c5458 stopped, ref_cnt=3
+14:33:58.759                         STUN sock 0x7f50b813ee98 destroyed
+14:33:58.759         stun_session.c  STUN session 0x7f50b81c4668 destroyed
+14:33:58.760           pjsua_core.c !Ignoring STUN resolution failure (by setting)
+14:33:58.760           pjsua_core.c  SIP UDP socket reachable at 192.168.0.132:5060
+14:33:58.761      udp0x7f50b81c4640  SIP UDP transport started, published address is 192.168.0.132:5060
+14:33:58.761             tcptp:5060  SIP TCP listener ready for incoming connections at 192.168.0.132:5060
+14:33:58.764            pjsua_acc.c  Adding account: id=
+14:33:58.764            pjsua_acc.c  .Invalid local URI: Invalid URI (PJSIP_EINVALIDURI) [status=171039]
+14:33:58.764            pjsua_acc.c  .Error adding account: Invalid URI (PJSIP_EINVALIDURI) [status=171039]
+14:33:58.764            account.cpp  pjsua_acc_add(&pj_acc_cfg, make_default, &id) error: Invalid URI (PJSIP_EINVALIDURI) (status=171039) [../src/pjsua2/account.cpp:983]
+14:33:58.765           pjsua_core.c  PJSUA state changed: INIT --> STARTING
+14:33:58.765         sip_endpoint.c  .Module "mod-unsolicited-mwi" registered
+14:33:58.765           pjsua_core.c  .PJSUA state changed: STARTING --> RUNNING
+14:33:58.769            pjsua_acc.c  Adding account: id=sip:6001@192.168.0.132
+14:33:58.769            pjsua_acc.c  .Account sip:6001@192.168.0.132 added with id 0
+14:33:58.769            pjsua_acc.c  .Acc 0: setting registration..
+14:33:58.769               endpoint  ..Request msg REGISTER/cseq=56203 (tdta0x7f50b81dcc18) created.
+14:33:58.769      tsx0x7f50b80c2408  ...Transaction created for Request msg REGISTER/cseq=56204 (tdta0x7f50b81dcc18)
+14:33:58.770      tsx0x7f50b80c2408  ..Sending Request msg REGISTER/cseq=56204 (tdta0x7f50b81dcc18) in state Null
+14:33:58.770          sip_resolve.c  ...Target '192.168.0.132:0' type=Unspecified resolved to '192.168.0.132:5060' type=UDP (UDP transport)
+14:33:58.770           pjsua_core.c  ...TX 525 bytes Request msg REGISTER/cseq=56204 (tdta0x7f50b81dcc18) to UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5060;rport;branch=z9hG4bKPj9d6062d6-90f2-4c97-af1a-b75f58123fcb
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=bddd64b9-d649-450d-8c3d-436f26ba6159
+To: <sip:6001@192.168.0.132>
+Call-ID: b9908f0f-0206-4c23-a39b-51003379e5cb
+CSeq: 56204 REGISTER
+User-Agent: pjsua22.12.1
+Contact: <sip:6001@192.168.0.132:5060;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+14:33:58.770      tsx0x7f50b80c2408  ...State changed from Null to Calling, event=TX_MSG
+14:33:58.770            pjsua_acc.c  ..Acc 0: Registration sent
+14:33:58.770         sip_endpoint.c !Processing incoming message: Request msg REGISTER/cseq=56204 (rdata0x7f50b81d8548)
+14:33:58.770           pjsua_core.c  .RX 525 bytes Request msg REGISTER/cseq=56204 (rdata0x7f50b81d8548) from UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5060;rport;branch=z9hG4bKPj9d6062d6-90f2-4c97-af1a-b75f58123fcb
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=bddd64b9-d649-450d-8c3d-436f26ba6159
+To: <sip:6001@192.168.0.132>
+Call-ID: b9908f0f-0206-4c23-a39b-51003379e5cb
+CSeq: 56204 REGISTER
+User-Agent: pjsua22.12.1
+Contact: <sip:6001@192.168.0.132:5060;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+14:33:58.771         sip_endpoint.c  .Request msg REGISTER/cseq=56204 (rdata0x7f50b81d8548) from 192.168.0.132:5060 was dropped/unhandled by any modules
+14:33:58.778           pjsua_call.c !Making call with acc #0 to sip:6002@192.168.0.122
+14:33:58.778            pjsua_aud.c  .Set sound device: capture=-1, playback=-2, mode=0
+14:33:58.778            pjsua_aud.c  ..Opening sound device (speaker + mic) PCM@16000/1/20ms
+14:33:58.778             alsa_dev.c  ...open_playback: Open playback device 'default'
+14:33:58.829             alsa_dev.c  ...Opened device alsa(default) for playing, sample rate=16000, ch=1, bits=16, period size=320 frames, latency=140 ms
+14:33:58.829             alsa_dev.c  ...open_capture: Open capture device 'default'
+14:33:58.868             alsa_dev.c  ...Opened device alsa(default) for capture, sample rate=16000, ch=1, bits=16, period size=320 frames, latency=100 ms
+14:33:58.868       ec0x7f50b81d5130  ...Creating Speex AEC
+14:33:58.868       ec0x7f50b81d5130  ...Speex AEC created, clock_rate=16000, channel=1, samples per frame=320, tail length=200 ms, latency=0 ms
+14:33:58.868      dlg0x7f50b828a8e8  .UAC dialog created
+14:33:58.868      dlg0x7f50b828a8e8  ..Session count inc to 2 by mod-pjsua
+14:33:58.868          pjsua_media.c  .Call 0: initializing media..
+14:33:58.868           pjsua_core.c  ..Trying STUN server 192.168.0.132 IPv4 (1 of 1)..
+14:33:58.868            stunresolve  ...TX 40 bytes STUN message to 192.168.0.132:3478:
+--- begin STUN message ---
+STUN Binding request
+ Hdr: length=20, magic=2112a442, tsx_id=cef43cdbc59434c000010734
+ Attributes:
+  SOFTWARE: length=13, value="pjnath-2.12.1"
+--- end of STUN message ---
+
+14:33:58.868     utsx0x7f50b828d6c8  ...STUN client transaction created
+14:33:58.868     utsx0x7f50b828d6c8  ...STUN sending message (transmit count=1)
+14:33:58.868             alsa_dev.c !ca_thread_func(22443): Set thread priority for audio capture thread.
+14:33:58.868             alsa_dev.c  Unable to increase thread priority, root access needed.
+14:33:58.869                  speex !warning: discarded first playback frame
+14:33:58.871                  speex  warning: discarded first playback frame
+14:33:58.871             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.871                  speex  warning: discarded first playback frame
+14:33:58.872                  speex  warning: discarded first playback frame
+14:33:58.872             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.872                  speex  warning: discarded first playback frame
+14:33:58.873                  speex  warning: discarded first playback frame
+14:33:58.873             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.873                  speex  warning: discarded first playback frame
+14:33:58.874                  speex  warning: discarded first playback frame
+14:33:58.874             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.874                  speex  warning: discarded first playback frame
+14:33:58.875                  speex  warning: discarded first playback frame
+14:33:58.875             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.875                  speex  warning: discarded first playback frame
+14:33:58.875                  speex  warning: discarded first playback frame
+14:33:58.875             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.876                  speex  warning: discarded first playback frame
+14:33:58.876                  speex  warning: discarded first playback frame
+14:33:58.876             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.877                  speex  warning: discarded first playback frame
+14:33:58.877                  speex  warning: discarded first playback frame
+14:33:58.877             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.878                  speex  warning: discarded first playback frame
+14:33:58.886                  speex  warning: discarded first playback frame
+14:33:58.886             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.887                  speex  warning: discarded first playback frame
+14:33:58.887                  speex  warning: discarded first playback frame
+14:33:58.887             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.888                  speex  warning: discarded first playback frame
+14:33:58.888                  speex  warning: discarded first playback frame
+14:33:58.888             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.889                  speex  warning: discarded first playback frame
+14:33:58.889                  speex  warning: discarded first playback frame
+14:33:58.889             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.889                  speex  warning: discarded first playback frame
+14:33:58.890                  speex  warning: discarded first playback frame
+14:33:58.890             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.891                  speex  warning: discarded first playback frame
+14:33:58.891                  speex  warning: discarded first playback frame
+14:33:58.891             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.892             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.892                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.893                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.893             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.893                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.894                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.894             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.894                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.894                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.894             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.895                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.896                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.896             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.896                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.897                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.897             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.897                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.898                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.898             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.898                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.899                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.899             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.899                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.900                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.900             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.900                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.901                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.901             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.901                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.902                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.902             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.902                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.903                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.903             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.904                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.904                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.904             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.905                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.905                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.905             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.906                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.906                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.906             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.907                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.908                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.908             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.908                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.909                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.909             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.909                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.910                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.910             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.910                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.911                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.911             alsa_dev.c  pb_thread_func: underrun!
+14:33:58.911                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.912                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.912                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.912                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.912                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.912                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.912                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.912                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.923                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.941                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:58.968     utsx0x7f50b828d6c8 !STUN sending message (transmit count=2)
+14:33:58.980                  speex !warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:59.020                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:33:59.168     utsx0x7f50b828d6c8 !STUN sending message (transmit count=3)
+14:33:59.269      tsx0x7f50b80c2408  Retransmit timer event
+14:33:59.270      tsx0x7f50b80c2408  .Retransmiting Request msg REGISTER/cseq=56204 (tdta0x7f50b81dcc18), count=0, restart?=1
+14:33:59.270           pjsua_core.c  .TX 525 bytes Request msg REGISTER/cseq=56204 (tdta0x7f50b81dcc18) to UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5060;rport;branch=z9hG4bKPj9d6062d6-90f2-4c97-af1a-b75f58123fcb
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=bddd64b9-d649-450d-8c3d-436f26ba6159
+To: <sip:6001@192.168.0.132>
+Call-ID: b9908f0f-0206-4c23-a39b-51003379e5cb
+CSeq: 56204 REGISTER
+User-Agent: pjsua22.12.1
+Contact: <sip:6001@192.168.0.132:5060;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+14:33:59.270         sip_endpoint.c  Processing incoming message: Request msg REGISTER/cseq=56204 (rdata0x7f50600097c8)
+14:33:59.270           pjsua_core.c  .RX 525 bytes Request msg REGISTER/cseq=56204 (rdata0x7f50600097c8) from UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5060;rport;branch=z9hG4bKPj9d6062d6-90f2-4c97-af1a-b75f58123fcb
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=bddd64b9-d649-450d-8c3d-436f26ba6159
+To: <sip:6001@192.168.0.132>
+Call-ID: b9908f0f-0206-4c23-a39b-51003379e5cb
+CSeq: 56204 REGISTER
+User-Agent: pjsua22.12.1
+Contact: <sip:6001@192.168.0.132:5060;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+14:33:59.337                  speex !warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+14:33:59.582                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:34:00.197                  speex !warning: No playback frame available (your application is buggy and/or got xruns)
+14:34:00.197                  speex !warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+14:34:00.198                  speex !warning: internal playback buffer corruption?
+14:34:00.217                  speex !warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+14:34:01.305                  speex  warning: Had to discard a playback frame (your application is buggy and/or got xruns)
+14:34:01.998                  speex !warning: No playback frame available (your application is buggy and/or got xruns)
+14:34:01.998                  speex !warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+14:34:01.998                  speex !warning: internal playback buffer corruption?
+14:34:02.017                  speex !warning: Auto-filling the buffer (your application is buggy and/or got xruns)
+14:34:02.430           sound_port.c  EC suspended because of inactivity
+14:34:11.687            stunresolve !..STUN sock 0x7f50b828b078 request, ref_cnt=4
+14:34:11.687            stunresolve  ..STUN session 0x7f50b828c8d8 destroy request, ref_cnt=4
+14:34:11.687     utsx0x7f50b828d6c8  ..STUN client transaction 0x7f50b828d6c8 stopped, ref_cnt=4
+14:34:11.687                         ..STUN sock 0x7f50b828b078 destroyed
+14:34:11.687         stun_session.c  ..tdata 0x7f50b828d548 destroy request, force=1, tsx=0x7f50b828d6c8, destroying=0
+14:34:11.687     utsx0x7f50b828d6c8  ..STUN client transaction 0x7f50b828d6c8 stopped, ref_cnt=0
+14:34:11.687         stun_session.c  ..STUN session 0x7f50b828c8d8 destroyed
+14:34:11.687           pjsua_core.c  ..Ignoring STUN resolution failure (by setting)
+14:34:11.688          pjsua_media.c  ..RTP socket reachable at 192.168.0.132:4000
+14:34:11.688          pjsua_media.c  ..RTCP socket reachable at 192.168.0.132:4001
+14:34:11.688     srtp0x7f50b828c4a0  ..SRTP keying SDES created
+14:34:11.688          pjsua_media.c  ..Media index 0 selected for audio call 0
+14:34:11.688          pjsua_media.c  ..Call 0: media transport initialization complete: Success
+14:34:11.688      udp0x7f50b828b460  ..UDP media transport created
+14:34:11.688      dlg0x7f50b828a8e8  ..Session count dec to 2 by mod-pjsua
+14:34:11.688      dlg0x7f50b828a8e8  .Module mod-invite added as dialog usage, data=0x7f50b828d4c8
+14:34:11.688      dlg0x7f50b828a8e8  ..Session count inc to 4 by mod-invite
+14:34:11.689      dlg0x7f50b828a8e8  .Module mod-100rel added as dialog usage, data=0x7f50b8245698
+14:34:11.689      dlg0x7f50b828a8e8  .100rel module attached
+14:34:11.689      inv0x7f50b828a8e8  .UAC invite session created for dialog dlg0x7f50b828a8e8
+14:34:11.689               endpoint  .Request msg INVITE/cseq=32764 (tdta0x7f50b8291ce8) created.
+14:34:11.689      inv0x7f50b828a8e8  ..Sending Request msg INVITE/cseq=32764 (tdta0x7f50b8291ce8)
+14:34:11.689      dlg0x7f50b828a8e8  ...Sending Request msg INVITE/cseq=32764 (tdta0x7f50b8291ce8)
+14:34:11.689      tsx0x7f50b823b128  ....Transaction created for Request msg INVITE/cseq=32764 (tdta0x7f50b8291ce8)
+14:34:11.689      tsx0x7f50b823b128  ...Sending Request msg INVITE/cseq=32764 (tdta0x7f50b8291ce8) in state Null
+14:34:11.689          sip_resolve.c  ....Target '192.168.0.122:0' type=Unspecified resolved to '192.168.0.122:5060' type=UDP (UDP transport)
+14:34:11.689           pjsua_core.c  ....TX 1257 bytes Request msg INVITE/cseq=32764 (tdta0x7f50b8291ce8) to UDP 192.168.0.122:5060:
+INVITE sip:6002@192.168.0.122 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132:5060;rport;branch=z9hG4bKPjd0033fac-b2e8-4caa-967d-913ff98c6109
+Max-Forwards: 70
+From: sip:6001@192.168.0.132;tag=2c0dbd75-ec53-401d-8a6e-d1aa2418d509
+To: sip:6002@192.168.0.122
+Contact: <sip:6001@192.168.0.132:5060;ob>
+Call-ID: 9d6f8b95-fc7e-4322-b273-6686c76c2027
+CSeq: 32764 INVITE
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Supported: replaces, 100rel, timer, norefersub
+Session-Expires: 1800
+Min-SE: 90
+User-Agent: pjsua22.12.1
+Content-Type: application/sdp
+Content-Length:   632
+
+v=0
+o=- 3865568651 3865568651 IN IP4 192.168.0.132
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 4000 RTP/AVP 96 97 98 99 3 0 8 9 120 121 122
+c=IN IP4 192.168.0.132
+b=TIAS:64000
+a=rtcp:4001 IN IP4 192.168.0.132
+a=sendrecv
+a=rtpmap:96 speex/16000
+a=rtpmap:97 speex/8000
+a=rtpmap:98 speex/32000
+a=rtpmap:99 iLBC/8000
+a=fmtp:99 mode=30
+a=rtpmap:3 GSM/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:9 G722/8000
+a=rtpmap:120 telephone-event/16000
+a=fmtp:120 0-16
+a=rtpmap:121 telephone-event/8000
+a=fmtp:121 0-16
+a=rtpmap:122 telephone-event/32000
+a=fmtp:122 0-16
+a=ssrc:11299

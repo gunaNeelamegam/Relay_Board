@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.animation.FadeTransition;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,7 +13,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import org.pjsip.pjsua2.AudioMedia;
+import org.pjsip.pjsua2.AudioMediaPlayer;
 import org.pjsip.pjsua2.CallOpParam;
+import org.pjsip.pjsua2.pjmedia_file_player_option;
 import org.pjsip.pjsua2.pjsip_status_code;
 import org.pjsip.pjsua2.pjsua_call_flag;
 
@@ -40,19 +44,19 @@ public class IncomingCallController implements Initializable {
 
     MyCall call = MyAccount.currentCall;
 
-    Task<Void> task = new Task<Void>() {
-        @Override
-        protected Void call() throws Exception {
-            while (call != null) {
-                DisplayUI();
-            }
-            return null;
-        }
-    };
+    static AudioMediaPlayer player;
+    static AudioMedia ring_pay_back;
 
     @FXML
     void answer(ActionEvent event) throws Exception {
         CallOpParam prm = new CallOpParam(true);
+        Platform.runLater(() -> {
+            try {
+                IncomingCallController.player.stopTransmit(IncomingCallController.ring_pay_back);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        });
         prm.setStatusCode(pjsip_status_code.PJSIP_SC_OK);
         call.answer(prm);
         System.out.println("ANSWER");
@@ -62,7 +66,14 @@ public class IncomingCallController implements Initializable {
     void hangUp(ActionEvent event) throws Exception {
         System.out.println("HANGUP");
         if (call != null) {
-            MainStageController.task.run();
+            Platform.runLater(() -> {
+                try {
+                    IncomingCallController.player.stopTransmit(IncomingCallController.ring_pay_back);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+            });
+//            MainStageController.task.run();
             CallOpParam prm = new CallOpParam(true);
             prm.setStatusCode(pjsip_status_code.PJSIP_SC_OK);
             call.hangup(prm);
@@ -71,14 +82,13 @@ public class IncomingCallController implements Initializable {
     }
 
     @FXML
-    void DisplayUI() {
-        pane.setStyle("-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #ff5d48, #ff5d48);");
+    void displayUI() {
+        pane.setStyle("-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #ff5d48, #ff5d48)");
         ft = new FadeTransition(Duration.millis(1000), pane);
         ft.setFromValue(1.0);
         ft.setToValue(0.6);
         ft.setCycleCount(Timeline.INDEFINITE);
         ft.setAutoReverse(true);
-        pane.setOpacity(1);
         ft.play();
     }
 
@@ -126,9 +136,24 @@ public class IncomingCallController implements Initializable {
         }
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        new Thread(task).start();
+    /*
+    @param is used to create the ringtone for OncomingCall
+     */
+    static void incoming_Call_Ringtone() throws Exception {
+        ring_pay_back = MyApp.ep.audDevManager().getPlaybackDevMedia();
+        player = new AudioMediaPlayer();
+        player.createPlayer("/home/user/NetBeansProjects/PjProject/src/main/resources/com/zilogic/pjproject/Tum-Tum-MassTamilan.fm.wav", pjmedia_file_player_option.PJMEDIA_FILE_NO_LOOP);
+        player.startTransmit(ring_pay_back);
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        new Thread(new Task() {
+            @Override
+            protected Void call() throws Exception {
+                displayUI();
+                return null;
+            }
+        }).start();
+    }
 }

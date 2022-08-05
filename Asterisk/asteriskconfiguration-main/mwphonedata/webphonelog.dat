@@ -1,0 +1,7 @@
+[2022.07.22 07:42:08:949] *****************SIP STACK START***************** [inst: 9081]
+[2022.07.22 07:42:08:950] EVENT,set iswsptrt30 to 4 autotransportdetect=no usetunneling=1 {thread: 14} [inst: 9081]
+[2022.07.22 07:42:08:950] EVENT, upper server set9 to    {thread: 14} [inst: 9081]
+[2022.07.22 07:42:08:950] EVENT,read config file (1400) /home/user/NetBeansProjects/Asterisk/asteriskconfiguration-main/mwphonedata/JVoIP89wpcfgex.dat {thread: 14} [inst: 9081]
+[2022.07.22 07:42:08:950] EVENT, configex load finished 60 {thread: 14} [inst: 9081]
+[2022.07.22 07:42:08:950] EVENT,common initialized {thread: 14} [inst: 9081]
+[2022.07.22 07:42:08:950] EVENT,common initialized1 [wpmain] {thread: 14} [inst: 9081]

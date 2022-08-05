@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane  fx:id="messageAch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zilogic.pjproject.MessageController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="1.0" prefHeight="438.0" prefWidth="272.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-1.0" prefHeight="50.0" prefWidth="272.0" style="-fx-background-color: #33e20a;" text="message" textFill="WHITE">
+               <font>
+                  <Font name="FreeMono Bold" size="21.0" />
+               </font>
+            </Label>
+            <VBox layoutY="46.0" prefHeight="392.0" prefWidth="272.0" style="-fx-background-color: #76c264;">
+               <children>
+                  <JFXButton fx:id="userAccount1" alignment="TOP_LEFT" buttonType="RAISED"  prefHeight="50.0" prefWidth="272.0" ripplerFill="BLACK" text=" ">
+                     <font>
+                        <Font name="FreeMono Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PINTEREST" size="20" wrappingWidth="27.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="272.0" ripplerFill="BLACK" text=" ">
+                     <font>
+                        <Font name="FreeMono Bold" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PINTEREST" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="60.0" prefHeight="50.0" prefWidth="272.0" ripplerFill="BLACK" text=" ">
+                     <font>
+                        <Font name="FreeMono Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="110.0" prefHeight="50.0" prefWidth="272.0" ripplerFill="BLACK" text=" ">
+                     <font>
+                        <Font name="FreeMono Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="160.0" prefHeight="50.0" prefWidth="272.0" ripplerFill="BLACK" text=" ">
+                     <font>
+                        <Font name="FreeMono Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="210.0" prefHeight="50.0" prefWidth="272.0" ripplerFill="BLACK" text=" ">
+                     <font>
+                        <Font name="FreeMono Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="260.0" prefHeight="50.0" prefWidth="272.0" ripplerFill="BLACK" text=" ">
+                     <font>
+                        <Font name="FreeMono Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="310.0" prefHeight="50.0" prefWidth="272.0" ripplerFill="BLACK" text=" ">
+                     <font>
+                        <Font name="FreeMono Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <JFXButton fx:id="search" buttonType="RAISED" contentDisplay="CENTER" layoutX="223.0" layoutY="7.0"  prefHeight="34.0" prefWidth="47.0" ripplerFill="#f5f5f5" text=" " textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="25" wrappingWidth="8.071428298950195" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+      <FlowPane layoutX="271.0" layoutY="-3.0" prefHeight="444.0" prefWidth="279.0" style="-fx-background-color: pibnk;">
+         <children>
+            <ScrollPane prefHeight="440.0" prefWidth="274.0">
+               <content>
+                  <Label fx:id="userName" prefHeight="54.0" prefWidth="275.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>

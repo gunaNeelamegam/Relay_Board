@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.zilogic.pjproject;
+package model;
 
 /**
  *
@@ -14,7 +14,7 @@ import org.pjsip.pjsua2.BuddyConfig;
 import org.pjsip.pjsua2.BuddyInfo;
 
 
-class MyBuddy extends Buddy {
+ public class MyBuddy extends Buddy {
   public BuddyConfig cfg;
   
   MyBuddy(BuddyConfig paramBuddyConfig) {

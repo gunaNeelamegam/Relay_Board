@@ -1,0 +1,23 @@
+../../lib; then mkdir -p ../../lib; fi
+ar rv ../../lib/libg7221codec-x86_64-unknown-linux-gnu.a  output/libg7221codec-x86_64-unknown-linux-gnu/common/common.o  output/libg7221codec-x86_64-unknown-linux-gnu/common/huff_tab.o  output/libg7221codec-x86_64-unknown-linux-gnu/common/tables.o  output/libg7221codec-x86_64-unknown-linux-gnu/common/basic_op.o  output/libg7221codec-x86_64-unknown-linux-gnu/decode/coef2sam.o  output/libg7221codec-x86_64-unknown-linux-gnu/decode/dct4_s.o  output/libg7221codec-x86_64-unknown-linux-gnu/decode/decoder.o  output/libg7221codec-x86_64-unknown-linux-gnu/encode/dct4_a.o  output/libg7221codec-x86_64-unknown-linux-gnu/encode/sam2coef.o  output/libg7221codec-x86_64-unknown-linux-gnu/encode/encoder.o
+r - output/libg7221codec-x86_64-unknown-linux-gnu/common/common.o
+r - output/libg7221codec-x86_64-unknown-linux-gnu/common/huff_tab.o
+r - output/libg7221codec-x86_64-unknown-linux-gnu/common/tables.o
+r - output/libg7221codec-x86_64-unknown-linux-gnu/common/basic_op.o
+r - output/libg7221codec-x86_64-unknown-linux-gnu/decode/coef2sam.o
+r - output/libg7221codec-x86_64-unknown-linux-gnu/decode/dct4_s.o
+r - output/libg7221codec-x86_64-unknown-linux-gnu/decode/decoder.o
+r - output/libg7221codec-x86_64-unknown-linux-gnu/encode/dct4_a.o
+r - output/libg7221codec-x86_64-unknown-linux-gnu/encode/sam2coef.o
+r - output/libg7221codec-x86_64-unknown-linux-gnu/encode/encoder.o
+ranlib ../../lib/libg7221codec-x86_64-unknown-linux-gnu.a
+make[3]: Leaving directory '/home/user/Desktop/pjsip-jni/third_party/build/g7221'
+make[2]: Leaving directory '/home/user/Desktop/pjsip-jni/third_party/build/g7221'
+make[2]: Entering directory '/home/user/Desktop/pjsip-jni/third_party/build/portaudio'
+make -f /home/user/Desktop/pjsip-jni/build/rules.mak APP=PORTAUDIO app=libportaudio ../../lib/libportaudio-x86_64-unknown-linux-gnu.a
+make[3]: Entering directory '/home/user/Desktop/pjsip-jni/third_party/build/portaudio'
+.libportaudio-x86_64-unknown-linux-gnu.depend:1: *** missing separator.  Stop.
+make[3]: Leaving directory '/home/user/Desktop/pjsip-jni/third_party/build/portaudio'
+make[2]: *** [Makefile:67: libportaudio-x86_64-unknown-linux-gnu.a] Error 2
+make[2]: Leaving directory '/home/user/Desktop/pjsip-jni/third_party/build/portaudio'
+make[1]: *** [Makefile:7: all] Error 1

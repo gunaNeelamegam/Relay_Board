@@ -1,5 +1,5 @@
 
-package com.zilogic.pjproject;
+package model;
 
 
 class MyShutdownHook extends Thread {

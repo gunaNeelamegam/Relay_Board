@@ -1,0 +1,24 @@
+Readme file all about java Relay Board :
+------------------------------------------------------------------------------------------------------
+1) relayboard-1.0-SNAPSHOT-jar-with-dependencies.jar  ---> is the jar file  
+
+COMMAND'S TO RUN:
+			java -jar relayboard-1.0-SNAPSHOT-jar-with-dependencies.jar (specific commands based upon the Relay board )
+			
+example:
+ 
+ OPTIONS :
+       MANDATAORY:
+ 		-p port name example :(/dev/ttyUSB0)
+ 		-b baudrate dataflow serial communication
+  	OPTIONAL :
+  		-sa --> to turn on the all the light in relay board
+  		-ca ---> to turn off all the light in relay board 
+  		-C  --> clear the specific light in the relay board
+  		-S  ---> set the Specific light in the relay board
+  		
+ NOTE:
+    when using the option like -C or -S you what's to specify the value like (-C C1) or (-S S1) 
+  		
+ 
+  java -jar relayboard-1.0-SNAPSHOT-jar-with-dependencies.jar (-p) (-b) 

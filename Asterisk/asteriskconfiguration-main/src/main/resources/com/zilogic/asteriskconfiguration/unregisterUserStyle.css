@@ -1,0 +1,10 @@
+.borderpane {
+    
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #68b7bd, #c9c9c9);
+    -fx-border-width: 5px;
+    -fx-border-color: black;
+}
+
+.vbox {
+    -fx-border-color: rgb(51, 48, 212);
+}

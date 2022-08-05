@@ -4,7 +4,6 @@ import javafx.application.Platform;
 import javafx.concurrent.Task;
 import org.pjsip.pjsua2.Account;
 import org.pjsip.pjsua2.AudioMedia;
-import org.pjsip.pjsua2.AudioMediaPlayer;
 import org.pjsip.pjsua2.Call;
 import org.pjsip.pjsua2.CallInfo;
 import org.pjsip.pjsua2.CallMediaInfo;
@@ -16,13 +15,8 @@ import org.pjsip.pjsua2.VideoWindow;
 
 class MyCall extends Call {
 
-    @Override
-    public String toString() {
-        return "MyCall{" + "audioMedia=" + audioMedia + ", vidWin=" + vidWin + ", vidPrev=" + vidPrev + '}';
-    }
-
     MainStageController mainc = new MainStageController();
-    AudioMedia audioMedia;
+    static public AudioMedia audioMedia;
     public VideoWindow vidWin;
 
     public VideoPreview vidPrev;
@@ -40,6 +34,10 @@ class MyCall extends Call {
             System.out.println("=====================================");
             if (callInfo.getState() == 6) {
                 DISCONNECTCALL = 6;
+                Platform.runLater(() -> {
+                    MainStageController.outGoingCallStage.close();
+                });
+
             }
         } catch (Exception exception) {
             System.err.println(" Exeption  while onCallState method");
@@ -61,9 +59,6 @@ class MyCall extends Call {
                     .getStatus() == 1 || callMediaInfo
                             .getStatus() == 3)) {
                 try {
-//                    AudioMediaPlayer player =new AudioMediaPlayer();
-//                    player.createPlayer("Tum-Tum-MassTamilan.fm.wav");
-//                    player.startTransmit(audioMedia);
                     audioMedia = getAudioMedia(b);
                     MyApp.ep.audDevManager().getCaptureDevMedia()
                             .startTransmit(audioMedia);
@@ -81,5 +76,10 @@ class MyCall extends Call {
             }
         }
         MyApp.observer.notifyCallMediaState(this);
+    }
+
+    @Override
+    public String toString() {
+        return "MyCall{" + "audioMedia=" + audioMedia + ", vidWin=" + vidWin + ", vidPrev=" + vidPrev + '}';
     }
 }

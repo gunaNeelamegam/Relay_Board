@@ -1,0 +1,241 @@
+17:47:03.563         sip_endpoint.c  .Module "mod-pjsua-log" registered
+17:47:03.563         sip_endpoint.c  .Module "mod-tsx-layer" registered
+17:47:03.563         sip_endpoint.c  .Module "mod-stateful-util" registered
+17:47:03.563         sip_endpoint.c  .Module "mod-ua" registered
+17:47:03.563         sip_endpoint.c  .Module "mod-100rel" registered
+17:47:03.564         sip_endpoint.c  .Module "mod-pjsua" registered
+17:47:03.564         sip_endpoint.c  .Module "mod-invite" registered
+17:47:03.564           pjsua_core.c  .Trying STUN server stun.pjsip.org IPv4 (1 of 1)..
+17:47:03.805            stunresolve  ..TX 40 bytes STUN message to 139.162.62.29:3478:
+--- begin STUN message ---
+STUN Binding request
+ Hdr: length=20, magic=2112a442, tsx_id=f3164aa35ad458460001e6fa
+ Attributes:
+  SOFTWARE: length=13, value="pjnath-2.12.1"
+--- end of STUN message ---
+
+17:47:03.805     utsx0x7f5cb414e048  ..STUN client transaction created
+17:47:03.805     utsx0x7f5cb414e048  ..STUN sending message (transmit count=1)
+17:47:03.839             alsa_dev.c  ..Added sound device default
+17:47:03.841             alsa_dev.c  ..Added sound device surround21
+17:47:03.842             alsa_dev.c  ..Added sound device surround40
+17:47:03.842             alsa_dev.c  ..Added sound device surround41
+17:47:03.842             alsa_dev.c  ..Added sound device surround50
+17:47:03.843             alsa_dev.c  ..Added sound device surround51
+17:47:03.843             alsa_dev.c  ..Added sound device surround71
+17:47:03.843             alsa_dev.c  ..Added sound device samplerate
+17:47:03.843             alsa_dev.c  ..Added sound device speexrate
+17:47:03.844             alsa_dev.c  ..Added sound device jack
+17:47:03.844             alsa_dev.c  ..Added sound device oss
+17:47:03.846             alsa_dev.c  ..Added sound device pulse
+17:47:03.847             alsa_dev.c  ..Added sound device upmix
+17:47:03.847             alsa_dev.c  ..Added sound device vdownmix
+17:47:03.848             alsa_dev.c  ..Added sound device sysdefault:CARD=PCH
+17:47:03.848             alsa_dev.c  ..Added sound device front:CARD=PCH,DEV=0
+17:47:03.848             alsa_dev.c  ..Added sound device surround21:CARD=PCH,DEV=0
+17:47:03.849             alsa_dev.c  ..Added sound device surround40:CARD=PCH,DEV=0
+17:47:03.849             alsa_dev.c  ..Added sound device surround41:CARD=PCH,DEV=0
+17:47:03.849             alsa_dev.c  ..Added sound device surround50:CARD=PCH,DEV=0
+17:47:03.849             alsa_dev.c  ..Added sound device surround51:CARD=PCH,DEV=0
+17:47:03.850             alsa_dev.c  ..Added sound device surround71:CARD=PCH,DEV=0
+17:47:03.856             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=0
+17:47:03.857             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=1
+17:47:03.857             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=2
+17:47:03.857             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=3
+17:47:03.858             alsa_dev.c  ..Added sound device hdmi:CARD=PCH,DEV=4
+17:47:03.858             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=0
+17:47:03.859             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=2
+17:47:03.898             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=3
+17:47:03.898             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=7
+17:47:03.899             alsa_dev.c  ..Added sound device dmix:CARD=PCH,DEV=8
+17:47:03.904             alsa_dev.c  ..ALSA driver found 32 devices
+17:47:03.904             alsa_dev.c  ..ALSA initialized
+17:47:03.905                  pjlib  ..select() I/O Queue created (0x7f5cb41ee0e8)
+17:47:03.905           conference.c  ..Creating conference bridge with 254 ports
+17:47:03.905           Master/sound  ..Using delay buffer with WSOLA.
+17:47:03.908         sip_endpoint.c  .Module "mod-evsub" registered
+17:47:03.908         sip_endpoint.c  .Module "mod-presence" registered
+17:47:03.908                evsub.c  .Event pkg "presence" registered by mod-presence
+17:47:03.908         sip_endpoint.c  .Module "mod-mwi" registered
+17:47:03.908                evsub.c  .Event pkg "message-summary" registered by mod-mwi
+17:47:03.908         sip_endpoint.c  .Module "mod-refer" registered
+17:47:03.908                evsub.c  .Event pkg "refer" registered by mod-refer
+17:47:03.908         sip_endpoint.c  .Module "mod-pjsua-pres" registered
+17:47:03.908         sip_endpoint.c  .Module "mod-pjsua-im" registered
+17:47:03.908         sip_endpoint.c  .Module "mod-pjsua-options" registered
+17:47:03.908           pjsua_core.c  .1 SIP worker threads created
+17:47:03.908           pjsua_core.c  .pjsua version 2.12.1 for Linux-5.13.0.52/x86_64/glibc-2.31 initialized
+17:47:03.908     utsx0x7f5cb414e048 !STUN sending message (transmit count=2)
+17:47:03.908           pjsua_core.c !.PJSUA state changed: CREATED --> INIT
+17:47:04.054             stun_msg.c !.Unrecognized attribute type 0x8020
+17:47:04.054            stunresolve  .RX 88 bytes STUN message from 139.162.62.29:3478:
+--- begin STUN message ---
+STUN Binding success response
+ Hdr: length=68, magic=2112a442, tsx_id=f3164aa35ad458460001e6fa
+ Attributes:
+  MAPPED-ADDRESS: length=8, IPv4 addr=27.5.11.43:34482
+  SOURCE-ADDRESS: length=8, IPv4 addr=139.162.62.29:3479
+  CHANGED-ADDRESS: length=8, IPv4 addr=45.118.135.233:3478
+  Attr 0x8020: length=8
+  SOFTWARE: length=16, value="Vovida.org 0.97"
+--- end of STUN message ---
+
+17:47:04.055            stunresolve  .STUN mapped address found/changed: 27.5.11.43:34482
+17:47:04.055            stunresolve  .STUN sock 0x7f5cb414a4a8 request, ref_cnt=8
+17:47:04.056            stunresolve  .STUN session 0x7f5cb414bd08 destroy request, ref_cnt=8
+17:47:04.056     utsx0x7f5cb414e048  .STUN client transaction 0x7f5cb414e048 stopped, ref_cnt=9
+17:47:04.056           pjsua_core.c  .STUN resolution success, using stun.pjsip.org, address is 139.162.62.29:3478
+17:47:04.056    natck0x7f5c60001db0  .Local address is 192.168.0.132:50931
+17:47:04.056    natck0x7f5c60001db0  .Server set to 139.162.62.29:3478
+17:47:04.056    natck0x7f5c60001db0  .Performing Test I: Binding request to 139.162.62.29:3478
+17:47:04.057    natck0x7f5c60001db0  ..TX 28 bytes STUN message to 139.162.62.29:3478:
+--- begin STUN message ---
+STUN Binding request
+ Hdr: length=8, magic=23118351, tsx_id=2c8a8e5c7cfb2b4600000000
+ Attributes:
+  CHANGE-REQUEST: length=4, value=0 (0x0)
+--- end of STUN message ---
+
+17:47:04.057     utsx0x7f5c60008888  ..STUN client transaction created
+17:47:04.057     utsx0x7f5c60008888  ..STUN sending message (transmit count=1)
+17:47:04.057         stun_session.c  .tdata 0x7f5cb414dec8 destroy request, force=0, tsx=0x7f5cb414e048, destroying=0
+17:47:04.057     utsx0x7f5cb414e048  .STUN transaction 0x7f5cb414e048 schedule destroy
+17:47:06.062           pjsua_core.c !Error contacting STUN server: Received no response from STUN server (PJLIB_UTIL_ESTUNNOTRESPOND) [status=320010]
+17:47:06.063           pjsua_core.c  SIP UDP socket reachable at 192.168.0.132:0
+17:47:06.063      udp0x7f5cb41e0210  SIP UDP transport started, published address is 192.168.0.132:0
+17:47:06.063             tcptp:5060  SIP TCP listener ready for incoming connections at 192.168.0.132:5060
+17:47:06.063             stun_msg.c !.Unrecognized attribute type 0x8020
+17:47:06.064    natck0x7f5c60001db0  .RX 88 bytes STUN message from 139.162.62.29:3478:
+--- begin STUN message ---
+STUN Binding success response
+ Hdr: length=68, magic=23118351, tsx_id=2c8a8e5c7cfb2b4600000000
+ Attributes:
+  MAPPED-ADDRESS: length=8, IPv4 addr=27.5.11.43:55022
+  SOURCE-ADDRESS: length=8, IPv4 addr=139.162.62.29:3479
+  CHANGED-ADDRESS: length=8, IPv4 addr=45.118.135.233:3478
+  Attr 0x8020: length=8
+  SOFTWARE: length=16, value="Vovida.org 0.97"
+--- end of STUN message ---
+
+17:47:06.064    natck0x7f5c60001db0  .Completed Test I: Binding request: Success
+17:47:06.064         stun_session.c  .tdata 0x7f5c60008708 destroy request, force=0, tsx=0x7f5c60008888, destroying=0
+17:47:06.064     utsx0x7f5c60008888  .STUN transaction 0x7f5c60008888 schedule destroy
+17:47:06.064    natck0x7f5c60001db0  Performing Test II: Binding request with change address and port request to 139.162.62.29:3478
+17:47:06.064    natck0x7f5c60001db0  .TX 28 bytes STUN message to 139.162.62.29:3478:
+--- begin STUN message ---
+STUN Binding request
+ Hdr: length=8, magic=52a5acab, tsx_id=248bc625191bf0c600000001
+ Attributes:
+  CHANGE-REQUEST: length=4, value=6 (0x6)
+--- end of STUN message ---
+
+17:47:06.065     utsx0x7f5c6000a318  .STUN client transaction created
+17:47:06.065     utsx0x7f5c6000a318  .STUN sending message (transmit count=1)
+17:47:06.065     utsx0x7f5cb414e048  STUN client transaction 0x7f5cb414e048 stopped, ref_cnt=1
+17:47:06.065         stun_session.c  tdata 0x7f5cb414dec8 destroy request, force=1, tsx=0x7f5cb414e048, destroying=0
+17:47:06.065     utsx0x7f5cb414e048  STUN client transaction 0x7f5cb414e048 stopped, ref_cnt=2
+17:47:06.065         stun_session.c  STUN transaction 0x7f5cb414e048 destroyed
+17:47:06.066                         STUN sock 0x7f5cb414a4a8 destroyed
+17:47:06.066         stun_session.c  STUN session 0x7f5cb414bd08 destroyed
+17:47:06.066            pjsua_acc.c !Adding account: id=
+17:47:06.066            pjsua_acc.c  .Invalid local URI: Invalid URI (PJSIP_EINVALIDURI) [status=171039]
+17:47:06.066            pjsua_acc.c  .Error adding account: Invalid URI (PJSIP_EINVALIDURI) [status=171039]
+17:47:06.066            account.cpp  pjsua_acc_add(&pj_acc_cfg, make_default, &id) error: Invalid URI (PJSIP_EINVALIDURI) (status=171039) [../src/pjsua2/account.cpp:983]
+17:47:06.067           pjsua_core.c  PJSUA state changed: INIT --> STARTING
+17:47:06.067         sip_endpoint.c  .Module "mod-unsolicited-mwi" registered
+17:47:06.067           pjsua_core.c  .PJSUA state changed: STARTING --> RUNNING
+17:47:06.070            pjsua_acc.c  Adding account: id=sip:6001@192.168.0.132
+17:47:06.071            pjsua_acc.c  .Account sip:6001@192.168.0.132 added with id 0
+17:47:06.071            pjsua_acc.c  .Acc 0: setting registration..
+17:47:06.071               endpoint  ..Request msg REGISTER/cseq=48539 (tdta0x7f5cb41e5708) created.
+17:47:06.071      tsx0x7f5cb41e76c8  ...Transaction created for Request msg REGISTER/cseq=48540 (tdta0x7f5cb41e5708)
+17:47:06.071      tsx0x7f5cb41e76c8  ..Sending Request msg REGISTER/cseq=48540 (tdta0x7f5cb41e5708) in state Null
+17:47:06.071          sip_resolve.c  ...Target '192.168.0.132:0' type=Unspecified resolved to '192.168.0.132:5060' type=UDP (UDP transport)
+17:47:06.071           pjsua_core.c  ...TX 515 bytes Request msg REGISTER/cseq=48540 (tdta0x7f5cb41e5708) to UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132;rport;branch=z9hG4bKPjc4438b65-6a60-4145-a809-4e0df849e7cc
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=89f4e102-fede-4021-8426-a850bba292a9
+To: <sip:6001@192.168.0.132>
+Call-ID: b4ddda85-2cee-4a85-b127-384d14898476
+CSeq: 48540 REGISTER
+User-Agent: pjsua22.12.1
+Contact: <sip:6001@192.168.0.132;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+17:47:06.071         sip_endpoint.c !Processing incoming message: Request msg REGISTER/cseq=48540 (rdata0x7f5cb41e1c98)
+17:47:06.072           pjsua_core.c  .RX 515 bytes Request msg REGISTER/cseq=48540 (rdata0x7f5cb41e1c98) from UDP 192.168.0.132:5060:
+REGISTER sip:192.168.0.132 SIP/2.0
+Via: SIP/2.0/UDP 192.168.0.132;rport;branch=z9hG4bKPjc4438b65-6a60-4145-a809-4e0df849e7cc
+Max-Forwards: 70
+From: <sip:6001@192.168.0.132>;tag=89f4e102-fede-4021-8426-a850bba292a9
+To: <sip:6001@192.168.0.132>
+Call-ID: b4ddda85-2cee-4a85-b127-384d14898476
+CSeq: 48540 REGISTER
+User-Agent: pjsua22.12.1
+Contact: <sip:6001@192.168.0.132;ob>
+Expires: 300
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONS
+Content-Length:  0
+
+
+--end msg--
+17:47:06.072         sip_endpoint.c  .Request msg REGISTER/cseq=48540 (rdata0x7f5cb41e1c98) from 192.168.0.132:5060 was dropped/unhandled by any modules
+17:47:06.072      tsx0x7f5cb41e76c8 !...State changed from Null to Calling, event=TX_MSG
+17:47:06.072            pjsua_acc.c  ..Acc 0: Registration sent
+17:47:06.074           pjsua_call.c  Making call with acc #0 to sip:6002@192.168.0.122
+17:47:06.074            pjsua_aud.c  .Set sound device: capture=-1, playback=-2, mode=0
+17:47:06.074            pjsua_aud.c  ..Opening sound device (speaker + mic) PCM@16000/1/20ms
+17:47:06.074             alsa_dev.c  ...open_playback: Open playback device 'default'
+17:47:06.077             alsa_dev.c  ...Opened device alsa(default) for playing, sample rate=16000, ch=1, bits=16, period size=320 frames, latency=140 ms
+17:47:06.077             alsa_dev.c  ...open_capture: Open capture device 'default'
+17:47:06.084             alsa_dev.c  ...Opened device alsa(default) for capture, sample rate=16000, ch=1, bits=16, period size=320 frames, latency=100 ms
+17:47:06.084       ec0x7f5cb4237130  ...Creating Speex AEC
+17:47:06.085       ec0x7f5cb4237130  ...Speex AEC created, clock_rate=16000, channel=1, samples per frame=320, tail length=200 ms, latency=0 ms
+17:47:06.085      dlg0x7f5cb428d098  .UAC dialog created
+17:47:06.085      dlg0x7f5cb428d098  ..Session count inc to 2 by mod-pjsua
+17:47:06.085          pjsua_media.c  .Call 0: initializing media..
+17:47:06.086             alsa_dev.c !ca_thread_func(56235): Set thread priority for audio capture thread.
+17:47:06.087             alsa_dev.c  Unable to increase thread priority, root access needed.
+17:47:06.087                  speex !warning: discarded first playback frame
+17:47:06.089                  speex  warning: discarded first playback frame
+17:47:06.090                  speex  warning: discarded first playback frame
+17:47:06.090                  speex  warning: discarded first playback frame
+17:47:06.090                  speex  warning: discarded first playback frame
+17:47:06.090                  speex  warning: discarded first playback frame
+17:47:06.090                  speex  warning: discarded first playback frame
+17:47:06.090                  speex  warning: discarded first playback frame
+17:47:06.102                  speex  warning: discarded first playback frame
+17:47:06.115    natck0x7f5c60001db0 !Performing Test III: Binding request with change port request to 139.162.62.29:3478
+17:47:06.117    natck0x7f5c60001db0  .TX 28 bytes STUN message to 139.162.62.29:3478:
+--- begin STUN message ---
+STUN Binding request
+ Hdr: length=8, magic=5c3b7ccb, tsx_id=1f47e2b466c6ec7d00000002
+ Attributes:
+  CHANGE-REQUEST: length=4, value=2 (0x2)
+--- end of STUN message ---
+
+17:47:06.117     utsx0x7f5cb414baf8  .STUN client transaction created
+17:47:06.117     utsx0x7f5cb414baf8  .STUN sending message (transmit count=1)
+17:47:06.165     utsx0x7f5c6000a318  STUN sending message (transmit count=2)
+17:47:06.217     utsx0x7f5cb414baf8  STUN sending message (transmit count=2)
+17:47:06.327          stun_simple.c !..Warning: unknown attr type 8020 in attr 3. Attribute was ignored.
+17:47:06.327          stun_simple.c  ..Warning: unknown attr type 8022 in attr 4. Attribute was ignored.
+17:47:06.334          stun_simple.c  ..Warning: unknown attr type 8020 in attr 3. Attribute was ignored.
+17:47:06.334          stun_simple.c  ..Warning: unknown attr type 8022 in attr 4. Attribute was ignored.
+17:47:06.334          pjsua_media.c  ..RTP socket reachable at 27.5.11.43:4000
+17:47:06.334          pjsua_media.c  ..RTCP socket reachable at 27.5.11.43:4001
+17:47:06.334     srtp0x7f5cb423f2a0  ..SRTP keying SDES created
+17:47:06.334          pjsua_media.c  ..Media index 0 selected for audio call 0
+17:47:06.334          pjsua_media.c  ..Call 0: media transport initialization complete: Success
+17:47:06.334      udp0x7f5cb423acc0  ..UDP media transport created
+17:47:06.334      dlg0x7f5cb428d098  ..Session count dec to 2 by mod-pjsua
+17:47:06.335      dlg0x7f5cb428d098  .Module mod-invite added as dialog usage, data=0x7f5cb4292428
+17:47:06.335      dlg0x7f5cb428d098  ..Session count inc to 4 by mod-invite
+17:47:06.335      dlg0x7f5cb428d098  .Module mod-100rel added as dialog usage, data=0x7f5cb4293ee8
+17:47:06.335      dlg0x7f5cb428d098  .100rel module attached
+17:47:06.335      inv0x7f5cb428d098  .UAC invite session created for dialog dlg0

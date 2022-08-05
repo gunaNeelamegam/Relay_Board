@@ -14,8 +14,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
+import org.pjsip.pjsua2.AudioMedia;
+import org.pjsip.pjsua2.AudioMediaPlayer;
 import org.pjsip.pjsua2.CallOpParam;
 import org.pjsip.pjsua2.SendInstantMessageParam;
+import org.pjsip.pjsua2.pjmedia_file_player_option;
 import org.pjsip.pjsua2.pjsip_status_code;
 import org.pjsip.pjsua2.pjsua_call_flag;
 
@@ -65,7 +68,7 @@ public class OutGoingCallController implements Initializable {
 
     void call() {
         try {
-            c.setStyle("-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #00FF00, #FFFFFF);");
+            c.setStyle("-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #00FF00, #FFFFFF)");
             ft = new FadeTransition(Duration.millis(1000), c);
             ft.setFromValue(1.0);
             ft.setToValue(0.6);

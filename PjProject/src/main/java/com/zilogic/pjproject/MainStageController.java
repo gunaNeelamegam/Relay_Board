@@ -4,7 +4,6 @@ import com.jfoenix.controls.JFXButton;
 import static com.zilogic.pjproject.MyAccount.INCOMINGCALL;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
@@ -33,6 +32,8 @@ public class MainStageController implements Initializable {
     public static Stage outGoingCallStage;
     @FXML
     public static Stage add_buddy_stage;
+    @FXML
+    public static Stage message_Stage;
     private static MyObserver observer = new MyObserver();
     public static MyAccount account = null;
     private static AccountConfig accCfg = null;
@@ -40,7 +41,6 @@ public class MainStageController implements Initializable {
     public static BorderPane borderPane;
     static Stage incoming_stage = null;
     static int i = 0;
-
     @FXML
     JFXButton incomingCallBtn;
 
@@ -70,13 +70,27 @@ public class MainStageController implements Initializable {
         }
     }
 
+    @FXML
+    public void loadmessage() throws Exception {
+        try {
+            message_Stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("Message.fxml"));
+            Scene scene = new Scene(root);
+            message_Stage.setScene(scene);
+            message_Stage.setTitle("message");
+            message_Stage.showAndWait();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     /*
     @param methid is used to verfify the incoming call is Arrived or not
      */
     static Task<Void> task;
 
     @FXML
-    public  synchronized void loadingIncomingUI() {
+    public synchronized void loadingIncomingUI() {
 
         task = new Task<Void>() {
             @Override
@@ -89,8 +103,11 @@ public class MainStageController implements Initializable {
                             INCOMINGCALL++;
                             System.out.println("INCOMING CALL fired");
                             Platform.runLater(() -> {
+                                try{
+                                IncomingCallController.incoming_Call_Ringtone();
+                                IncomingCallController ic=new IncomingCallController();
                                 loadIncomingUI();
-                            });
+                                }catch(Exception e){e.getMessage();}});
                         }
                     } catch (Exception e) {
                         System.out.println("Exception while loading the incoming call ");
@@ -110,17 +127,15 @@ public class MainStageController implements Initializable {
     static Task<Void> dis_connect;
 
     void disConnect_UI() {
+        try{
         if (MainStageController.incoming_stage.isShowing()) {
+            IncomingCallController.player.stopTransmit(IncomingCallController.ring_pay_back);
             MainStageController.incoming_stage.close();
-        }
-        if (MainStageController.outGoingCallStage.isShowing()) {
-//            OutGoingCallController.exitThreadCalling = true;
-            MainStageController.outGoingCallStage.close();
-        }
+        }}catch(Exception e){e.getMessage();}
     }
 
     @FXML
-    public  synchronized void dis_ConnectCallStage() {
+    public synchronized void dis_ConnectCallStage() {
 
         dis_connect = new Task<Void>() {
             @Override

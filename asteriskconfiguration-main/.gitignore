@@ -1,0 +1,8 @@
+/target/*
+*.deb
+*~
+"#*"
+*.zip
+/deb/build/*
+
+

@@ -5,7 +5,7 @@
          "threadCnt":            1,
          "mainThreadOnly":       false,
          "nameserver":           [ ],
-         "userAgent":            "Guna Application 2.12.1",
+         "userAgent":            "",
          "stunServer":           [ ],
          "stunTryIpv6":          false,
          "stunIgnoreFailure":    true,
@@ -14,9 +14,9 @@
       },
       "LogConfig":            { 
          "msgLogging":           1,
-         "level":                4,
+         "level":                5,
          "consoleLevel":         4,
-         "decor":                25200,
+         "decor":                25328,
          "filename":             "",
          "fileFlags":            0
       },
@@ -49,7 +49,7 @@
    },
    "SipTransport":         { 
       "TransportConfig":      { 
-         "port":                 6000,
+         "port":                 0,
          "portRange":            0,
          "publicAddress":        "",
          "boundAddress":         "",
@@ -89,7 +89,7 @@
       { 
          "AccountConfig":        { 
             "priority":             0,
-            "idUri":                "sip:6002@192.168.0.132",
+            "idUri":                "sip:6003@192.168.0.132",
             "AccountRegConfig":     { 
                "registrarUri":         "sip:192.168.0.132",
                "registerOnAdd":        true,
@@ -116,7 +116,7 @@
                   { 
                      "scheme":               "digest",
                      "realm":                "*",
-                     "username":             "6002",
+                     "username":             "6003",
                      "dataType":             0,
                      "data":                 "1234",
                      "akaK":                 "",
@@ -234,7 +234,12 @@
                "startKeyframeInterval": 0
             }
          },
-         "buddies":              [ ]
+         "buddies":              [ 
+            { 
+               "uri":                  "sip:6001@192.168.0.132",
+               "subscribe":            true
+            }
+         ]
       }
    ]
 }

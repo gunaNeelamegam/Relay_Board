@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=smartpas
+GenericName=smartpas
+Comment=Correlate users with this device.
+Keywords=asset;track;users;zilogic;systems;it;work;zs-login;
+Exec=/usr/local/bin/smartpas %U
+Icon=/usr/local/bin/logo.jpeg
+Terminal=false
+Type=Application

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zilogic.asteriskconfiguration.RegisterNodeController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="registerBtn" layoutX="148.0" layoutY="176.0" mnemonicParsing="false" onAction="#RegisterBtn" text="Register User" />
+            <TextField fx:id="serverTextField" alignment="TOP_LEFT" layoutX="179.0" layoutY="16.0" prefHeight="24.0" prefWidth="151.0" />
+            <Text fx:id="serverAddrLabel" layoutX="48.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Address" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

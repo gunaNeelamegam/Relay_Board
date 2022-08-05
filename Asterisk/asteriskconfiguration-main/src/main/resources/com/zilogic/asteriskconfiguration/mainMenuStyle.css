@@ -1,0 +1,9 @@
+.borderpane {
+    -fx-background-color: rgb(55, 158, 141);
+    -fx-border-width: 5px;
+    -fx-border-color: black;
+}
+
+.vbox {
+    -fx-border-color: rgb(51, 48, 212);
+}
