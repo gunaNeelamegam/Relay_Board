@@ -58,7 +58,7 @@
                         <FontAwesomeIconView fill="WHITE" glyphName="INBOX" size="30" />
                      </graphic>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="280.0" onAction="#nodeConfig" prefHeight="110.0" prefWidth="108.0" ripplerFill="#ee7c0a" text="RINGTONE" textFill="WHITE">
+                        <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="280.0"  prefHeight="110.0" prefWidth="108.0" ripplerFill="#ee7c0a" text="RINGTONE" textFill="WHITE">
                             <font>
                                 <Font name="Comic Sans MS Bold" size="15.0" />
                             </font>

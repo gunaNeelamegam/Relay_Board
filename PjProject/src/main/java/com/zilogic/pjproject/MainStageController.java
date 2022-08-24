@@ -194,13 +194,7 @@ public class MainStageController implements Initializable {
         add_buddy_stage.showAndWait();
     }
 
-    @FXML
-    public void nodeConfig() throws IOException {
-        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("NodeConfig.fxml")));
-        addAccountStage.setScene(scene);
-        addAccountStage.setTitle("NODE CONFIG");
-        addAccountStage.show();
-    }
+  
 
     /*
     @param method is used for creating the account using the External Thread for polling the Event

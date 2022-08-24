@@ -3,13 +3,15 @@ package com.zilogic.pjproject;
 import com.jfoenix.controls.JFXButton;
 import java.util.ArrayList;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class AddAccountController {
-
+    
     String domainAddress;
     String username;
     String password;
@@ -27,12 +29,11 @@ public class AddAccountController {
     Thread accountRegThread;
     static boolean exitRegThread = false;
     String callStatus;
-    private MyObserver observer = new MyObserver();
     public static ArrayList<AddAccount> userdetails = new ArrayList<AddAccount>();
-
-
+   static ObservableList<AddAccount> observer_account = FXCollections.observableArrayList();
+    
     Task<Void> task;
-
+    
     @FXML
     void save() throws Exception {
         MyApp.accList.clear();
@@ -45,6 +46,7 @@ public class AddAccountController {
         addaccount.setDomainAddress(domainAddress);
         addaccount.setPassword(password);
         userdetails.add(addaccount);
+        observer_account.add(addaccount);
         task = new Task() {
             @Override
             protected Void call() throws Exception {
@@ -66,7 +68,7 @@ public class AddAccountController {
         Thread t1 = new Thread(task);
         t1.start();
     }
-
+    
     @FXML
     public void close() {
         MainStageController.addAccountStage.close();

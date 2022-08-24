@@ -1,9 +1,11 @@
-
 package com.zilogic.pjproject;
 
 import com.jfoenix.controls.JFXButton;
+import static com.zilogic.pjproject.MessageController.i;
 import java.util.ArrayList;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -17,7 +19,7 @@ public class AddBuddyController {
 
     BuddyConfig bdy = new BuddyConfig();
     @FXML
-    private TextField buddyName;
+    public TextField buddyName;
 
     @FXML
     private JFXButton closeBtn;
@@ -25,9 +27,12 @@ public class AddBuddyController {
     @FXML
     private JFXButton saveBtn;
 
-     MyApp app=new MyApp();
-    
+    MyApp app = new MyApp();
+
+    String[] buddyN = new String[10];
     public ArrayList<AddBuddy> buddyDetails = new ArrayList<AddBuddy>();
+    ObservableList<AddBuddy> observer_buddy = FXCollections.observableArrayList();
+
     MyBuddy mybud = null;
 
     @FXML
@@ -39,7 +44,7 @@ public class AddBuddyController {
     void save() {
         Platform.runLater(() -> {
             try {
-                add_Buddy(buddyDetails);
+                add_Buddy();
             } catch (Exception ex) {
             }
         });
@@ -47,16 +52,20 @@ public class AddBuddyController {
         MainStageController.add_buddy_stage.close();
     }
 
-    private void add_Buddy(ArrayList<AddBuddy> buddyDetails) throws Exception {
+    private void add_Buddy() throws Exception {
         MyAccount acc = MyApp.accList.get(0);
         bdy.setUri("sip:" + buddyName.getText().trim() + "@" + acc.getInfo().getUri().substring(9));
         bdy.setSubscribe(true);
         AddBuddy buddy = new AddBuddy(buddyName.getText());
-        buddyDetails.add(buddy);
+//        buddyDetails.add(buddy);
+        observer_buddy.add(buddy);
         mybud = acc.addBuddy(bdy);
         System.out.println("Buddy added Successfully");
         app.saveConfig("pjsua2.json");
-        
+        for (AddBuddy b : buddyDetails) {
+            int i = 0;
+            buddyN[i] = b.getBuddyUserName();
+        }
     }
 }
 // @FXML
